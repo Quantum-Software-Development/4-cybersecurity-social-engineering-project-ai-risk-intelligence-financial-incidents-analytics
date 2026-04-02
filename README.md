@@ -7,10 +7,6 @@
 
 <br><br>
 
-# 🔐 [Cybersecurity, Social Engineering and AI Security  / [Project 4 – AI Finance Incident Risk & Governance Analysis ]() -
-
-
-
-# AI Finance Incident Risk & Governance Analysis  
-Algorithmic Bias • Operational Risk • AI Governance in Financial Services 
+# <p align="center"> 🔐 [Cybersecurity, Social Engineering and AI Security  / [Project 4 – AI Finance Incident Risk & Governance Analysis ]() - 
+### <p align="center"> Algorithmic Bias • Operational Risk • AI Governance in Financial Services 
 
