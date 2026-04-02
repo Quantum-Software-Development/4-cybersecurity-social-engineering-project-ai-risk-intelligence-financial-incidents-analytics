@@ -81,3 +81,35 @@
 
 
 
+
+## Table of Contents
+
+- [About](#about)
+- [Overview](#overview)
+- [Objectives](#objectives)
+- [Research Questions](#research-questions)
+- [Data Source](#data-source)
+- [Data Preparation](#data-preparation)
+- [Feature Engineering](#feature-engineering)
+  - [Financial Application Type](#financial-application-type)
+  - [Customer Segment](#customer-segment)
+  - [Incident Type](#incident-type)
+  - [Severity Level](#severity-level)
+- [Hypotheses & Statistical Analysis](#hypotheses--statistical-analysis)
+- [Machine Learning Models](#machine-learning-models)
+- [Database Architecture](#database-architecture)
+- [REST API](#rest-api)
+- [CRISP-DM Methodology](#crisp-dm-methodology)
+- [Visualizations](#visualizations)
+- [Project Phases](#project-phases)
+- [Business Impact](#business-impact)
+- [Risks & Limitations](#risks--limitations)
+- [Tech Stack](#tech-stack)
+- [How to Run](#how-to-run)
+- [Dataset Access](#dataset-access)
+- [Author](#author)
+- [Topics](#topics)
+- [Final Note](#final-note)
+
+<br><br>
+
