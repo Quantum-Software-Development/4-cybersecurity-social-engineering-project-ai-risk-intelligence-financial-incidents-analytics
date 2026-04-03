@@ -87,19 +87,20 @@
 - [Data Source](#data-source)
 - [Data Preparation](#data-preparation)
 - [Feature Engineering](#feature-engineering)
-  - [Financial Application Type](#financial-application-type)
-  - [Customer Segment](#customer-segment)
-  - [Incident Type](#incident-type)
-  - [Severity Level](#severity-level)
-- [Hypotheses & Statistical Analysis](#hypotheses--statistical-analysis)
+    - [Financial Application Type](#financial-application-type)
+    - [Customer Segment](#customer-segment)
+    - [Incident Type](#incident-type)
+    - [Severity Level](#severity-level)
+- [Hypotheses \& Statistical Analysis](#hypotheses--statistical-analysis)
 - [Machine Learning Models](#machine-learning-models)
 - [Database Architecture](#database-architecture)
+- [SQL Schema](#sql-schema)
 - [REST API](#rest-api)
 - [CRISP-DM Methodology](#crisp-dm-methodology)
 - [Visualizations](#visualizations)
 - [Project Phases](#project-phases)
 - [Business Impact](#business-impact)
-- [Risks & Limitations](#risks--limitations)
+- [Risks \& Limitations](#risks--limitations)
 - [Tech Stack](#tech-stack)
 - [How to Run](#how-to-run)
 - [Dataset Access](#dataset-access)
@@ -108,4 +109,5 @@
 - [Final Note](#final-note)
 
 <br><br>
+
 
