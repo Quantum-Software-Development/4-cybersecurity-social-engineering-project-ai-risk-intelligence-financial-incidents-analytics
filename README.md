@@ -130,7 +130,8 @@
    6.4 [Final Consolidated Pipeline Notebook](#final-consolidated-pipeline-notebook)
 
 
-7. [CRISP‑DM Methodology Alignment](#crisp-dm-methodology-alignment)  
+7. [CRISP‑DM Methodology Alignment](#crisp-dm-methodology-alignment)
+   7.0 [CRISP‑DM Methodology Diagram](#crisp‑dm-methodology-diagram) 
    7.1 [Business Understanding](#business-understanding)  
    7.2 [Data Understanding](#data-understanding)  
    7.3 [Data Preparation](#data-preparation)  
@@ -139,22 +140,22 @@
    7.6 [Deployment](#deployment)
 
 
-8. [How to Run](#how-to-run)  
+9. [How to Run](#how-to-run)  
    8.1 [Repository and Environment](#repository-and-environment)  
    8.2 [Notebook Execution Order](#notebook-execution-order)  
    8.3 [Starting the API](#starting-the-api)
 
 
-9. [Dataset Access](#dataset-access)  
+10. [Dataset Access](#dataset-access)  
 
 
-10. [Author](#author)  
+11. [Author](#author)  
 
 
-11. [Topics](#topics)  
+12. [Topics](#topics)  
 
 
-12. [Final Note](#final-note)
+13. [Final Note](#final-note)
 
 
 
