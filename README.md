@@ -130,8 +130,8 @@
    6.4 [Final Consolidated Pipeline Notebook](#final-consolidated-pipeline-notebook)
 
 
-7. [CRISP‑DM Methodology Alignment](#crisp-dm-methodology-alignment)
-   7.0 [CRISP‑DM Methodology Diagram](#crisp‑dm-methodology-diagram) 
+7. [CRISP‑DM Methodology Alignment](#crisp-dm-methodology-alignment) <br>
+   7.0 [CRISP‑DM Methodology Diagram](#crisp‑dm-methodology-diagram) <br>
    7.1 [Business Understanding](#business-understanding)  
    7.2 [Data Understanding](#data-understanding)  
    7.3 [Data Preparation](#data-preparation)  
