@@ -97,7 +97,7 @@
 >
 > * 🔗 **[Cybersecurity, Social Engineering & AI Security — Main Hub Repository](https://github.com/Quantum-Software-Development/1-Cybersecurity-SocialEngineering_Main_Hub_Repository-PUCSP)**
 >
-> *Part of the **Humanistic AI Research & Data Modeling Series** — where data meets human insight.*
+> *Part of the Humanistic AI Data Modeling Series — where data connects with human insight… and occasionally gets socially engineered. ⚡️
 
 <br><br><br><br>
 <!-- ========= END Main Repo REFERENCE  ========= -->
