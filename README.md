@@ -42,14 +42,14 @@
 <!-- ========= END Institucional INFO ========= -->
 
 <!-- ========= START BADGES ========= -->
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-Data%20Science-007ACC?logo=python&logoColor=ffffff" />
-  <img src="https://img.shields.io/badge/API-REST-00A676" />
-  <img src="https://img.shields.io/badge/Security-Zero%20Trust-008B8B" />
-  <img src="https://img.shields.io/badge/Machine%20Learning-AI-20B2AA" />
-  <img src="https://img.shields.io/badge/Data-SQL-LIGHT-00CED1" />
-</p>
 
+<p align="center"> 
+  <img src="https://img.shields.io/badge/Python-Data%20Science-007ACC?logo=python&logoColor=ffffff" /> 
+  <img src="https://img.shields.io/badge/API-REST-00A676" /> 
+  <img src="https://img.shields.io/badge/Security-Zero%20Trust-008B8B" /> 
+  <img src="https://img.shields.io/badge/Machine%20Learning-AI-20B2AA" /> 
+  <img src="https://img.shields.io/badge/SQL-Light-40E0D0?logo=postgresql&logoColor=ffffff" />
+</p>
 
 <br><br>
 
