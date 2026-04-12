@@ -170,3 +170,98 @@ Do ponto de vista de negócio, o problema que endereçamos é a ausência de vis
 Nesta fase exploratória, o foco está em organizar a base, criar variáveis derivadas, compreender padrões iniciais e consolidar um pipeline claro, pronto para ser expandido em direção a modelos preditivos, dashboards e APIs.
 
 <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+
+
+
+<!-- ======================================= Start DEFAULT Footer ===========================================  -->
+<br><br>
+
+
+## 💌 [Let the data flow... Ping Me !](mailto:fabicampanari@proton.me)
+
+<br>
+
+
+#### <p align="center">  🛸๋ My Contacts [Hub](https://linktr.ee/fabianacampanari)
+
+
+<br>
+
+### <p align="center"> <img src="https://github.com/user-attachments/assets/517fc573-7607-4c5d-82a7-38383cc0537d" />
+
+
+<br><br>
+
+<p align="center">  ────────────── ⊹🔭๋ ──────────────
+
+<!--
+<p align="center">  ────────────── 🛸๋*ੈ✩* 🔭*ੈ₊ ──────────────
+-->
+
+<br>
+
+<p align="center"> ➣➢➤ <a href="#top">Back to Top </a>
+  
+
+  
+#
+ 
+##### <p align="center"> Copyright 2026 Quantum Software Development. Code released under the  [MIT license.](https://github.com/Mindful-AI-Assistants/CDIA-Entrepreneurship-Soft-Skills-PUC-SP/blob/21961c2693169d461c6e05900e3d25e28a292297/LICENSE)
+
+
