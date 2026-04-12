@@ -1,16 +1,113 @@
+<!-- ======================================= ⚡️ Start DEFAULT HEADER ===========================================  -->
 
 
+<!-- ========= START LANGUAGE BUTTON ========= -->
 <br>
- 
- \[[🇧🇷 Português](README.pt_BR.md)\] \[**[🇬🇧 English](README.md)**\]
- 
+
+**\[[🇧🇷 Português](README.pt_BR.md)\] \[**[🇬🇧 English](README.md)**\]**
+
+<br><br>
+<!-- ========= END LANGUAGE BUTTON ========= -->
+
+
+
+<!-- ========= START REPO TITLE ========= -->
+# <p align="center"> 🔐 [Cybersecurity, Social Engineering and AI Security]()  / [Project 4 – AAI Incidents in Financial Services ]() 
+### <p align="center"> Analysis of Algorithmic Bias • Operational Risk • AI Governance Responses in Financial Services 
+
 
 
 <br><br>
+<!-- ========= END REPO TITLE ========= -->
 
-# AI Incidents in Financial Services
 
-Análise de Viés Algorítmico, Risco Operacional e Governança de IA em Serviços Financeiros
+<!-- ========= START Institucional INFO ========= -->
+## [Cybersecurity and Social Engineering Integrated Project - PUC-SP 5th Semester (2026)]()
+
+
+<br>
+
+[**Institution:**]() Pontifical Catholic University of São Paulo (PUC‑SP – Humanistic AI & Data Science • 5º Semester • 2026)  <br>
+[**School:**]() FACEI – Faculty of Interdisciplinary Studies  <br>
+[**Course Repo:**]() INTEGRATED PROJECT: Cybersecurity and Social Engineering – 108 Hours  <br>
+**Professor:** [✨ Eduardo Savino Gomes]()  <br>
+[**Extensionist Activities:**]() Extension projects and workshops using open‑source software and data‑driven consulting to support the community, aligned with the 20 official extension hours of the course.
+
+<br><br>
+
+#
+
+<br><br>
+<!-- ========= END Institucional INFO ========= -->
+
+<!-- ========= START BADGES ========= -->
+
+<p align="center"> 
+  <img src="https://img.shields.io/badge/Python-Data%20Science-007ACC?logo=python&logoColor=ffffff" /> 
+  <img src="https://img.shields.io/badge/API-REST-00A676" /> 
+  <img src="https://img.shields.io/badge/Security-Zero%20Trust-008B8B" /> 
+  <img src="https://img.shields.io/badge/Machine%20Learning-AI-20B2AA" /> 
+  <img src="https://img.shields.io/badge/SQL-Light-40E0D0?logo=postgresql&logoColor=ffffff" />
+</p>
+
+<br><br>
+
+#
+
+<br><br>
+<!-- ========= END START BADGES ========= -->
+
+
+
+
+<!-- ========= START Confidentiality statement ========= -->
+
+> [!IMPORTANT]
+> 
+> ⚠️ Heads Up
+>
+> * Projects and deliverables may be made [publicly available]() whenever possible.
+>   
+> * The course emphasizes [**practical, hands-on experience**]() with real datasets to simulate professional consulting scenarios in the fields of **Machine Learning and Neural Networks** for partner organizations and institutions affiliated with the university.
+>   
+> * All activities comply with the [**academic and ethical guidelines of PUC-SP**]().
+>   
+> * Any content not authorized for public disclosure will remain [**confidential**]() and securely stored in [private repositories]().  
+> <br>
+>
+>
+
+<br><br> 
+
+#
+
+<br><br>
+<!-- ========= END Confidentiality statement  ========= -->
+
+
+
+<!-- ========= START Main Repo REFERENCE  ========= -->
+> [!TIP]
+>
+> This repository is part of the flagship project:
+> **🔐 Cybersecurity, Social Engineering & AI Security — Main Hub**
+>
+> Explore the complete ecosystem of materials, analyses, and notebooks in the central repository:
+>
+> * 🔗 **[Cybersecurity, Social Engineering & AI Security — Main Hub Repository](https://github.com/Quantum-Software-Development/1-Cybersecurity-SocialEngineering_Main_Hub_Repository-PUCSP)**
+>
+> *Part of the Humanistic AI Data Modeling Series — where data connects with human insight… and occasionally gets socially engineered. ⚡️
+
+<br><br><br><br>
+<!-- ========= END Main Repo REFERENCE  ========= -->
+
+
+<!-- ======================================= END DEFAULT HEADER ⚡️ ===========================================  -->
+
+
+
+
+
 
 <br><br>
 
