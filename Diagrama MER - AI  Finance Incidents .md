@@ -1,12 +1,11 @@
+
+# [🇧🇷 PORT]
+
 ## 🧠 Diagrama DER — AI Finance Incidents
 
 Este diagrama representa a modelagem de dados para o registro e análise de incidentes relacionados ao uso de Inteligência Artificial no setor financeiro.
 
 <br><br>
-
-
-
-🇧🇷 [Port]
 
 ## 📌 Entidades
 
@@ -106,4 +105,111 @@ erDiagram
     ORGANIZACAO ||--o{ INCIDENTE : sofre
 ```
 
+<br>
 
+#
+
+<br>
+
+# [🇺🇸 ENG]
+
+## 🧠 ERD Diagram — AI Finance Incidents
+
+This diagram represents the data modeling for recording and analyzing incidents related to the use of Artificial Intelligence in the financial sector.
+
+<br><br>
+
+
+## 📌 Entities
+
+- **INCIDENT**: represents an event related to failures, risks, or issues involving AI systems.  
+- **ORGANIZATION**: entity that suffered or was impacted by an incident.  
+- **CLASSIFICATION**: details the technical categorization of the incident (failure type, AI domain, data source).
+
+<br><br>
+
+## 🔗 Relationships
+
+- **ORGANIZATION → INCIDENT (1:N)**  
+  One organization can suffer multiple incidents, but each incident is associated with a single organization.
+
+- **INCIDENT → CLASSIFICATION (1:N)**  
+  One incident can have multiple classifications, allowing more granular analysis.
+
+<br><br>
+
+## 💡 Purpose
+
+This model enables:
+- Risk analysis in AI systems  
+- Incident auditing and traceability  
+- Structured classification for studies and reports  
+
+<br><br>
+
+## Important
+
+Why doesn’t CLASSIFICATION have `org_id`?
+
+**Answer:**  
+Because it depends on INCIDENT, not directly on the organization.
+
+<br><br>
+
+## Reminder
+
+Entity → Table  
+Attribute → Column  
+PK → Primary Key  
+1:N Relationship → Foreign Key  
+ERD → becomes SQL  
+
+<br><br>
+
+```mermaid
+%%{init: {
+  "theme": "base",
+  "themeVariables": {
+    "primaryColor": "#0d1117",
+    "primaryTextColor": "#ffffff",
+    "primaryBorderColor": "#00b4d8",
+    "lineColor": "#00b4d8",
+    "background": "#0d1117"
+  },
+  "themeCSS": "
+    .er.relationshipLine path { stroke: #00b4d8 !important; }
+    .er.entityBox { stroke: #00b4d8 !important; fill: #0d1117 !important; }
+    .er.attributeBoxOdd { fill: #0d1117 !important; }
+    .er.attributeBoxEven { fill: #0d1117 !important; }
+    .er.entityLabel { fill: #ffffff !important; }
+  "
+}}%%
+
+erDiagram
+    INCIDENT {
+        int incident_id PK
+        date incident_date
+        string title
+        string description
+        string risk_type
+        string severity
+    }
+
+    ORGANIZATION {
+        int org_id PK
+        string organization_name
+        string country
+        string sector
+    }
+
+    CLASSIFICATION {
+        int class_id PK
+        int incident_id FK
+        string ai_domain
+        string failure_type
+        string data_source
+    }
+
+    INCIDENT ||--o{ CLASSIFICATION : has
+    ORGANIZATION ||--o{ INCIDENT : suffers
+```
