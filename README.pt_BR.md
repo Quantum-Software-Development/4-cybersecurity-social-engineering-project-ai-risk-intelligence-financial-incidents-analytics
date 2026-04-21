@@ -13,7 +13,7 @@
 
 <!-- ========= START REPO TITLE ========= -->
 # <p align="center"> 🔐 [Cybersecurity, Social Engineering and AI Security]()  / [Project 4 – AAI Incidents in Financial Services ]() 
-### <p align="center"> Analysis of Algorithmic Bias • Operational Risk • AI Governance Responses in Financial Services 
+### <p align="center"> Análise de Viés Algorítmico, Risco Operacional e Governança de IA em Serviços Financeiros
 
 
 
@@ -113,64 +113,70 @@
 
 ## Table of Contents
 
-1. [Project Overview](#project-overview)  
-   1.1 [Business Context](#business-context)  
-   1.2 [General Objective](#general-objective)  
-   1.3 [Specific Objectives](#specific-objectives)  
-   1.4 [Research Questions](#research-questions)  
-
-2. [Data and Problem Definition](#data-and-problem-definition)  
-   2.1 [Data Source: AI Incident Database (AIID)](#data-source-ai-incident-database-aiid)  
-   2.2 [Scope: Financial Services Focus](#scope-financial-services-focus)  
-   2.3 [Key Raw Variables](#key-raw-variables)  
-   2.4 [Core Analytical Concepts](#core-analytical-concepts)  
-
-3. [Derived Variables and Data Model](#derived-variables-and-data-model)  
-   3.1 [Financial Application Type (application_type)](#financial-application-type-application_type)  
-   3.2 [Incident Type (incident_type)](#incident-type-incident_type)  
-   3.3 [Customer Segment (customer_segment)](#customer-segment-customer_segment)  
-   3.4 [Severity Level (severity_level)](#severity-level-severity_level)  
-   3.5 [Additional Attributes](#additional-attributes)  
-
-4. [Project Structure and Notebooks](#project-structure-and-notebooks)  
-   4.1 [Notebook 1 – Data Preparation](#notebook-1--data-preparation)  
-   4.2 [Notebook 2 – Exploratory Analysis](#notebook-2--exploratory-analysis)  
-   4.3 [Notebook 3 – Feature Engineering and Analytical Base](#notebook-3--feature-engineering-and-analytical-base)  
-   4.4 [Notebook 4 – Consolidation and Reporting](#notebook-4--consolidation-and-reporting)  
-
-5. [CRISP-DM Alignment](#crisp-dm-alignment)  
-
-6. [How to Run](#how-to-run)  
-
-7. [Notebook Code (with Graph References)](#notebook-code-with-graph-references)  
-   7.1 [Notebook 1 – Data Preparation](#notebook-1--data-preparation-1)  
-   7.2 [Notebook 2 – Exploratory Analysis](#notebook-2--exploratory-analysis-1)  
-   7.3 [Notebook 3 – Feature Engineering](#notebook-3--feature-engineering-1)  
-   7.4 [Notebook 4 – Consolidation and Reporting](#notebook-4--consolidation-and-reporting-1)  
-
-8. [Next Steps and Possible Extensions](#next-steps-and-possible-extensions)  
-
-9. [Author and Context](#author-and-context)  
-
-10. [Topics (Tags)](#topics-tags)
+ 1. [Introdução](#1-introdução)
+2. [Objetivos e Questões de Pesquisa](#2-objetivos-e-questões-de-pesquisa)
+3. [Fundamentação e Contexto de Dados](#3-fundamentação-e-contexto-de-dados)
+4. [Metodologia — CRISP-DM](#4-metodologia--crisp-dm)
+5. [Dados Utilizados e Preparação](#5-dados-utilizados-e-preparação)
+6. [Variáveis Analíticas e Hipóteses](#6-variáveis-analíticas-e-hipóteses)
+7. [Técnicas Estatísticas e de IA/ML](#7-técnicas-estatísticas-e-de-iaml)
+8. [Estrutura Técnica — 5 Notebooks](#8-estrutura-técnica--5-notebooks)
+9. [Banco de Dados Relacional e API RESTful](#9-banco-de-dados-relacional-e-api-restful)
+10. [Resultados Obtidos](#10-resultados-obtidos)
+11. [Cronograma, Entregáveis e Alinhamento ao Briefing](#11-cronograma-entregáveis-e-alinhamento-ao-briefing)
+12. [Guia de Instalação e Execução](#12-guia-de-instalação-e-execução)
+13. [Estrutura de Arquivos do Projeto](#13-estrutura-de-arquivos-do-projeto)
+14. [Limitações, Riscos e Cuidados Metodológicos](#14-limitações-riscos-e-cuidados-metodológicos)
+15. [Considerações Finais e Próximos Passos](#15-considerações-finais-e-próximos-passos)
+16. [Referências](#16-referências)
 
 
 <br><br>
 
-## 1. Visão Geral do Projeto
-
-### 1.1 Contexto de Negócio
-
-Desenvolvemos este projeto sob a perspectiva de uma boutique de consultoria especializada em risco de IA aplicada ao setor financeiro. Nossa proposta é apoiar bancos, fintechs e demais organizações na identificação de padrões de incidente, no mapeamento de vulnerabilidades sistêmicas e na transformação de eventos históricos em inteligência acionável para governança, compliance e mitigação de risco.
-
-O projeto utiliza dados do Artificial Intelligence Incident Database (AIID) para construir uma base analítica focada em serviços financeiros, com ênfase em aplicações como concessão de crédito, detecção de fraude, avaliação de risco, automação bancária, pagamentos, seguros e contextos correlatos. A partir dessa base, estruturamos variáveis analíticas, realizamos exploração descritiva inicial e preparamos o pipeline para análises estatísticas, modelagem preditiva e exposição dos resultados via API ou serviços de dados.
-
-Do ponto de vista de negócio, o problema que endereçamos é a ausência de visibilidade estruturada sobre riscos reais de IA em operações financeiras. Muitas instituições já utilizam modelos algorítmicos em decisões sensíveis, mas ainda carecem de mecanismos robustos para entender onde estão seus maiores riscos, quais aplicações demandam supervisão reforçada, quais grupos podem estar mais expostos a viés e como priorizar controles preventivos com base em evidências.
-
-Nesta fase exploratória, o foco está em organizar a base, criar variáveis derivadas, compreender padrões iniciais e consolidar um pipeline claro, pronto para ser expandido em direção a modelos preditivos, dashboards e APIs.
+## 1. [Introdução]()
 
 <br>
 
+### [1.1]() ***Contextualização do tema***
+
+O uso de sistemas de Inteligência Artificial (IA) no setor financeiro cresceu de forma acelerada em aplicações como concessão de crédito, detecção de fraude, *trading* algorítmico, avaliação de risco e automação de atendimento. Esse avanço cria oportunidades de eficiência e inovação, mas também amplia superfícies de **risco operacional**, **viés algorítmico** e **falhas de governança** em ambientes altamente regulados.
+
+Este projeto parte de incidentes reais de IA documentados em diferentes organizações para construir uma visão estruturada de como esses riscos se manifestam em serviços financeiros, com foco em **viés algorítmico**, **risco operacional** e **respostas de governança** em bancos e fintechs.
+
+<br>
+
+### [1.2]() ***Problema de pesquisa***
+
+Dado um conjunto de incidentes de IA registrados em múltiplos setores e filtrados para o domínio financeiro, o problema central é avaliar se:
+
+- existem **padrões sistemáticos** de viés e risco associados a certos tipos de aplicação de IA (crédito, fraude, *trading*);
+- determinados **segmentos de clientes** são desproporcionalmente afetados;
+- **respostas de governança** e de reguladores acompanham adequadamente a gravidade dos incidentes.
+
+<br>
+
+### [1.3]() ***Relevância para o setor financeiro e para a governança de IA***
+
+<br>
+
+| [Stakeholder]() | [Benefício Direto]() |
+|---|---|
+| [**Bancos e Fintechs**]() | Aprimorar gestão de risco operacional e reputacional |
+| [**Reguladores**]() | Supervisão baseada em dados e evidências quantitativas |
+| [**Gestores de Risco**]() | Ferramentas para avaliar exposição a incidentes de IA |
+| [**Compliance**]() | Identificar lacunas regulatórias e priorizar auditorias |
+| [**Investidores**]() | Entender impacto de incidentes de IA no valor de instituições |
+
+
+<br><br>
+
+> [!TIP]
+>
+> Para a [**governança de IA**](), o projeto ilustra como dados de incidentes podem ser transformados em indicadores, modelos preditivos e APIs, viabilizando monitoramento contínuo e respostas estruturadas a riscos.
+>
+> <br>
+
+<br><br>
 
 
 
