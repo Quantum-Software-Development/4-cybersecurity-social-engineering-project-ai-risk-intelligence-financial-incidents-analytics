@@ -44,24 +44,11 @@
 <!-- ========= START BADGES ========= -->
 
 <p align="center">
-  <a href="https://python.org">
-    <img src="https://img.shields.io/badge/Python-3.10+-0fb9b1.svg" />
-  </a>
-  <a href="https://streamlit.io">
-    <img src="https://img.shields.io/badge/Streamlit-Dashboard-14b8a6.svg" />
-  </a>
-  <a href="https://flask.palletsprojects.com">
-    <img src="https://img.shields.io/badge/API-Flask-0ea5a4.svg" />
-  </a>
-  <a href="https://xgboost.readthedocs.io">
-    <img src="https://img.shields.io/badge/XGBoost-1.7+-2dd4bf.svg" />
-  </a>
-  <a href="https://sqlite.org">
-    <img src="https://img.shields.io/badge/SQLite-3+-5eead4.svg" />
-  </a>
-  <a href="https://creativecommons.org/licenses/by-sa/4.0/">
-    <img src="https://img.shields.io/badge/License-CC%20BY--SA%204.0-99f6e4.svg" />
-  </a>
+  <img src="https://img.shields.io/badge/Python-Data%20Science-0fb9b1?logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/Streamlit-Dashboard-14b8a6?logo=streamlit&logoColor=white" />
+  <img src="https://img.shields.io/badge/API-REST-0ea5a4?logo=flask&logoColor=white" />
+  <img src="https://img.shields.io/badge/Machine%20Learning-AI-2dd4bf" />
+  <img src="https://img.shields.io/badge/Database-SQL-5eead4?logo=postgresql&logoColor=black" />
 </p>
 
 
