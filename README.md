@@ -41,7 +41,7 @@
 <br><br>
 <!-- ========= END Institucional INFO ========= -->
 
-<!-- ========= START BADGES ========= -->[![Python](https://img.shields.io/badge/Python-3.10+-0fb9b1.svg)](https://python.org)
+<!-- ========= START BADGES ========= -->
 
 <p align="center">
   <a href="https://python.org">
