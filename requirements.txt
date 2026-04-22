@@ -1,46 +1,82 @@
-# ════════════════════════════════════════════════════
-# requirements.txt — AI Finance Incidents
-# Python 3.10+ | PUC-SP 2026
-# ════════════════════════════════════════════════════
+# ═══════════════════════════════════════════════════════════════
+# AI Incidents in Financial Services — Requirements
+# Python 3.10+ | PUC-SP | CRISP-DM Project
+# ═══════════════════════════════════════════════════════════════
 
-
-# Data
+# ----------------------------------------------------------------
+# 📦 CORE DATA STACK
+# ----------------------------------------------------------------
+# Manipulação e processamento de dados
 pandas>=2.0.0
 numpy>=1.24.0
 
-# Visualization
+# ----------------------------------------------------------------
+# 📊 DATA VISUALIZATION
+# ----------------------------------------------------------------
+# Visualização exploratória e dashboards analíticos
 matplotlib>=3.7.0
 seaborn>=0.12.0
 plotly>=5.18.0
 
-# Statistics
+# ----------------------------------------------------------------
+# 📈 STATISTICS & ANALYSIS
+# ----------------------------------------------------------------
+# Testes estatísticos e modelagem analítica
 scipy>=1.11.0
 statsmodels>=0.14.0
 
-# Machine Learning
+# ----------------------------------------------------------------
+# 🤖 MACHINE LEARNING
+# ----------------------------------------------------------------
+# Modelagem, treinamento e explicabilidade
 scikit-learn>=1.3.0
 xgboost>=1.7.0
 shap>=0.43.0
 joblib>=1.3.0
 
-# Notebooks
+# ----------------------------------------------------------------
+# 📓 NOTEBOOK ENVIRONMENT
+# ----------------------------------------------------------------
+# Ambiente interativo para desenvolvimento e experimentação
 jupyter>=1.0.0
 ipykernel>=6.25.0
 ipywidgets>=8.1.0
 
-# Flask API
+# ----------------------------------------------------------------
+# 🌐 API RESTFUL
+# ----------------------------------------------------------------
+# Backend para exposição de dados e modelos
 flask>=2.3.0
 flask-cors>=4.0.0
 
-# Dashboard
+# ----------------------------------------------------------------
+# 📊 DASHBOARD
+# ----------------------------------------------------------------
+# Interface interativa para visualização de resultados
 streamlit>=1.32.0
 
-# HTTP
+# ----------------------------------------------------------------
+# 🔗 INTEGRATION / HTTP
+# ----------------------------------------------------------------
+# Comunicação com APIs externas
 requests>=2.31.0
 
-# Chatbot
+# ----------------------------------------------------------------
+# 🤖 GENERATIVE AI (OPTIONAL)
+# ----------------------------------------------------------------
+# Integração com modelos de linguagem (chatbot/assistente)
 openai>=1.0.0
 
-# Utilities
+# ----------------------------------------------------------------
+# 🧰 UTILITIES
+# ----------------------------------------------------------------
+# Configuração de ambiente e manipulação de datas
 python-dotenv>=1.0.0
 python-dateutil>=2.8.2
+
+# ----------------------------------------------------------------
+# 🚀 PRODUCTION (OPTIONAL)
+# ----------------------------------------------------------------
+# Descomente para deploy em produção
+# gunicorn>=21.2.0
+# pytest>=7.4.0
