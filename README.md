@@ -206,10 +206,112 @@ In addition, the project adopts the perspective of a boutique consulting firm sp
 <br><br>
 
 
+## AI Financial Incident Intelligence System
 
+<br>
 
+###  Architecture (MLOps-Ready)
 
+```mermaid
+%%{init: {
+  "theme": "base",
+  "themeVariables": {
+    "background": "#0d1117",
+    "primaryColor": "#0d1117",
+    "primaryTextColor": "#ffffff",
+    "primaryBorderColor": "#00d1c1",
+    "lineColor": "#00d1c1",
+    "secondaryColor": "#161b22",
+    "tertiaryColor": "#0d1117",
+    "fontFamily": "Inter, Arial"
+  }
+}}%%
 
+flowchart TB
+
+%% =========================
+%% DATA SOURCES
+%% =========================
+subgraph DS["📥 DATA SOURCES"]
+    A1[Kaggle Dataset<br/>Financial Incidents]
+    A2[External APIs<br/>AI Incident Database]
+end
+
+%% =========================
+%% DATA LAYER
+%% =========================
+subgraph DL["📊 DATA LAYER"]
+    B1[Raw Data Storage]
+    B2[Data Cleaning Pipeline]
+    B3[Processed Dataset]
+end
+
+%% =========================
+%% FEATURE ENGINEERING
+%% =========================
+subgraph FE["⚙️ FEATURE ENGINEERING"]
+    C1[Feature Extraction]
+    C2[Encoding & Transformation]
+    C3[Feature Store (Versioned)]
+end
+
+%% =========================
+%% MACHINE LEARNING LAYER
+%% =========================
+subgraph ML["🤖 MACHINE LEARNING LAYER"]
+    D1[Model Training Pipeline]
+    D2[Model Evaluation]
+    D3[Model Registry (Versioned)]
+end
+
+%% =========================
+%% STORAGE LAYER
+%% =========================
+subgraph ST["🗄️ STORAGE LAYER"]
+    E1[(SQLite Database)]
+    E2[(Serialized Models .pkl)]
+end
+
+%% =========================
+%% APPLICATION LAYER
+%% =========================
+subgraph AP["🚀 APPLICATION LAYER"]
+    F1[REST API Service<br/>FastAPI / Flask]
+    F2[Streamlit Dashboard]
+end
+
+%% =========================
+%% FLOW
+%% =========================
+
+A1 --> B1
+A2 --> B1
+
+B1 --> B2 --> B3
+
+B3 --> C1 --> C2 --> C3
+
+C3 --> D1 --> D2 --> D3
+
+D3 --> E2
+B3 --> E1
+
+E2 --> F1
+E1 --> F1
+
+F1 --> F2
+
+%% =========================
+%% STYLING (DARK + TURQUOISE)
+%% =========================
+
+classDef default fill:#0d1117,stroke:#00d1c1,stroke-width:1px,color:#ffffff;
+classDef group fill:#161b22,stroke:#00d1c1,stroke-width:1px,color:#ffffff;
+
+class DS,DL,FE,ML,ST,AP group;
+```
+
+<br><br>
 
 
 
