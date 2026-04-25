@@ -12,9 +12,9 @@
 
 
 <!-- ========= START REPO TITLE ========= -->
-# <p align="center">🔐 [Segurança em IA, Cibersegurança & Engenharia Social]() | [Projeto: Análise de Risco e Governança de Incidentes de IA no Setor Financeiro]()</p>
+# <p align="center"> 🔐 [Incidentes de IA em Bancos, Serviços Financeiros e Fintechs]()
 
-### <p align="center">Viés Algorítmico • Risco Operacional • Estratégias de Governança em Serviços Financeiros</p>
+### <p align="center"> Uma Análise de Viés Algorítmico, Risco Operacional e Governança para Conformidade Regulatória
 
 
 <br><br>
