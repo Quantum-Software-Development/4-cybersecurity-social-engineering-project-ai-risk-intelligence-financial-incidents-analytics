@@ -186,9 +186,12 @@ A principal contribuição está menos em um modelo “pronto para produção”
 
 ### [1.1]() ***Contextualização do tema***
 
-O uso de sistemas de Inteligência Artificial (IA) no setor financeiro cresceu de forma acelerada em aplicações como concessão de crédito, detecção de fraude, *trading* algorítmico, avaliação de risco e automação de atendimento. Esse avanço cria oportunidades de eficiência e inovação, mas também amplia superfícies de **risco operacional**, **viés algorítmico** e **falhas de governança** em ambientes altamente regulados.
 
-Este projeto parte de incidentes reais de IA documentados em diferentes organizações para construir uma visão estruturada de como esses riscos se manifestam em serviços financeiros, com foco em **viés algorítmico**, **risco operacional** e **respostas de governança** em bancos e fintechs.
+O uso de sistemas de Inteligência Artificial no setor financeiro tem crescido rapidamente em aplicações como [**credit scoring**](), [**fraud detection**](), [**algorithmic trading**](), *[*risk assessment**](), automação de atendimento e apoio à conformidade. Esse avanço amplia a capacidade operacional das instituições, mas também introduz novos vetores de risco, sobretudo em ambientes altamente regulados e sensíveis a falhas de decisão automatizada.
+
+No setor financeiro, falhas de IA não afetam apenas desempenho técnico. Elas podem gerar impactos reputacionais, vieses discriminatórios, perdas operacionais, questionamentos regulatórios e mudanças de políticas internas. Por isso, analisar incidentes reais de IA nesse domínio é uma forma concreta de aproximar governança algorítmica, gestão de risco e evidência empírica.
+
+Este projeto foi construído a partir de incidentes reais documentados no[**AI Incident Database (AIID)**](https://incidentdatabase.ai/) e filtrados para o contexto de serviços financeiros. A proposta central é transformar esse conjunto em uma base analítica estruturada, capaz de sustentar análise estatística, modelagem preditiva, armazenamento relacional, exposição via API e consumo em dashboard.
 
 <br>
 
@@ -196,9 +199,11 @@ Este projeto parte de incidentes reais de IA documentados em diferentes organiza
 
 Dado um conjunto de incidentes de IA registrados em múltiplos setores e filtrados para o domínio financeiro, o problema central é avaliar se:
 
-- existem **padrões sistemáticos** de viés e risco associados a certos tipos de aplicação de IA (crédito, fraude, *trading*);
-- determinados **segmentos de clientes** são desproporcionalmente afetados;
-- **respostas de governança** e de reguladores acompanham adequadamente a gravidade dos incidentes.
+<br>
+
+[-]() existem **padrões sistemáticos** de viés e risco associados a certos tipos de aplicação de IA (crédito, fraude, *trading*);
+[-]() determinados **segmentos de clientes** são desproporcionalmente afetados;
+[-]() **respostas de governança** e de reguladores acompanham adequadamente a gravidade dos incidentes.
 
 <br>
 
@@ -223,84 +228,31 @@ Dado um conjunto de incidentes de IA registrados em múltiplos setores e filtrad
 >
 > <br>
 
+
 <br><br>
 
 
-# Sistema de Inteligência de Incidentes Financeiros com IA  
-## Arquitetura do Sistema (Design MLOps)
+## 2. [Objetivos e Questões de ]()
 
 <br>
 
-```mermaid
-flowchart TB
+### [2.1]() Objetivo Geral
 
-subgraph FONTES_DE_DADOS
-    A1[Dataset Kaggle - Incidentes Financeiros]
-    A2[APIs Externas - Base de Incidentes]
-end
+Avaliar, com base em dados estruturados de incidentes de IA no setor financeiro, se há padrões relevantes de **viés algorítmico**, **risco operacional** e **governança**, produzindo evidências úteis para análise, monitoramento e suporte à decisão.
 
-subgraph CAMADA_DE_DADOS
-    B1[Armazenamento de Dados Brutos]
-    B2[Pipeline de Limpeza de Dados]
-    B3[Dataset Processado]
-end
+<br>
 
-subgraph ENGENHARIA_DE_FEATURES
-    C1[Extração de Features]
-    C2[Transformação e Codificação]
-    C3[Feature Store Versionada]
-end
+### [2.2]() Objetivos específicos
 
-subgraph PIPELINE_DE_ML
-    D1[Treinamento de Modelos]
-    D2[Avaliação de Modelos]
-    D3[Registro de Modelos]
-end
+<br>
 
-subgraph ARMAZENAMENTO
-    E1[(Banco de Dados SQLite)]
-    E2[(Modelos Serializados)]
-end
+[1.]() Identificar incidentes de IA relacionados a serviços financeiros.  
+[2.]() Estruturar e enriquecer os dados com variáveis derivadas de interesse analítico.  
+[p3.]() Avaliar hipóteses estatísticas sobre concentração, viés, severidade e resposta regulatória.  
+[4.]() Construir modelos preditivos para classificação de severidade e investigação regulatória.  
+[5.]() Organizar os resultados em uma arquitetura composta por notebooks, base relacional, API RESTful e dashboard.
 
-subgraph APLICACAO
-    F1[API REST - FastAPI / Flask]
-    F2[Dashboard Streamlit]
-end
-
-A1 --> B1
-A2 --> B1
-
-B1 --> B2 --> B3
-B3 --> C1 --> C2 --> C3
-C3 --> D1 --> D2 --> D3
-
-D3 --> E2
-B3 --> E1
-
-E2 --> F1
-E1 --> F1
-
-F1 --> F2
-
-%% =========================
-%% ESTILO TURQUESA (COMPATÍVEL GITHUB)
-%% =========================
-
-classDef default fill:#0d1117,stroke:#00d1c1,stroke-width:1px,color:#ffffff;
-classDef grupo fill:#0d1117,stroke:#00d1c1,stroke-width:2px,color:#ffffff;
-
-class FONTES_DE_DADOS,CAMADA_DE_DADOS,ENGENHARIA_DE_FEATURES,PIPELINE_DE_ML,ARMAZENAMENTO,APLICACAO grupo;
-```
-
-
-
-
-
-
-
-
-
-
+<br><br>
 
 
 
