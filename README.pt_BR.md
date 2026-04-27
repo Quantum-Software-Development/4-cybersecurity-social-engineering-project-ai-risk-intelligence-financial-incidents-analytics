@@ -41,6 +41,20 @@
 <br><br>
 <!-- ========= END Institucional INFO ========= -->
 
+<!-- ========= START BADGES ========= -->
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-Data%20Science-0fb9b1?logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/Streamlit-Dashboard-14b8a6?logo=streamlit&logoColor=white" />
+  <img src="https://img.shields.io/badge/API-REST-0ea5a4?logo=flask&logoColor=white" />
+  <img src="https://img.shields.io/badge/Machine%20Learning-AI-2dd4bf" />
+  <img src="https://img.shields.io/badge/Database-SQL-5eead4?logo=postgresql&logoColor=black" />
+</p>
+
+<br><br>
+<!-- ========= END START BADGES ========= -->
+
+
 
 
 ##  [Visão executiva]()
@@ -55,29 +69,11 @@ A principal contribuição está menos em um modelo “pronto para produção”
 
 
 
-<br><br>
 
-#
-
-<br><br>
-
-
-<!-- ========= START BADGES ========= -->
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-Data%20Science-0fb9b1?logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/Streamlit-Dashboard-14b8a6?logo=streamlit&logoColor=white" />
-  <img src="https://img.shields.io/badge/API-REST-0ea5a4?logo=flask&logoColor=white" />
-  <img src="https://img.shields.io/badge/Machine%20Learning-AI-2dd4bf" />
-  <img src="https://img.shields.io/badge/Database-SQL-5eead4?logo=postgresql&logoColor=black" />
-</p>
 
 <br><br>
 
-#
 
-<br><br>
-<!-- ========= END START BADGES ========= -->
 
 
 
