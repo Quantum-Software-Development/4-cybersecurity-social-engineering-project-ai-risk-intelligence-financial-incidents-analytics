@@ -56,17 +56,17 @@
 </p>
 <!-- ========= END PPTX -->
 
-<br><br><br><br>
+<br><br>
+
+#
+
+<br><br>
 
 <!-- ========= END BADGEO ========= -->
 
 
 
 <!-- ========= START Institucional INFO ========= -->
-
-
-
-<br>
 
 [**Projeto Integrador — 5º Semestre | PUC-SP**]()
 [**Institution:**]() Pontifical Catholic University of São Paulo  – Humanistic AI & Data Science 
@@ -75,11 +75,8 @@
 [**Metodologia**:]()  CRISP-DM · **Fonte de Dados**: AI Incident Database (AIID)
 [**Professor:**]()  [✨ Eduardo Savino Gomes]()
 
-<br><br>
 
-#
-
-<br><br>
+<br><br><br><br>
 <!-- ========= END Institucional INFO ========= -->
 
 <!-- ========= START BADGES ========= -->
