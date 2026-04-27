@@ -17,11 +17,7 @@
 ### <p align="center"> Uma Análise de Viés Algorítmico, Risco Operacional e Governança para Conformidade Regulatória
 
 
-<br><br>
-
-#
-
-<br><br>
+<br><br><br><br>
 <!-- ========= END REPO TITLE ========= -->
 
 
