@@ -115,7 +115,6 @@ Its connection with [**AI Security**]() lies in the need to monitor, evaluate an
 
 ## Table of Contents
 
-## 📋 Summary
 
 1. [Introduction](#1-introduction)
 2. [Objectives and Research Questions](#2-objectives-and-research-questions)
