@@ -46,7 +46,7 @@
     />
   </a>
 
-  <a href="">
+  <a href="https://docs.google.com/presentation/d/1wuR9X_ZuLUC2U2qtaqYrDIb157EfPLxe/edit?usp=sharing&ouid=116111056943857458728&rtpof=true&sd=true">
     <img 
       src="https://img.shields.io/badge/View_PowerPoint-Deck-06b6d4?style=for-the-badge&logo=microsoftpowerpoint&logoColor=white" 
       alt="View PowerPoint"
