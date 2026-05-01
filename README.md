@@ -41,17 +41,16 @@
 <!-- ========= END DashBoar Streamlit -->
 
 
-
-
-  
 <p align="center">
   <a href="https://celebrated-faun-c3f0a2.netlify.app/">
     <img 
       src="https://img.shields.io/badge/View_Presentation-Slides-14b8a6?style=for-the-badge&logo=googleslides&logoColor=white" 
-      alt="View Presentation"
+      alt="Frontend React DOM"
       style="height: 30px; width: auto;"
     />
   </a>
+
+
 
   <a href="https://docs.google.com/presentation/d/1wuR9X_ZuLUC2U2qtaqYrDIb157EfPLxe/edit?usp=sharing&ouid=116111056943857458728&rtpof=true&sd=true">
     <img 
