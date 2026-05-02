@@ -24,7 +24,7 @@
 <!-- ========= Start Dashboard ========= -->
 
 <p align="center">
-  <a href="https://ai-incidents-financial-services.streamlit.app/" target="_blank" rel="noopener noreferrer">
+  <a href="" target="_blank" rel="noopener noreferrer">
     <img 
       src="https://img.shields.io/badge/AI_Incident_Risk_Dashboard_Banking_&_Financial_Services-Streamlit-0f172a?style=for-the-badge&logo=streamlit&logoColor=white" 
       alt="AI Incident Risk Dashboard – Banking & Financial Services"
