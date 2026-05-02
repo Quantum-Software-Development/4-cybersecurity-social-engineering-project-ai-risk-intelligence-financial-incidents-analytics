@@ -84,10 +84,29 @@
 [**Authors:**]()[Fabiana ⚡️ Campanari](https://linktr.ee/fabianacampanari) e [Perdro Vyctor Almeida]()  <br>
 [**Context:**]() This project analyzes real-world AI incidents in banking, financial services and fintech through the lenses of AI security, cybersecurity, social engineering, governance and regulatory compliance.
 
-
-
-<br><br><br><br>
+<br><br>
 <!-- ========= END Institucional INFO ========= -->
+
+
+
+<!-- ========= START SPONSOR BADGES ========= -->
+
+#### <p align="center"> [![Sponsor FabianaCampanari](https://img.shields.io/badge/Sponsor-%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7%20FabianaCampanari%20%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7-brightgreen?logo=GitHub)](https://github.com/sponsors/FabianaCampanari)
+
+<br><br>
+<!-- ========= END SPONSOR BADGES ========= -->
+
+
+<!-- ========= START DEMO VIDEO ========= -->
+
+https://github.com/user-attachments/assets/5d3c33b0-166e-414c-a561-8e8dd509be3d
+
+🖤 Creative Direction, Music Curation & Editing  by Fab⚡️ <br>
+🎶 Soundtrack: "Canon in D" — Johann Pachelbel
+
+<br><br><br>
+<!-- ========= END DEMO VIDEO ========= -->
+
 
 <!-- ========= START BADGES ========= -->
 
@@ -100,31 +119,10 @@
   <img src="https://img.shields.io/badge/Render-Cloud%20Deploy-22c7b8?logo=render&logoColor=white" />
 </p>
 
-<br><br>
-
-
-<br><br>
+<br><br><br>
 <!-- ========= END  BADGES ========= -->
 
 
-
-<!-- ========= START DEMO VIDEO ========= -->
-
-https://github.com/user-attachments/assets/5d3c33b0-166e-414c-a561-8e8dd509be3d
-
-🖤 Creative Direction, Music Curation & Editing  by Fab
-🎶 Soundtrack: "Canon in D" — Johann Pachelbel
-
-<br><br><br><br>
-<!-- ========= END DEMO VIDEO ========= -->
-
-
-
-<!-- ========= START SPONSOR BADGES ========= -->
-
-#### <p align="center"> [![Sponsor FabianaCampanari](https://img.shields.io/badge/Sponsor-%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7%20FabianaCampanari%20%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7-brightgreen?logo=GitHub)](https://github.com/sponsors/FabianaCampanari)
-
-<!-- ========= END SPONSOR BADGES ========= -->
 
 
 The project is aligned with the course because it examines AI not only as a computational tool, but as a socio-technical risk layer embedded in highly regulated financial systems. In this context, failures in AI-driven applications such as credit scoring, fraud detection, trading systems and automated decision-making may generate algorithmic bias, operational disruption, regulatory exposure and harm to customers.
