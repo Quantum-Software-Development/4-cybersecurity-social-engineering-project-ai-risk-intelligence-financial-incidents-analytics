@@ -11,20 +11,24 @@
 
 
 
+
 <!-- ========= START REPO TITLE ========= -->
-# <p align="center"> 🔐 [Incidentes de IA em Bancos, Serviços Financeiros e Fintechs]()
 
-### <p align="center"> Uma Análise de Viés Algorítmico, Risco Operacional e Governança para Conformidade Regulatória
+# <p align="center"> 🔐 [AI Incidents in Banking, Financial Services and Fintech]()
+
+###  <p align="center"> Análise de Viés Algorítmico, Risco Operacional, Modelagem Preditiva e Governança de IA em Serviços Financeiros
 
 
-<br><br><br><br>
+
+<br><br>
 <!-- ========= END REPO TITLE ========= -->
 
 
-<!-- ========= Start Dashboard ========= -->
+<!-- ========= Start Dashboard Streamlit ========= -->
+
 
 <p align="center">
-  <a href="" target="_blank" rel="noopener noreferrer">
+  <a href="https://ai-incidents-financial-services.streamlit.app/" target="_blank" rel="noopener noreferrer">
     <img 
       src="https://img.shields.io/badge/AI_Incident_Risk_Dashboard_Banking_&_Financial_Services-Streamlit-0f172a?style=for-the-badge&logo=streamlit&logoColor=white" 
       alt="AI Incident Risk Dashboard – Banking & Financial Services"
@@ -34,17 +38,19 @@
 </p>
 
 
-<!-- ========= END DashBoar -->
+<!-- ========= END DashBoar Streamlit -->
 
-  
+
 <p align="center">
-  <a href="https://luxury-taffy-7cbd89.netlify.app/">
+  <a href="https://celebrated-faun-c3f0a2.netlify.app/">
     <img 
       src="https://img.shields.io/badge/View_Presentation-Slides-14b8a6?style=for-the-badge&logo=googleslides&logoColor=white" 
       alt="Frontend React DOM"
       style="height: 30px; width: auto;"
     />
   </a>
+
+
 
   <a href="https://docs.google.com/presentation/d/1wuR9X_ZuLUC2U2qtaqYrDIb157EfPLxe/edit?usp=sharing&ouid=116111056943857458728&rtpof=true&sd=true">
     <img 
@@ -56,62 +62,100 @@
 </p>
 <!-- ========= END PPTX -->
 
-<br><br>
-
-#
-
-<br><br>
+<br><br><br><br>
 
 <!-- ========= END BADGEO ========= -->
 
 
 
+<!-- ========= START Institucional INFO ========= -->
+
 
 
 <!-- ========= START Institucional INFO ========= -->
 
-[**Projeto Integrador — 5º Semestre | PUC-SP**]()
-[**Institution:**]() Pontifical Catholic University of São Paulo  – Humanistic AI & Data Science 
-[**Disciplina**:]()  Segurança Cibernética e Engenharia Social · Sistemas Distribuídos e Aprendizagem de Máquina  
-[**Course Repo:**]() INTEGRATED PROJECT: Cybersecurity and Social Engineering
-[**Metodologia**:]()  CRISP-DM · **Fonte de Dados**: AI Incident Database (AIID)
-[**Professor:**]()  [✨ Eduardo Savino Gomes]()
 
+<br>
 
-<br><br><br><br>
+[**Institution:**]() Pontifical Catholic University of São Paulo (PUC‑SP – Humanistic AI & Data Science • 5º Semester • 2026)  
+[**School:**]() FACEI – Faculty of Interdisciplinary Studies  
+[**Course:**]() AI Security, Cybersecurity & Social Engineering  
+[**Professor:**]() [✨ Eduardo Savino Gomes]()  
+[**Authors:**]()[Fabiana ⚡️ Campanari](https://linktr.ee/fabianacampanari) e [Perdro Vyctor Almeida]()  <br>
+[**Context:**]() Este projeto analisa incidentes reais de Inteligência Artificial em bancos, serviços financeiros e fintechs sob as perspectivas de segurança em IA, cibersegurança, engenharia social, governança e conformidade regulatória. 
+
+<br><br>
 <!-- ========= END Institucional INFO ========= -->
+
+
+
+<!-- ========= START SPONSOR BADGES ========= -->
+
+#### <p align="center"> [![Sponsor FabianaCampanari](https://img.shields.io/badge/Sponsor-%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7%20FabianaCampanari%20%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7-brightgreen?logo=GitHub)](https://github.com/sponsors/FabianaCampanari)
+
+<br><br>
+<!-- ========= END SPONSOR BADGES ========= -->
+
+
+<!-- ========= START DEMO VIDEO ========= -->
+
+https://github.com/user-attachments/assets/5d3c33b0-166e-414c-a561-8e8dd509be3d
+
+🖤 Creative Direction, Music Curation & Editing  by Fab⚡️ <br>
+🎶 Soundtrack: "Canon in D" — Johann Pachelbel
+
+<br><br><br>
+<!-- ========= END DEMO VIDEO ========= -->
+
 
 <!-- ========= START BADGES ========= -->
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-Data%20Science-0fb9b1?logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/Streamlit-Dashboard-14b8a6?logo=streamlit&logoColor=white" />
+  <img src="https://img.shields.io/badge/API-REST-0ea5a4?logo=flask&logoColor=white" />
+  <img src="https://img.shields.io/badge/Machine%20Learning-AI-2dd4bf" />
+  <img src="https://img.shields.io/badge/Database-SQL-5eead4?logo=postgresql&logoColor=black" />
+  <img src="https://img.shields.io/badge/Render-Cloud%20Deploy-22c7b8?logo=render&logoColor=white" />
+</p>
+
+<br><br><br>
+<!-- ========= END  BADGES ========= -->
 
 
 
+<!-- ========= START INTRO ========= -->
+##  [Visão Geral]()
+
+Este projeto consolida uma visão ponta a ponta sobre incidentes de IA em serviços financeiros, conectando dados públicos do AI Incident Database (AIID) a um pipeline completo de análise, modelagem e exposição via API e dashboard.
+
+Do ponto de vista executivo, o trabalho mostra como incidentes dispersos podem ser transformados em indicadores estruturados de risco, com foco em [**viés algorítmico**](), [**risco operacional**]() e [**respostas de governança**](). A principal contribuição está na **arquitetura analítica integrada**: da aquisição dos dados à disponibilização de endpoints RESTful e camada de visualização.
+
+O sistema responde a perguntas como:
+
+[-]() Quais tipos de aplicação de IA geram mais incidentes no setor financeiro?
+[-]() Viés algorítmico afeta segmentos de clientes de forma desigual?
+[-]() É possível prever a severidade de um incidente antes de uma investigação regulatória?
 
 
-##  [Visão executiva]()
-
-Este projeto consolida uma visão ponta a ponta sobre incidentes de IA em serviços financeiros, conectando dados públicos do AI Incident Database (AIID) a um pipeline completo de análise, modelagem e exposição via API e dashboard. Do ponto de vista executivo, o trabalho mostra como incidentes dispersos podem ser transformados em indicadores estruturados de risco, com foco em viés algorítmico, risco operacional e respostas de governança, consumidos por um dashboard interativo que lê diretamente a API.
-
-A solução é organizada segundo o referencial **CRISP‑DM**, tratado aqui como modelo de projeto de negócio baseado em dados: partimos de *Business Understanding* (problema, escopo financeiro e questões de risco/compliance), passamos por *Data Understanding* e *Data Preparation* (construção da base temática de incidentes), avançamos para *Modeling* e *Evaluation* (modelos supervisionados e testes de hipóteses) e chegamos ao *Deployment* em uma arquitetura com banco relacional, API RESTful e camada de apresentação.
-
-Além da camada analítica tradicional, o projeto foi desenhado para incorporar uma interface conversacional integrada a modelos da OpenAI/ChatGPT, permitindo que usuários não técnicos interajam com os resultados por meio de linguagem natural, façam perguntas sobre os incidentes e explorem os dados sem precisar conhecer detalhes de SQL, estatística ou machine learning.
-
-A principal contribuição está menos em um modelo “pronto para produção” e mais na arquitetura analítica integrada: da aquisição dos dados à disponibilização de endpoints RESTful e de uma camada de visualização e interação, respeitando limitações da base e deixando claro que, nas condições atuais, os modelos devem ser tratados como prova de conceito, não como ferramenta decisória final.
-
-
-
-
+> [!IMPORTANT]
+>
+>  [**Posicionamento correto**:]() os modelos preditivos devem ser tratados como **prova de conceito metodológica**. A principal entrega é a arquitetura analítica integrada — não um classificador de alta acurácia pronto para produção.
+> <br>
+>
 
 <br><br>
 
+#
 
-
+<br><br>
+<!-- ========= END INTRO ========= -->
 
 
 
 <!-- ========= START Confidentiality statement ========= -->
 
-> [!IMPORTANT]
+> [!NOTE]
 > 
 > ⚠️ Heads Up
 >
@@ -154,8 +198,8 @@ A principal contribuição está menos em um modelo “pronto para produção”
 <!-- ======================================= END DEFAULT HEADER ⚡️ ===========================================  -->
 
 
-
 <br><br>
+
 
 ## Table of Contents
 
