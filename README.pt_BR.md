@@ -138,6 +138,9 @@ O sistema responde a perguntas como:
 [-]() É possível prever a severidade de um incidente antes de uma investigação regulatória?
 
 
+<br><br>
+
+
 > [!IMPORTANT]
 >
 >  [**Posicionamento correto**:]() os modelos preditivos devem ser tratados como **prova de conceito metodológica**. A principal entrega é a arquitetura analítica integrada — não um classificador de alta acurácia pronto para produção.
