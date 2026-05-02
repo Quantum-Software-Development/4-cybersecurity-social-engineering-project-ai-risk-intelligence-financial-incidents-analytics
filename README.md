@@ -40,22 +40,19 @@
 
 <!-- ========= END DashBoar Streamlit -->
 
-
 <p align="center">
   <a href="https://stellar-fenglisu-9274fc.netlify.app/">
     <img 
-      src="https://img.shields.io/badge/View_Presentation-Slides-14b8a6?style=for-the-badge&logo=googleslides&logoColor=white" 
-      alt="Frontend React DOM"
+      src="https://img.shields.io/badge/React-Interactive%20Slides-14b8a6?style=for-the-badge&logo=react&logoColor=white" 
+      alt="React Interactive Slides"
       style="height: 30px; width: auto;"
     />
   </a>
 
-
-
   <a href="https://docs.google.com/presentation/d/1wuR9X_ZuLUC2U2qtaqYrDIb157EfPLxe/edit?usp=sharing&ouid=116111056943857458728&rtpof=true&sd=true">
     <img 
-      src="https://img.shields.io/badge/View_PowerPoint-Deck-06b6d4?style=for-the-badge&logo=microsoftpowerpoint&logoColor=white" 
-      alt="View PowerPoint"
+      src="https://img.shields.io/badge/PPTX-Presentation%20Deck-06b6d4?style=for-the-badge&logo=microsoftpowerpoint&logoColor=white" 
+      alt="PPTX Presentation Deck"
       style="height: 30px; width: auto;"
     />
   </a>
