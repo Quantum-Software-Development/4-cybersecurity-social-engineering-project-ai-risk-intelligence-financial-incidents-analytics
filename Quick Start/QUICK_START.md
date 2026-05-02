@@ -1,197 +1,234 @@
-# ⚡ Guia Rápido de Início (Quick Start)
+# ⚡ Quick Start Guide
 
-## 🚀 Como começar em 5 minutos
+## 🚀 How to Get Started in 5 Minutes
 
-### 1. Preparação do Ambiente
+### 1. Environment Setup
 
 ```bash
-# Criar ambiente virtual
+# Create virtual environment
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
-# ou: venv\Scripts\activate  # Windows
+# or: venv\Scripts\activate  # Windows
 
-# Instalar dependências
+# Install dependencies
 pip install -r requirements.txt
 ```
 
-### 2. Preparar os Dados
+---
 
-**Opção A - Usar dados fornecidos**:
-- Arquivos já incluídos: `incidents.csv` e `incidents_finance_filtered.csv`
-- Pule para o passo 3
+### 2. Prepare the Data
 
-**Opção B - Baixar dados atualizados**:
+**Option A — Use provided data**:
+
+* Included files: `incidents.csv` and `incidents_finance_filtered.csv`
+* Skip to step 3
+
+**Option B — Download updated data**:
+
 ```python
 import kagglehub
 path = kagglehub.dataset_download("konradb/ai-incident-database")
 print("Path to dataset files:", path)
 ```
 
-### 3. Executar Notebooks na Ordem
+---
 
-#### 📓 Notebook 1: Exploração e Preparação
+### 3. Run the Notebooks in Order
+
+#### 📓 Notebook 1: Exploration and Preparation
+
 ```bash
 jupyter notebook notebook_1_exploracao_preparacao.ipynb
 ```
 
-**O que faz**:
-- Carrega dataset AIID
-- Filtra incidentes do setor financeiro
-- Cria variáveis derivadas
-- Gera banco SQLite
+**What it does**:
 
-**Saídas**:
-- `incidents_finance_filtered.csv`
-- `ai_finance_incidents.db`
+* Loads the AIID dataset
+* Filters financial sector incidents
+* Creates derived variables
+* Generates SQLite database
 
-**Tempo estimado**: ~5-10 minutos
+**Outputs**:
+
+* `incidents_finance_filtered.csv`
+* `ai_finance_incidents.db`
+
+**Estimated time**: ~5–10 minutes
 
 ---
 
-#### 📊 Notebook 2: Análise Estatística
+#### 📊 Notebook 2: Statistical Analysis
+
 ```bash
 jupyter notebook notebook_2_analise_estatistica.ipynb
 ```
 
-**O que faz**:
-- Estatísticas descritivas
-- 4 testes de hipóteses
-- Visualizações
+**What it does**:
 
-**Pré-requisito**: Notebook 1 completo
+* Descriptive statistics
+* 4 hypothesis tests
+* Visualizations
 
-**Tempo estimado**: ~3-5 minutos
+**Prerequisite**: Notebook 1 completed
+
+**Estimated time**: ~3–5 minutes
 
 ---
 
-#### 🤖 Notebook 3: Modelagem ML
+#### 🤖 Notebook 3: ML Modeling
+
 ```bash
 jupyter notebook notebook_3_modelagem_ml.ipynb
 ```
 
-**O que faz**:
-- Treina 2 modelos ML
-- Avalia performance
-- Salva modelos
+**What it does**:
 
-**Saídas**:
-- `models/severity_classifier.pkl`
-- `models/investigation_classifier.pkl`
+* Trains 2 ML models
+* Evaluates performance
+* Saves trained models
 
-**Pré-requisito**: Notebook 1 completo
+**Outputs**:
 
-**Tempo estimado**: ~10-15 minutos (inclui treinamento)
+* `models/severity_classifier.pkl`
+* `models/investigation_classifier.pkl`
+
+**Prerequisite**: Notebook 1 completed
+
+**Estimated time**: ~10–15 minutes (includes training)
 
 ---
 
-#### 🚀 Notebook 4: API RESTful
+#### 🚀 Notebook 4: RESTful API
+
 ```bash
 jupyter notebook notebook_4_api_restful.ipynb
 ```
 
-**O que faz**:
-- Define 9 endpoints
-- Testa API
-- Gera documentação
+**What it does**:
 
-**Pré-requisitos**: Notebooks 1 e 3 completos
+* Defines 9 endpoints
+* Tests API
+* Generates documentation
 
-**Tempo estimado**: ~5 minutos
+**Prerequisites**: Notebooks 1 and 3 completed
+
+**Estimated time**: ~5 minutes
 
 ---
 
-### 4. Executar a API
+### 4. Run the API
 
 ```bash
-# Copiar código da API para arquivo standalone
-# (ou usar o código do Notebook 4)
+# Copy API code into a standalone file
+# (or use the code from Notebook 4)
 
 python app.py
 ```
 
-**Testar**:
+**Test it**:
+
 ```bash
-# Endpoint raiz
+# Root endpoint
 curl http://localhost:5000/
 
-# Listar incidentes
+# List incidents
 curl http://localhost:5000/api/incidents?limit=5
 
-# Estatísticas
+# Statistics
 curl http://localhost:5000/api/stats/by-application
 ```
 
 ---
 
-## 🎯 Atalhos para Casos de Uso Comuns
+# 🎯 Shortcuts for Common Use Cases
 
-### Caso 1: "Só quero ver os resultados"
-1. Execute Notebook 1 (gera dados)
-2. Execute Notebook 2 (análises e gráficos)
-3. Leia o `RESUMO_EXECUTIVO.md`
+### Case 1: “I just want to see the results”
 
-### Caso 2: "Quero usar os modelos ML"
-1. Execute Notebook 1 (gera dados)
-2. Execute Notebook 3 (treina modelos)
-3. Use modelos salvos em `models/`
-
-```python
-import joblib
-modelo = joblib.load('models/severity_classifier.pkl')
-# Fazer predições...
-```
-
-### Caso 3: "Quero a API funcionando"
-1. Execute Notebooks 1 e 3 (dados + modelos)
-2. Execute Notebook 4 (define API)
-3. Copie código para `app.py` e execute
-4. Acesse http://localhost:5000
-
-### Caso 4: "Quero customizar as análises"
-1. Execute Notebook 1 (dados base)
-2. Crie seu próprio notebook
-3. Use `incidents_finance_filtered.csv` e `ai_finance_incidents.db`
+1. Run Notebook 1 (generate data)
+2. Run Notebook 2 (analysis and charts)
+3. Read `RESUMO_EXECUTIVO.md`
 
 ---
 
-## 🐛 Resolução de Problemas Comuns
+### Case 2: “I want to use the ML models”
 
-### Problema: ModuleNotFoundError
+1. Run Notebook 1 (generate data)
+2. Run Notebook 3 (train models)
+3. Use saved models in `models/`
 
-**Solução**:
+```python
+import joblib
+model = joblib.load('models/severity_classifier.pkl')
+# Make predictions...
+```
+
+---
+
+### Case 3: “I want the API working”
+
+1. Run Notebooks 1 and 3 (data + models)
+2. Run Notebook 4 (API definition)
+3. Copy code into `app.py` and run it
+4. Access `http://localhost:5000`
+
+---
+
+### Case 4: “I want to customize the analyses”
+
+1. Run Notebook 1 (base data)
+2. Create your own notebook
+3. Use `incidents_finance_filtered.csv` and `ai_finance_incidents.db`
+
+---
+
+# 🐛 Troubleshooting Common Issues
+
+### Problem: `ModuleNotFoundError`
+
+**Solution**:
+
 ```bash
 pip install -r requirements.txt
 ```
 
-### Problema: "Arquivo não encontrado"
+---
 
-**Solução**: 
-- Verifique se está no diretório correto
-- Execute notebooks na ordem correta
-- Verifique se Notebook 1 foi completado
+### Problem: “File not found”
 
-### Problema: Modelos ML não carregam
+**Solution**:
 
-**Solução**:
-1. Execute Notebook 3 completamente
-2. Verifique se pasta `models/` existe
-3. Confirme arquivos `.pkl` foram criados
-
-### Problema: API retorna erro 500
-
-**Solução**:
-1. Verifique se banco `ai_finance_incidents.db` existe
-2. Verifique se modelos foram salvos
-3. Veja logs no terminal para detalhes
+* Make sure you are in the correct directory
+* Run notebooks in the correct order
+* Confirm Notebook 1 was fully completed
 
 ---
 
-## 📁 Estrutura de Arquivos Esperada
+### Problem: ML models do not load
 
-Após executar todos os notebooks:
+**Solution**:
 
-```
-projeto/
+1. Run Notebook 3 completely
+2. Check if the `models/` folder exists
+3. Confirm `.pkl` files were created
+
+---
+
+### Problem: API returns error 500
+
+**Solution**:
+
+1. Check if `ai_finance_incidents.db` exists
+2. Check if models were saved
+3. Review terminal logs for details
+
+---
+
+# 📁 Expected File Structure
+
+After running all notebooks:
+
+```plaintext
+project/
 ├── notebook_1_exploracao_preparacao.ipynb
 ├── notebook_2_analise_estatistica.ipynb
 ├── notebook_3_modelagem_ml.ipynb
@@ -207,64 +244,68 @@ projeto/
 ├── app.py
 ├── requirements.txt
 ├── README.md
-├── RESUMO_EXECUTIVO.md
+├── EXECUTIVE_SUMMARY.md
 └── README_API.md
 ```
 
 ---
 
-## ⏱️ Tempo Total Estimado
+# ⏱️ Estimated Total Time
 
-- **Mínimo** (apenas resultados): ~15-20 minutos
-- **Completo** (tudo incluindo API): ~30-40 minutos
+* **Minimum** (results only): ~15–20 minutes
+* **Complete** (including API): ~30–40 minutes
 
 ---
 
-## 💡 Dicas Pro
+# 💡 Pro Tips
 
-1. **Use Google Colab se não tiver ambiente local**:
-   - Upload dos notebooks
-   - Upload de `incidents.csv`
-   - Execute células sequencialmente
+1. **Use Google Colab if you do not have a local environment**:
 
-2. **Salve trabalho incrementalmente**:
-   - Cada notebook gera arquivos intermediários
-   - Não precisa refazer tudo se algo der errado
+   * Upload notebooks
+   * Upload `incidents.csv`
+   * Execute cells sequentially
 
-3. **Customize para seu caso**:
-   - Todos os notebooks são modularizados
-   - Fácil adaptar filtros, features, modelos
+2. **Save work incrementally**:
+
+   * Each notebook generates intermediate files
+   * No need to redo everything if something fails
+
+3. **Customize for your use case**:
+
+   * All notebooks are modularized
+   * Easy to adapt filters, features, and models
 
 4. **Performance**:
-   - Notebooks 1-2: Rápidos
-   - Notebook 3: Mais demorado (treinamento ML)
-   - Notebook 4: Rápido (apenas definição)
+
+   * Notebooks 1–2: Fast
+   * Notebook 3: Slower (ML training)
+   * Notebook 4: Fast (API setup only)
 
 ---
 
-## 📞 Precisa de Ajuda?
+# 📞 Need Help?
 
-- Verifique `README.md` para documentação completa
-- Verifique `RESUMO_EXECUTIVO.md` para entender resultados
-- Verifique `README_API.md` para documentação da API
-- Revise células de texto nos notebooks para explicações
-
----
-
-## ✅ Checklist de Validação
-
-Após executar tudo, confirme:
-
-- [ ] `incidents_finance_filtered.csv` foi criado
-- [ ] `ai_finance_incidents.db` existe e tem 3 tabelas
-- [ ] Pasta `models/` tem 4 arquivos `.pkl`
-- [ ] Notebook 2 mostrou 4 testes de hipóteses
-- [ ] Notebook 3 mostrou métricas de modelos (F1-Score, etc.)
-- [ ] API responde em http://localhost:5000
-
-Se todos ✅, parabéns! Projeto completo e funcional! 🎉
+* Check `README.md` for complete documentation
+* Check `RESUMO_EXECUTIVO.md` to understand results
+* Check `README_API.md` for API documentation
+* Review notebook text cells for explanations
 
 ---
 
-**Versão**: 1.0  
-**Última atualização**: Abril 2026
+# ✅ Validation Checklist
+
+After execution, confirm:
+
+* [ ] `incidents_finance_filtered.csv` was created
+* [ ] `ai_finance_incidents.db` exists and has 3 tables
+* [ ] `models/` folder contains 4 `.pkl` files
+* [ ] Notebook 2 displayed 4 hypothesis tests
+* [ ] Notebook 3 displayed model metrics (F1-Score, etc.)
+* [ ] API responds at `http://localhost:5000`
+
+If all are ✅, congratulations! Your project is complete and fully functional! 🎉
+
+---
+
+**Version**: 1.0
+**Last Updated**: April 2026 🚀

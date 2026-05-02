@@ -24,8 +24,52 @@
 <!-- ========= END REPO TITLE ========= -->
 
 
+<!-- ========= Start Dashboard ========= -->
+
+<p align="center">
+  <a href="https://ai-incidents-financial-services.streamlit.app/">
+    <img 
+      src="https://img.shields.io/badge/AI_Incident_Risk_Dashboard_Banking_&_Financial_Services-Streamlit-brightgreen?logo=streamlit&logoColor=white&style=flat-square" 
+      alt="AI Incident Risk Dashboard – Banking & Financial Services"
+      style="height: 30px; width: auto;"
+    />
+  </a>
+</p>
+
+
+<!-- ========= END DashBoar -->
+
+  
+<p align="center">
+  <a href="https://luxury-taffy-7cbd89.netlify.app/">
+    <img 
+      src="https://img.shields.io/badge/View_Presentation-Slides-14b8a6?style=for-the-badge&logo=googleslides&logoColor=white" 
+      alt="View Presentation"
+      style="height: 30px; width: auto;"
+    />
+  </a>
+
+  <a href="https://docs.google.com/presentation/d/1wuR9X_ZuLUC2U2qtaqYrDIb157EfPLxe/edit?usp=sharing&ouid=116111056943857458728&rtpof=true&sd=true">
+    <img 
+      src="https://img.shields.io/badge/View_PowerPoint-Deck-06b6d4?style=for-the-badge&logo=microsoftpowerpoint&logoColor=white" 
+      alt="View PowerPoint"
+      style="height: 30px; width: auto;"
+    />
+  </a>
+</p>
+<!-- ========= END PPTX -->
+
+<br><br><br><br>
+
+<!-- ========= END BADGEO ========= -->
+
+
+
 <!-- ========= START Institucional INFO ========= -->
-## [Cybersecurity and Social Engineering Integrated Project - PUC-SP 5th Semester (2026)]()
+
+
+
+<!-- ========= START Institucional INFO ========= -->
 
 
 <br>
