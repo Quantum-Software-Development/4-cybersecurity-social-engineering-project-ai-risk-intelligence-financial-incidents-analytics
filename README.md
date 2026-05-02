@@ -28,7 +28,7 @@
 
 
 <p align="center">
-  <a href="" target="_blank" rel="noopener noreferrer">
+  <a href="https://ai-incidents-financial-services.streamlit.app/" target="_blank" rel="noopener noreferrer">
     <img 
       src="https://img.shields.io/badge/AI_Incident_Risk_Dashboard_Banking_&_Financial_Services-Streamlit-0f172a?style=for-the-badge&logo=streamlit&logoColor=white" 
       alt="AI Incident Risk Dashboard – Banking & Financial Services"
@@ -81,6 +81,7 @@
 [**School:**]() FACEI – Faculty of Interdisciplinary Studies  
 [**Course:**]() AI Security, Cybersecurity & Social Engineering  
 [**Professor:**]() [✨ Eduardo Savino Gomes]()  
+[**Authors**:**  [Fabiana ⚡️ Campanari](https://linktr.ee/fabianacampanari) e [Perdro Vyctor Almeida]()  <br>
 [**Context:**]() This project analyzes real-world AI incidents in banking, financial services and fintech through the lenses of AI security, cybersecurity, social engineering, governance and regulatory compliance.
 
 
@@ -96,8 +97,8 @@
   <img src="https://img.shields.io/badge/API-REST-0ea5a4?logo=flask&logoColor=white" />
   <img src="https://img.shields.io/badge/Machine%20Learning-AI-2dd4bf" />
   <img src="https://img.shields.io/badge/Database-SQL-5eead4?logo=postgresql&logoColor=black" />
+  <img src="https://img.shields.io/badge/Render-Cloud%20Deploy-22c7b8?logo=render&logoColor=white" />
 </p>
-
 
 <br><br>
 
@@ -162,7 +163,6 @@ Its connection with [**AI Security**]() lies in the need to monitor, evaluate an
 
 ## Table of Contents
 
-## 📋 Summary
 
 1. [Introduction](#1-introduction)
 2. [Objectives and Research Questions](#2-objectives-and-research-questions)
