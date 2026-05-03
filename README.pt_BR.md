@@ -18,10 +18,31 @@
 
 ###  <p align="center"> Análise de Viés Algorítmico, Risco Operacional, Modelagem Preditiva e Governança de IA em Serviços Financeiros
 
-
-
 <br><br>
 <!-- ========= END REPO TITLE ========= -->
+
+
+<!-- ========= START DashBoar Streamlit -->
+<p align="center">
+  <a href="https://ai-incidents-financial-services.streamlit.app/" target="_blank" rel="noopener noreferrer">
+    <img 
+      src="https://img.shields.io/badge/AI_Incident_Risk_Dashboard_Banking_&_Financial_Services-Streamlit-0f172a?style=for-the-badge&logo=streamlit&logoColor=white" 
+      alt="AI Incident Risk Dashboard – Banking & Financial Services"
+      style="height: 32px; width: auto;"
+    />
+  </a>
+</p>
+
+<!-- ========= END Dashboard Streamlit -->
+
+<p align="center">
+  <a href="https://stellar-fenglisu-9274fc.netlify.app/">
+    <img 
+      src="https://img.shields.io/badge/React-Interactive%20Slides-115e59?style=for-the-badge&logo=react&logoColor=white" 
+      alt="React Interactive Slides"
+      style="height: 30px; width: auto;"
+    />
+  </a>
 
   <a href="https://docs.google.com/presentation/d/1CeNA6D3Va2X8nc0dVeD1BKxV97d1SI-v/edit?slide=id.p1#slide=id.p1">
     <img 
@@ -38,12 +59,6 @@
 
 
 <!-- ========= START Institucional INFO ========= -->
-
-
-
-<!-- ========= START Institucional INFO ========= -->
-
-
 <br>
 
 [**Institution:**]() Pontifical Catholic University of São Paulo (PUC‑SP – Humanistic AI & Data Science • 5º Semester • 2026)  
