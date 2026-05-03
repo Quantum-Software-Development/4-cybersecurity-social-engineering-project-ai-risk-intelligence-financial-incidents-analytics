@@ -98,9 +98,6 @@ https://github.com/user-attachments/assets/5d3c33b0-166e-414c-a561-8e8dd509be3d
 
 
 <!-- ========= START BADGES ========= -->
-
-
-
 <p align="center">
   <img src="https://img.shields.io/badge/Python-Data%20Science-0f172a?logo=python&logoColor=white" />
   <img src="https://img.shields.io/badge/React-Interactive%20Presentation-123c4a?logo=react&logoColor=white" />
@@ -218,58 +215,116 @@ The system answers questions such as:
 
 <br><br>
 
-## 1. Introduction
+
+## 1. [Introduction]()
 
 <br>
 
-### 1.1 Business Context
+### 1.1 [**Context of the topic**]()
 
-The adoption of Artificial Intelligence (AI) in banking and financial services has expanded significantly across critical domains such as credit scoring, fraud detection, algorithmic trading, risk management, and customer operations.
+The use of Artificial Intelligence systems in the financial sector has been growing rapidly in applications such as [**credit scoring**](), [**fraud detection**](), [**algorithmic trading**](), *[**risk assessment**](), customer service automation, and compliance support. This advancement expands institutions’ operational capacity but also introduces new risk vectors, especially in highly regulated environments sensitive to automated decision-making failures.
 
-While these systems improve efficiency and decision-making speed, they also introduce material risks related to **model bias**, **operational failures**, and **governance gaps**. For financial institutions, these risks translate directly into **regulatory exposure, reputational damage, and financial loss**.
+In the financial sector, AI failures do not only affect technical performance. They can generate reputational damage, discriminatory bias, operational losses, regulatory scrutiny, and changes in internal policies. Therefore, analyzing real AI incidents in this domain is a concrete way to bridge algorithmic governance, risk management, and empirical evidence.
 
-This project analyzes real-world AI incident reports to support a structured understanding of how these risks emerge in financial environments, with a focus on **risk patterns, affected customer groups, and governance response effectiveness**.
-
-<br>
-
-### 1.2 Business Problem
-
-Given a dataset of AI-related incidents filtered for the financial sector, this project addresses the following business questions:
-
-- Are there **recurring risk patterns** associated with specific AI use cases (credit, fraud, trading)?
-- Do certain **customer segments experience disproportionate impact** from AI-driven decisions?
-- Are **governance and regulatory responses aligned with incident severity and risk level**?
+This project was built using real documented incidents from the [**AI Incident Database (AIID)**](https://incidentdatabase.ai/) filtered for the financial services context. The central proposal is to transform this dataset into a structured analytical base capable of supporting statistical analysis, predictive modeling, relational storage, API exposure, and dashboard consumption.
 
 <br>
 
-### 1.3 Business Value for Financial Institutions
+### 1.2 [**Research problem**]()
+
+Given a set of AI incidents recorded across multiple sectors and filtered to the financial domain, the central problem is to evaluate whether:
 
 <br>
 
-| Stakeholder | Business Value |
-|---|---|
-| Banks and Financial Institutions | Improved operational risk control and reduced exposure to model failures |
-| Regulators | Data-driven supervision and better risk monitoring capabilities |
-| Risk Management Teams | Enhanced visibility of AI-related operational risks |
-| Compliance Departments | Identification of governance gaps and audit prioritization |
-| Executive Leadership | Better understanding of AI risk impact on business performance and reputation |
+[-]() there are **systematic patterns** of bias and risk associated with certain types of AI applications (credit, fraud, *trading*);
+[-]() certain **customer segments** are disproportionately affected;
+[-]() **governance and regulatory responses** adequately match the severity of incidents.
 
+<br>
+
+### 1.3 [**Relevance to the financial sector and AI governance**]()
+
+<br>
+
+| [Stakeholder]()            | [Direct Benefit]()                                           |
+| -------------------------- | ------------------------------------------------------------ |
+| [**Banks and Fintechs**]() | Improve operational and reputational risk management         |
+| [**Regulators**]()         | Evidence-based and data-driven supervision                   |
+| [**Risk Managers**]()      | Tools to assess exposure to AI incidents                     |
+| [**Compliance**]()         | Identify regulatory gaps and prioritize audits               |
+| [**Investors**]()          | Understand the impact of AI incidents on institutional value |
 
 <br><br>
 
-> [!Note]
+> [!TIP]
 >
-> This project demonstrates how AI incident data can be transformed into actionable risk indicators, predictive models, and API-driven monitoring systems, enabling continuous oversight and improved governance in financial environments.
+> For [**AI governance**](), the project illustrates how incident data can be transformed into indicators, predictive models, and APIs, enabling continuous monitoring and structured responses to risks.
 >
 > <br>
->
 
 <br><br>
 
+## 2. [Objectives and Questions]()
 
+<br>
+
+### 2.1 [General Objective]()
+
+To evaluate, based on structured data from AI incidents in the financial sector, whether there are relevant patterns of **algorithmic bias**, **operational risk**, and **governance**, producing evidence useful for analysis, monitoring, and decision support.
 
 <br><br>
 
+### 2.2 [Specific objectives]()
+
+<br>
+
+[1.]() Identify AI incidents related to financial services.
+[2.]() Structure and enrich the data with derived analytical variables.
+[3.]() Evaluate statistical hypotheses on concentration, bias, severity, and regulatory response.
+[4.]() Build predictive models for severity classification and regulatory investigation.
+[5.]() Organize results into an architecture composed of notebooks, relational database, RESTful API, and dashboard.
+
+<br><br>
+
+### 2.3 [Research hypotheses]()
+
+<br>
+
+| [Hypothesis]() | [Question]()                                                   | [Approach]()                        |
+| -------------- | -------------------------------------------------------------- | ----------------------------------- |
+| [H1]()         | Are incidents concentrated in certain application types?       | Chi-square goodness-of-fit          |
+| [H2]()         | Does algorithmic bias disproportionately affect segments?      | Chi-square test of independence     |
+| [H3]()         | Do more severe incidents generate greater regulatory response? | Chi-square and logistic regression  |
+| [H4]()         | Is there a temporal trend in incident volume?                  | Time correlation and trend analysis |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+<br><br>
+<br><br>
 
 ## System Architecture (MLOps Design)
 
