@@ -11,21 +11,17 @@
 
 
 
-
 <!-- ========= START REPO TITLE ========= -->
-
 # <p align="center"> 🔐 [AI Incidents in Banking, Financial Services and Fintech]()
 
 ###  <p align="center"> An Analysis of Algorithmic Bias, Operational Risk and Governance for Regulatory Compliance
 
-
-
 <br><br>
+
 <!-- ========= END REPO TITLE ========= -->
 
 
-<!-- ========= Start Dashboard Streamlit ========= -->
-
+<!-- ========= START DashBoar Streamlit -->
 
 <p align="center">
   <a href="https://ai-incidents-financial-services.streamlit.app/" target="_blank" rel="noopener noreferrer">
@@ -37,13 +33,12 @@
   </a>
 </p>
 
-
-<!-- ========= END DashBoar Streamlit -->
+<!-- ========= END Dashboard Streamlit -->
 
 <p align="center">
   <a href="https://stellar-fenglisu-9274fc.netlify.app/">
     <img 
-      src="https://img.shields.io/badge/React-Interactive%20Slides-14b8a6?style=for-the-badge&logo=react&logoColor=white" 
+      src="https://img.shields.io/badge/React-Interactive%20Slides-115e59?style=for-the-badge&logo=react&logoColor=white" 
       alt="React Interactive Slides"
       style="height: 30px; width: auto;"
     />
@@ -51,17 +46,16 @@
 
   <a href="https://docs.google.com/presentation/d/1CeNA6D3Va2X8nc0dVeD1BKxV97d1SI-v/edit?slide=id.p1#slide=id.p1">
     <img 
-      src="https://img.shields.io/badge/PPTX-Presentation%20Deck-06b6d4?style=for-the-badge&logo=microsoftpowerpoint&logoColor=white" 
-      alt="PPTX Presentation Deck"
+      src="https://img.shields.io/badge/PPTX-Strategic%20Presentation-0f766e?style=for-the-badge&logo=microsoftpowerpoint&logoColor=white" 
+      alt="PPTX Strategic Presentation"
       style="height: 30px; width: auto;"
     />
   </a>
-</p>
+
 <!-- ========= END PPTX -->
 
 <br><br><br><br>
-
-<!-- ========= END BADGEO ========= -->
+<!-- ========= END BADGE  ========= -->
 
 
 
@@ -110,10 +104,26 @@ https://github.com/user-attachments/assets/5d3c33b0-166e-414c-a561-8e8dd509be3d
 <p align="center">
   <img src="https://img.shields.io/badge/Python-Data%20Science-0fb9b1?logo=python&logoColor=white" />
   <img src="https://img.shields.io/badge/Streamlit-Dashboard-14b8a6?logo=streamlit&logoColor=white" />
-  <img src="https://img.shields.io/badge/API-REST-0ea5a4?logo=flask&logoColor=white" />
+  <img src="https://img.shields.io/badge/RESTful%20API-Built%20with%20Flask-0ea5a4?logo=flask&logoColor=white" />
   <img src="https://img.shields.io/badge/Machine%20Learning-AI-2dd4bf" />
   <img src="https://img.shields.io/badge/Database-SQL-5eead4?logo=postgresql&logoColor=black" />
   <img src="https://img.shields.io/badge/Render-Cloud%20Deploy-22c7b8?logo=render&logoColor=white" />
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-Data%20Science-0d9488?logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/React-Interactive%20Presentation-0f766e?logo=react&logoColor=white" />
+  <img src="https://img.shields.io/badge/PowerPoint-Strategic%20Deck-0ea5a4?logo=microsoftpowerpoint&logoColor=white" />
+  <img src="https://img.shields.io/badge/Streamlit-Analytical%20Dashboard-14b8a6?logo=streamlit&logoColor=white" />
+  <img src="https://img.shields.io/badge/RESTful%20API-Built%20with%20Flask-2dd4bf?logo=flask&logoColor=white" />
+  <img src="https://img.shields.io/badge/Dashboard-Powered%20by%20Own%20API-5eead4?logo=fastapi&logoColor=black" />
+  <img src="https://img.shields.io/badge/Groq%20API-LLM%20Inference-0f766e?logo=graphql&logoColor=white" />
+  <img src="https://img.shields.io/badge/AI%20Chat-Embedded%20Assistant-0891b2?logo=openai&logoColor=white" />
+  <img src="https://img.shields.io/badge/Machine%20Learning-Predictive%20Models-06b6d4?logo=tensorflow&logoColor=white" />
+  <img src="https://img.shields.io/badge/Database-Relational%20SQL-67e8f9?logo=postgresql&logoColor=black" />
+  <img src="https://img.shields.io/badge/Render-Cloud%20Deployment-164e63?logo=render&logoColor=white" />
+</p>
+
+
 </p>
 
 <br><br><br>
