@@ -22,7 +22,6 @@
 
 
 <!-- ========= START DashBoar Streamlit -->
-
 <p align="center">
   <a href="https://ai-incidents-financial-services.streamlit.app/" target="_blank" rel="noopener noreferrer">
     <img 
@@ -51,7 +50,6 @@
       style="height: 30px; width: auto;"
     />
   </a>
-
 <!-- ========= END PPTX -->
 
 <br><br><br><br>
@@ -101,29 +99,20 @@ https://github.com/user-attachments/assets/5d3c33b0-166e-414c-a561-8e8dd509be3d
 
 <!-- ========= START BADGES ========= -->
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-Data%20Science-0fb9b1?logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/Streamlit-Dashboard-14b8a6?logo=streamlit&logoColor=white" />
-  <img src="https://img.shields.io/badge/RESTful%20API-Built%20with%20Flask-0ea5a4?logo=flask&logoColor=white" />
-  <img src="https://img.shields.io/badge/Machine%20Learning-AI-2dd4bf" />
-  <img src="https://img.shields.io/badge/Database-SQL-5eead4?logo=postgresql&logoColor=black" />
-  <img src="https://img.shields.io/badge/Render-Cloud%20Deploy-22c7b8?logo=render&logoColor=white" />
+
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-Data%20Science-0d9488?logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/React-Interactive%20Presentation-0f766e?logo=react&logoColor=white" />
-  <img src="https://img.shields.io/badge/PowerPoint-Strategic%20Deck-0ea5a4?logo=microsoftpowerpoint&logoColor=white" />
-  <img src="https://img.shields.io/badge/Streamlit-Analytical%20Dashboard-14b8a6?logo=streamlit&logoColor=white" />
-  <img src="https://img.shields.io/badge/RESTful%20API-Built%20with%20Flask-2dd4bf?logo=flask&logoColor=white" />
-  <img src="https://img.shields.io/badge/Dashboard-Powered%20by%20Own%20API-5eead4?logo=fastapi&logoColor=black" />
-  <img src="https://img.shields.io/badge/Groq%20API-LLM%20Inference-0f766e?logo=graphql&logoColor=white" />
+  <img src="https://img.shields.io/badge/Python-Data%20Science-0f172a?logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/React-Interactive%20Presentation-123c4a?logo=react&logoColor=white" />
+  <img src="https://img.shields.io/badge/PowerPoint-Strategic%20Deck-115e59?logo=microsoftpowerpoint&logoColor=white" />
+  <img src="https://img.shields.io/badge/Streamlit-Analytical%20Dashboard-0f766e?logo=streamlit&logoColor=white" />
+  <img src="https://img.shields.io/badge/RESTful%20API-Built%20with%20Flask-0ea5a4?logo=flask&logoColor=white" />
+  <img src="https://img.shields.io/badge/Dashboard-Powered%20by%20Own%20API-14b8a6?logo=fastapi&logoColor=white" />
+  <img src="https://img.shields.io/badge/Groq%20API-LLM%20Inference-22d3ee?logo=graphql&logoColor=white" />
   <img src="https://img.shields.io/badge/AI%20Chat-Embedded%20Assistant-0891b2?logo=openai&logoColor=white" />
   <img src="https://img.shields.io/badge/Machine%20Learning-Predictive%20Models-06b6d4?logo=tensorflow&logoColor=white" />
-  <img src="https://img.shields.io/badge/Database-Relational%20SQL-67e8f9?logo=postgresql&logoColor=black" />
+  <img src="https://img.shields.io/badge/Database-Relational%20SQL-67e8f9?logo=postgresql&logoColor=0f172a" />
   <img src="https://img.shields.io/badge/Render-Cloud%20Deployment-164e63?logo=render&logoColor=white" />
-</p>
-
-
 </p>
 
 <br><br><br>
