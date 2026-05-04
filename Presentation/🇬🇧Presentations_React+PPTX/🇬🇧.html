@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Incidents in Financial Services — Presentation</title>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/gitbrent/pptxgenjs@3.12.0/dist/pptxgen.bundle.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #040508;
+      --surface: #080c10;
+      --surface2: #0d1420;
+      --teal: #00d4c8;
+      --teal-dim: #00a89e;
+      --teal-glow: rgba(0,212,200,0.15);
+      --teal-border: rgba(0,212,200,0.25);
+      --white: #ffffff;
+      --white-80: rgba(255,255,255,0.80);
+      --white-50: rgba(255,255,255,0.50);
+      --white-20: rgba(255,255,255,0.12);
+      --font-display: 'Syne', sans-serif;
+      --font-body: 'Space Grotesk', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * { margin:0; padding:0; box-sizing:border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: var(--font-body);
+      overflow-x: hidden;
+    }
+
+    /* ── Grid noise texture ── */
+    body::before {
+      content: '';
+      position: fixed; inset: 0; pointer-events: none;
+      background-image:
+        radial-gradient(ellipse 80% 60% at 50% -10%, rgba(0,212,200,0.08) 0%, transparent 60%);
+      z-index: 0;
+    }
+
+    /* ── Nav ── */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 48px;
+      background: rgba(4,5,8,0.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--teal-border);
+      z-index: 100;
+    }
+    .nav-logo {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--teal);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .nav-dots {
+      display: flex; gap: 10px;
+    }
+    .nav-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--white-20);
+      border: none; cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .nav-dot.active { background: var(--teal); box-shadow: 0 0 10px var(--teal); }
+    .nav-counter {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--white-50);
+    }
+
+    /* ── Slide base ── */
+    .slide {
+      min-height: 100vh;
+      padding: 120px 80px 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+      border-bottom: 1px solid var(--white-20);
+    }
+
+    .slide-number {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--teal);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .slide-number::after {
+      content: ''; flex: 1; max-width: 60px;
+      height: 1px; background: var(--teal-dim);
+    }
+
+    /* ── Typography ── */
+    .headline {
+      font-family: var(--font-display);
+      font-size: clamp(2.8rem, 6vw, 5.5rem);
+      font-weight: 800;
+      line-height: 1.02;
+      letter-spacing: -0.02em;
+      color: var(--white);
+    }
+    .headline .accent { color: var(--teal); }
+
+    .subline {
+      font-size: clamp(1rem, 1.8vw, 1.3rem);
+      color: var(--white-80);
+      line-height: 1.65;
+      max-width: 680px;
+    }
+
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--teal);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    /* ── Cards ── */
+    .card {
+      background: rgba(13,20,32,0.8);
+      border: 1px solid var(--teal-border);
+      border-radius: 16px;
+      padding: 28px 32px;
+      backdrop-filter: blur(10px);
+      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      border-color: var(--teal);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 60px rgba(0,212,200,0.1);
+    }
+    .card-title {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--teal);
+      margin-bottom: 12px;
+    }
+    .card-body {
+      font-size: 0.9rem;
+      color: var(--white-80);
+      line-height: 1.7;
+    }
+
+    /* ── Grid layouts ── */
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; }
+    .grid-5 { display: grid; grid-template-columns: repeat(5,1fr); gap: 16px; }
+
+    /* ── KPI block ── */
+    .kpi {
+      text-align: center;
+      background: rgba(0,212,200,0.04);
+      border: 1px solid var(--teal-border);
+      border-radius: 16px;
+      padding: 32px 20px;
+      transition: all 0.3s;
+    }
+    .kpi:hover { background: rgba(0,212,200,0.08); transform: translateY(-3px); }
+    .kpi-value {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--teal);
+      line-height: 1;
+    }
+    .kpi-label {
+      font-size: 0.75rem;
+      color: var(--white-50);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-top: 8px;
+    }
+
+    /* ── Pipeline ── */
+    .pipeline {
+      display: flex; align-items: stretch; gap: 0;
+      margin: 32px 0;
+    }
+    .pipe-step {
+      flex: 1;
+      background: rgba(13,20,32,0.9);
+      border: 1px solid var(--teal-border);
+      border-radius: 12px;
+      padding: 20px 16px;
+      text-align: center;
+      position: relative;
+      transition: all 0.3s;
+    }
+    .pipe-step:hover { border-color: var(--teal); background: rgba(0,212,200,0.06); }
+    .pipe-step + .pipe-step { margin-left: 8px; }
+    .pipe-step + .pipe-step::before {
+      content: '→';
+      position: absolute; left: -16px; top: 50%;
+      transform: translateY(-50%);
+      color: var(--teal);
+      font-size: 1.1rem;
+      z-index: 2;
+    }
+    .pipe-nb {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--teal);
+      letter-spacing: 0.15em;
+      margin-bottom: 8px;
+    }
+    .pipe-title {
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    .pipe-desc { font-size: 0.75rem; color: var(--white-50); line-height: 1.5; }
+    .pipe-out {
+      margin-top: 10px; padding-top: 10px;
+      border-top: 1px solid var(--white-20);
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--teal-dim);
+    }
+
+    /* ── Badge ── */
+    .badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(0,212,200,0.1);
+      border: 1px solid var(--teal-border);
+      border-radius: 999px;
+      padding: 4px 12px;
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      color: var(--teal);
+    }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+
+    /* ── Comparison table ── */
+    .compare-table { width: 100%; border-collapse: collapse; margin-top: 24px; }
+    .compare-table th {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--teal);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--teal-border);
+      text-align: left;
+    }
+    .compare-table td {
+      padding: 14px 16px;
+      font-size: 0.88rem;
+      color: var(--white-80);
+      border-bottom: 1px solid var(--white-20);
+      vertical-align: middle;
+    }
+    .compare-table tr:hover td { background: rgba(0,212,200,0.03); }
+    .compare-table .winner { color: var(--teal); font-weight: 600; }
+    .compare-table .rank1::before {
+      content: '🥇 '; 
+    }
+
+    /* ── Code block ── */
+    .code-block {
+      background: rgba(4,5,8,0.9);
+      border: 1px solid var(--teal-border);
+      border-radius: 12px;
+      padding: 24px;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      color: #c8f8f5;
+      line-height: 1.7;
+      overflow-x: auto;
+    }
+    .code-block .comment { color: var(--white-50); }
+    .code-block .keyword { color: #ff79c6; }
+    .code-block .string { color: #f1fa8c; }
+    .code-block .function { color: var(--teal); }
+
+    /* ── Flow diagram ── */
+    .flow { display: flex; flex-direction: column; gap: 12px; }
+    .flow-row { display: flex; align-items: center; gap: 12px; }
+    .flow-box {
+      background: rgba(13,20,32,0.9);
+      border: 1px solid var(--teal-border);
+      border-radius: 10px;
+      padding: 12px 18px;
+      font-size: 0.85rem;
+      color: var(--white-80);
+      white-space: nowrap;
+    }
+    .flow-arrow { color: var(--teal); font-size: 1.2rem; }
+
+    /* ── Roadmap ── */
+    .roadmap-item {
+      display: flex; gap: 20px; align-items: flex-start;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--white-20);
+    }
+    .roadmap-item:last-child { border-bottom: none; }
+    .roadmap-dot {
+      width: 12px; height: 12px; min-width: 12px;
+      border-radius: 50%;
+      background: var(--teal);
+      margin-top: 4px;
+      box-shadow: 0 0 8px var(--teal);
+    }
+    .roadmap-dot.dim { background: var(--white-20); box-shadow: none; }
+    .roadmap-title { font-weight: 600; color: var(--white); margin-bottom: 4px; }
+    .roadmap-desc { font-size: 0.85rem; color: var(--white-50); line-height: 1.6; }
+
+    /* ── Hero bg effect ── */
+    .hero-glow {
+      position: absolute; right: -5%; top: 10%;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(0,212,200,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* ── Gradient line ── */
+    .gradient-line {
+      height: 2px;
+      background: linear-gradient(90deg, var(--teal) 0%, transparent 100%);
+      margin: 20px 0;
+      max-width: 300px;
+    }
+
+    /* ── Animations ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(0,212,200,0.4); }
+      50%       { box-shadow: 0 0 0 8px rgba(0,212,200,0); }
+    }
+    .animate { animation: fadeUp 0.7s ease both; }
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.3s; }
+    .delay-4 { animation-delay: 0.4s; }
+    .delay-5 { animation-delay: 0.5s; }
+
+    /* ── Footer ── */
+    .slide-footer {
+      position: absolute; bottom: 30px; right: 80px;
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--white-20);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    /* ── Scroll hint ── */
+    .scroll-hint {
+      position: fixed; bottom: 32px; left: 50%;
+      transform: translateX(-50%);
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--white-50);
+      letter-spacing: 0.2em;
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+      animation: fadeUp 1s ease 1s both;
+      pointer-events: none;
+    }
+    .scroll-arrow {
+      width: 20px; height: 20px;
+      border-right: 1.5px solid var(--teal);
+      border-bottom: 1.5px solid var(--teal);
+      transform: rotate(45deg);
+      animation: scrollBounce 1.5s ease infinite;
+    }
+    @keyframes scrollBounce {
+      0%, 100% { transform: rotate(45deg) translateY(0); }
+      50%       { transform: rotate(45deg) translateY(5px); }
+    }
+
+    @media (max-width: 900px) {
+      .slide { padding: 100px 24px 60px; }
+      .grid-2, .grid-3, .grid-4, .grid-5 { grid-template-columns: 1fr; }
+      .pipeline { flex-direction: column; }
+      .pipe-step + .pipe-step { margin-left: 0; margin-top: 20px; }
+      .pipe-step + .pipe-step::before { content: '↓'; left: 50%; top: -14px; transform: translateX(-50%); }
+      .nav { padding: 16px 24px; }
+    }
+  </style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const { useState, useEffect, useRef } = React;
+
+const SLIDES = [
+  { id: 'hero', label: 'INTRO' },
+  { id: 'problem', label: 'PROBLEM' },
+  { id: 'solution', label: 'SOLUTION' },
+  { id: 'data', label: 'DATA' },
+  { id: 'pipeline', label: 'PIPELINE' },
+  { id: 'ml', label: 'ML' },
+  { id: 'api', label: 'API' },
+  { id: 'groq', label: 'GROQ' },
+  { id: 'architecture', label: 'ARCHITECTURE' },
+  { id: 'deploy', label: 'DEPLOY' },
+  { id: 'roadmap', label: 'ROADMAP' },
+  { id: 'conclusion', label: 'CONCLUSION' },
+];
+
+function Nav({ active, onDot }) {
+  return (
+    <nav className="nav">
+      <div className="nav-logo">AI · Fin · Risk</div>
+      <div className="nav-dots">
+        {SLIDES.map((s, i) => (
+          <button
+            key={s.id}
+            className={`nav-dot ${active === i ? 'active' : ''}`}
+            onClick={() => onDot(s.id)}
+            title={s.label}
+          />
+        ))}
+      </div>
+      <div className="nav-counter">
+        {String(active + 1).padStart(2, '0')} / {String(SLIDES.length).padStart(2, '0')}
+      </div>
+    </nav>
+  );
+}
+
+function SlideNum({ n, label }) {
+  return (
+    <div className="slide-number animate">
+      <span style={{ fontFamily: 'var(--font-mono)', color: 'var(--teal)' }}>
+        {String(n).padStart(2, '0')}
+      </span>
+      <span style={{ color: 'var(--white-50)' }}>{label}</span>
+    </div>
+  );
+}
+
+/* ── SLIDE 1: HERO ── */
+function SlideHero() {
+  return (
+    <div id="hero" className="slide" style={{ justifyContent: 'flex-end', paddingBottom: '120px' }}>
+      <div className="hero-glow" />
+      <SlideNum n={1} label="INTRODUCTION" />
+      <div className="animate delay-1" style={{ marginBottom: 8 }}>
+        <span className="section-label">PUC-SP · Capstone Project · 5th Semester · 2026</span>
+      </div>
+      <h1 className="headline animate delay-2" style={{ marginBottom: 24, maxWidth: 900 }}>
+        AI Incidents in<br />
+        <span className="accent">Financial Services</span>
+      </h1>
+      <div className="gradient-line animate delay-3" />
+      <p className="subline animate delay-3">
+        Analysis of algorithmic bias, operational risk, and AI governance in financial
+        services — end-to-end CRISP-DM pipeline with REST API, interactive dashboard,
+        and Groq chatbot.
+      </p>
+      <div className="badge-row animate delay-4">
+        {['CRISP-DM','XGBoost','Flask','Streamlit','SQLite','Groq llama-3.1','Python 3.10+'].map(b => (
+          <span key={b} className="badge">{b}</span>
+        ))}
+      </div>
+      <div className="slide-footer">AI · FIN · RISK · 2026</div>
+    </div>
+  );
+}
+
+/* ── SLIDE 2: PROBLEM ── */
+function SlideProblem() {
+  const problems = [
+    { icon: '⚠️', title: 'Flash Crash 2010', desc: '~$1 trillion lost in minutes due to a flawed trading algorithm' },
+    { icon: '⚖️', title: 'Credit Bias', desc: 'Apple Card discriminated against women in credit limits — SEC/FTC case' },
+    { icon: '🏛️', title: 'MiDAS Michigan', desc: '40,000 false fraud accusations issued by an automated system' },
+    { icon: '🔒', title: 'Regulatory Gap', desc: 'Governance responses fail to keep pace with incident severity' },
+    { icon: '🌐', title: 'Scattered Data', desc: 'Unstructured, non-standardized incidents, hard to monitor' },
+    { icon: '📉', title: 'No Prediction', desc: 'No public tool available to predict severity before a crisis' },
+  ];
+  return (
+    <div id="problem" className="slide">
+      <SlideNum n={2} label="PROBLEM" />
+      <h2 className="headline animate delay-1" style={{ fontSize: 'clamp(2rem,4vw,3.5rem)', marginBottom: 16 }}>
+        The Problem We<br />
+        <span className="accent">Want to Solve</span>
+      </h2>
+      <p className="subline animate delay-2" style={{ marginBottom: 40 }}>
+        AI failures in financial services generate billions in losses — but data
+        remains scattered, unstructured, and lacks systematic analysis.
+      </p>
+      <div className="grid-3 animate delay-3">
+        {problems.map(p => (
+          <div key={p.title} className="card">
+            <div style={{ fontSize: '2rem', marginBottom: 12 }}>{p.icon}</div>
+            <div className="card-title">{p.title}</div>
+            <div className="card-body">{p.desc}</div>
+          </div>
+        ))}
+      </div>
+      <div className="slide-footer">AI · FIN · RISK · 2026</div>
+    </div>
+  );
+}
+
+/* ── SLIDE 3: SOLUTION ── */
+function SlideSolution() {
+  const deliverables = [
+    { nb: 'NB1', icon: '📊', title: 'Analytical Base', desc: '31 filtered financial incidents, 8 derived variables, relational SQLite DB' },
+    { nb: 'NB2', icon: '📈', title: 'Statistical Analysis', desc: 'H1–H4 formalized: chi-square, Spearman, logistic regression with Odds Ratio' },
+    { nb: 'NB3', icon: '🤖', title: 'ML Models', desc: 'Logistic Regression + Random Forest + XGBoost serialized and ready for serving' },
+    { nb: 'NB4', icon: '🚀', title: 'API RESTful', desc: '9 Flask endpoints: historical data, aggregated stats, and real-time predictions' },
+    { nb: 'APP', icon: '🖥️', title: 'Dashboard', desc: '7 Streamlit pages with dark mode, interactive Plotly, and integrated Groq chatbot' },
+  ];
+  return (
+    <div id="solution" className="slide">
+      <SlideNum n={3} label="SOLUTION" />
+      <h2 className="headline animate delay-1" style={{ fontSize: 'clamp(2rem,4vw,3.5rem)', marginBottom: 16 }}>
+        Pipeline <span className="accent">CRISP-DM</span><br />
+        End-to-End
+      </h2>
+      <p className="subline animate delay-2" style={{ marginBottom: 40 }}>
+        From raw data collection to smart chatbot — integrated data science,
+        engineering, and visualization architecture.
+      </p>
+      <div className="grid-5 animate delay-3">
+        {deliverables.map(d => (
+          <div key={d.nb} className="card" style={{ textAlign: 'center', padding: '24px 16px' }}>
+            <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.65rem', color: 'var(--teal)', marginBottom: 10, letterSpacing: '0.15em' }}>{d.nb}</div>
+            <div style={{ fontSize: '2.2rem', marginBottom: 12 }}>{d.icon}</div>
+            <div className="card-title" style={{ fontSize: '0.95rem' }}>{d.title}</div>
+            <div className="card-body" style={{ fontSize: '0.8rem' }}>{d.desc}</div>
+          </div>
+        ))}
+      </div>
+      <div className="slide-footer">AI · FIN · RISK · 2026</div>
+    </div>
+  );
+}
+
+/* ── SLIDE 4: DATA ── */
+function SlideData() {
+  const kpis = [
+    { value: '31', label: 'Financial Incidents' },
+    { value: '2003', label: 'Series Start' },
+    { value: '2023', label: 'Series End' },
+    { value: '8', label: 'Derived Variesbles' },
+    { value: '3', label: 'SQLite Tables' },
+    { value: '30+', label: 'Financial Keywords' },
+  ];
+  const vars = [
+    { name: 'application_type', type: 'Categorical', classes: 7, desc: 'credit_scoring, fraud_detection, trading...' },
+    { name: 'incident_type', type: 'Categorical', classes: 6, desc: 'bias, operational_failure, market_disruption...' },
+    { name: 'customer_segment', type: 'Categorical', classes: 5, desc: 'retail, underserved, corporate, sme...' },
+    { name: 'severity_level', type: 'Ordinal', classes: 4, desc: 'low → medium → high → critical' },
+    { name: 'regulatory_investigation', type: 'Binary', classes: 2, desc: 'formal investigation occurred' },
+    { name: 'fine_imposed', type: 'Binary', classes: 2, desc: 'fine or sanction applied' },
+    { name: 'policy_change', type: 'Binary', classes: 2, desc: 'policy/system change' },
+    { name: 'third_party_audit', type: 'Binary', classes: 2, desc: 'independent audit' },
+  ];
+  return (
+    <div id="data" className="slide">
+      <SlideNum n={4} label="DATA" />
+      <h2 className="headline animate delay-1" style={{ fontSize: 'clamp(2rem,4vw,3.5rem)', marginBottom: 32 }}>
+        Feature <span className="accent">Engineering</span><br />
+        via Semantic Inference
+      </h2>
+      <div className="grid-3 animate delay-2" style={{ gap: 16, marginBottom: 32 }}>
+        {kpis.map(k => <div key={k.label} className="kpi"><div className="kpi-value">{k.value}</div><div className="kpi-label">{k.label}</div></div>)}
+      </div>
+      <div className="animate delay-3" style={{ overflowX: 'auto' }}>
+        <table className="compare-table">
+          <thead>
+            <tr><th>Variesble</th><th>Type</th><th>Classes</th><th>Example Categories</th></tr>
+          </thead>
+          <tbody>
+            {vars.map(v => (
+              <tr key={v.name}>
+                <td><code style={{ fontFamily: 'var(--font-mono)', color: 'var(--teal)', fontSize: '0.82rem' }}>{v.name}</code></td>
+                <td>{v.type}</td>
+                <td style={{ textAlign: 'center', color: 'var(--teal)' }}>{v.classes}</td>
+                <td style={{ color: 'var(--white-50)', fontSize: '0.82rem' }}>{v.desc}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <div className="slide-footer">AI · FIN · RISK · 2026</div>
+    </div>
+  );
+}
+
+/* ── SLIDE 5: PIPELINE ── */
+function SlidePipeline() {
+  const steps = [
+    { nb: 'NB1', phase: 'Data Prep', title: 'Exploration', out: 'CSV + SQLite', desc: 'AIID API → filtering → features → database' },
+    { nb: 'NB2', phase: 'Evaluation', title: 'Statistics', out: 'H1–H4', desc: 'Chi-square · Spearman · OLS · LogReg' },
+    { nb: 'NB3', phase: 'Modeling', title: 'ML Models', out: 'models/*.pkl', desc: 'LR + RF + XGBoost + serialização' },
+    { nb: 'NB4', phase: 'Deployment', title: 'API Flask', out: 'app_api.py', desc: '9 REST endpoints for data and predictions' },
+    { nb: 'APP', phase: 'Frontend', title: 'Dashboard', out: 'localhost:8501', desc: '7 pages · Plotly · Groq chatbot' },
+  ];
+  const hyps = [
+    { code: 'H1', test: 'Chi-Square Goodness-of-Fit', q: 'Incidents concentrated by application?' },
+    { code: 'H2', test: 'Chi-Square Independence', q: 'Bias affects segments unequally?' },
+    { code: 'H3', test: 'Chi-Square + LogReg (OR)', q: 'Severity → regulatory investigation?' },
+    { code: 'H4', test: 'Spearman + OLS', q: 'Increasing temporal trend?' },
+  ];
+  return (
+    <div id="pipeline" className="slide">
+      <SlideNum n={5} label="PIPELINE" />
+      <h2 className="headline animate delay-1" style={{ fontSize: 'clamp(2rem,4vw,3.5rem)', marginBottom: 32 }}>
+        Analytical <span className="accent">Pipeline</span><br />
+        & Hypotheses
+      </h2>
+      <div className="pipeline animate delay-2">
+        {steps.map(s => (
+          <div key={s.nb} className="pipe-step">
+            <div className="pipe-nb">{s.nb} · {s.phase}</div>
+            <div className="pipe-title">{s.title}</div>
+            <div className="pipe-desc">{s.desc}</div>
+            <div className="pipe-out">{s.out}</div>
+          </div>
+        ))}
+      </div>
+      <div className="grid-2 animate delay-3" style={{ gap: 16, marginTop: 32 }}>
+        {hyps.map(h => (
+          <div key={h.code} className="card" style={{ display: 'flex', gap: 16, alignItems: 'center' }}>
+            <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.8rem', fontWeight: 800, color: 'var(--teal)', minWidth: 48 }}>{h.code}</div>
+            <div>
+              <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.68rem', color: 'var(--teal)', marginBottom: 4, letterSpacing: '0.1em' }}>{h.test}</div>
+              <div className="card-body">{h.q}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="slide-footer">AI · FIN · RISK · 2026</div>
+    </div>
+  );
+}
+
+/* ── SLIDE 6: ML ── */
+function SlideML() {
+  const models = [
+    { alg: 'Logistic Regression', role: 'Baseline', f1: '~0.66', auc: '~0.74', note: 'Interpretable, linear reference' },
+    { alg: 'Random Forest', role: 'Ensemble', f1: '~0.74', auc: '~0.83', note: '200 trees, class_weight balanced' },
+    { alg: 'XGBoost ★', role: 'Main', f1: '~0.79', auc: '~0.87', note: 'scale_pos_weight, 200 estimators', winner: true },
+  ];
+  return (
+    <div id="ml" className="slide">
+      <SlideNum n={6} label="MACHINE LEARNING" />
+      <h2 className="headline animate delay-1" style={{ fontSize: 'clamp(2rem,4vw,3.5rem)', marginBottom: 16 }}>
+        Predictive <span className="accent">Modeling</span><br />
+        Two Targets
+      </h2>
+      <div className="grid-2 animate delay-2" style={{ marginBottom: 28 }}>
+        <div className="card">
+          <div className="card-title">🎯 Model 1 — Severity</div>
+          <div className="card-body" style={{ fontFamily: 'var(--font-mono)', fontSize: '0.8rem' }}>
+            Target: <span style={{ color: 'var(--teal)' }}>severity_binary</span><br />
+            0 = low/medium (90.3%)<br />
+            1 = high/critical (9.7%)<br />
+            Imbalance Ratio: <span style={{ color: '#ff79c6' }}>9.33</span>
+          </div>
+        </div>
+        <div className="card">
+          <div className="card-title">⚖️ Model 2 — Investigation</div>
+          <div className="card-body" style={{ fontFamily: 'var(--font-mono)', fontSize: '0.8rem' }}>
+            Target: <span style={{ color: 'var(--teal)' }}>regulatory_investigation</span><br />
+            0 = no investigation (96.8%)<br />
+            1 = with investigation (3.2%)<br />
+            <span style={{ color: 'var(--white-50)', fontSize: '0.75rem' }}>→ Extreme case of imbalance</span>
+          </div>
+        </div>
+      </div>
+      <div className="animate delay-3" style={{ overflowX: 'auto' }}>
+        <table className="compare-table">
+          <thead>
+            <tr><th>Algorithm</th><th>Role</th><th>F1-Score</th><th>ROC-AUC</th><th>Observation</th></tr>
+          </thead>
+          <tbody>
+            {models.map(m => (
+              <tr key={m.alg}>
+                <td className={m.winner ? 'winner' : ''}>{m.alg}</td>
+                <td>{m.role}</td>
+                <td style={{ fontFamily: 'var(--font-mono)', color: m.winner ? 'var(--teal)' : 'var(--white-80)' }}>{m.f1}</td>
+                <td style={{ fontFamily: 'var(--font-mono)', color: m.winner ? 'var(--teal)' : 'var(--white-80)' }}>{m.auc}</td>
+                <td style={{ color: 'var(--white-50)', fontSize: '0.82rem' }}>{m.note}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <div className="animate delay-4" style={{ marginTop: 20, padding: '16px 20px', background: 'rgba(255,121,198,0.06)', border: '1px solid rgba(255,121,198,0.2)', borderRadius: 12 }}>
+        <span style={{ color: '#ff79c6', fontSize: '0.82rem', fontWeight: 600 }}>⚠️ Correct interpretation: </span>
+        <span style={{ fontSize: '0.82rem', color: 'var(--white-80)' }}>
+          The ML pipeline was successfully implemented. With a small and heavily imbalanced dataset, the models serve as a <strong>methodological proof of concept</strong> — not decision-making tools.
+        </span>
+      </div>
+      <div className="slide-footer">AI · FIN · RISK · 2026</div>
+    </div>
+  );
+}
+
+/* ── SLIDE 7: API ── */
+function SlideAPI() {
+  const endpoints = [
+    { method: 'GET', route: '/', group: 'Docs', desc: 'API status and documentation' },
+    { method: 'GET', route: '/api/incidents', group: 'Dados', desc: 'List with filters: application_type, severity, year, limit' },
+    { method: 'GET', route: '/api/incidents/<id>', group: 'Dados', desc: 'Full detail + financial impact + regulatory response' },
+    { method: 'GET', route: '/api/stats/by-application', group: 'Stats', desc: 'Concentration by AI application type' },
+    { method: 'GET', route: '/api/stats/by-segment', group: 'Stats', desc: 'Incidents and bias rate by segment' },
+    { method: 'GET', route: '/api/stats/temporal', group: 'Stats', desc: 'Time series by year' },
+    { method: 'GET', route: '/api/stats/governance', group: 'Stats', desc: 'Frequency of governance flags' },
+    { method: 'POST', route: '/api/predict/severity', group: 'ML', desc: 'Classifies as high/low severity + probability' },
+    { method: 'POST', route: '/api/predict/investigation', group: 'ML', desc: 'Probability of regulatory investigation' },
+  ];
+  const groupColors = { Docs: '#64748b', Dados: '#3b82f6', Stats: '#10b981', ML: '#8b5cf6' };
+  return (
+    <div id="api" className="slide">
+      <SlideNum n={7} label="API RESTFUL" />
+      <h2 className="headline animate delay-1" style={{ fontSize: 'clamp(2rem,4vw,3.5rem)', marginBottom: 32 }}>
+        9 Flask <span className="accent">Endpoints</span><br />
+        Three Groups
+      </h2>
+      <div className="animate delay-2" style={{ overflowX: 'auto' }}>
+        <table className="compare-table">
+          <thead>
+            <tr><th>Method</th><th>Group</th><th>Route</th><th>Description</th></tr>
+          </thead>
+          <tbody>
+            {endpoints.map(e => (
+              <tr key={e.route}>
+                <td>
+                  <span style={{
+                    fontFamily: 'var(--font-mono)', fontSize: '0.75rem',
+                    color: e.method === 'GET' ? 'var(--teal)' : '#f59e0b',
+                    fontWeight: 600
+                  }}>{e.method}</span>
+                </td>
+                <td>
+                  <span style={{
+                    fontFamily: 'var(--font-mono)', fontSize: '0.68rem',
+                    color: groupColors[e.group],
+                    background: `${groupColors[e.group]}15`,
+                    padding: '2px 8px', borderRadius: 4
+                  }}>{e.group}</span>
+                </td>
+                <td><code style={{ fontFamily: 'var(--font-mono)', fontSize: '0.78rem', color: 'var(--white-80)' }}>{e.route}</code></td>
+                <td style={{ fontSize: '0.82rem', color: 'var(--white-50)' }}>{e.desc}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <div className="slide-footer">AI · FIN · RISK · 2026</div>
+    </div>
+  );
+}
+
+/* ── SLIDE 8: GROQ ── */
+function SlideGroq() {
+  const comparison = [
+    { api: 'Groq ★', custo: 'Free', vel: '~270 tok/s', tier: 'Unlimited', sdk: 'requests', rank: 1 },
+    { api: 'Gemini Flash', custo: 'Free', vel: '~100 tok/s', tier: '15 req/min', sdk: 'google-ai', rank: 2 },
+    { api: 'DeepSeek', custo: 'Free', vel: '~80 tok/s', tier: 'Generous', sdk: 'API OAI', rank: 3 },
+    { api: 'OpenRouter', custo: 'Varies', vel: 'Varies', tier: 'Credits', sdk: 'API OAI', rank: 4 },
+    { api: 'OpenAI', custo: '$0.15/1M', vel: '~40 tok/s', tier: 'Paid', sdk: 'openai', rank: 5 },
+  ];
+  return (
+    <div id="groq" className="slide">
+      <SlideNum n={8} label="MIGRATION TO GROQ" />
+      <h2 className="headline animate delay-1" style={{ fontSize: 'clamp(2rem,4vw,3.5rem)', marginBottom: 16 }}>
+        OpenAI → <span className="accent">Groq</span><br />
+        6x Faster. Zero Cost.
+      </h2>
+      <div className="grid-2 animate delay-2" style={{ gap: 20, marginBottom: 28 }}>
+        <div className="animate delay-2" style={{ overflowX: 'auto' }}>
+          <table className="compare-table">
+            <thead><tr><th>#</th><th>API</th><th>Cost</th><th>Speed</th><th>Free Tier</th></tr></thead>
+            <tbody>
+              {comparison.map(c => (
+                <tr key={c.api}>
+                  <td style={{ color: c.rank === 1 ? 'var(--teal)' : 'var(--white-50)', fontFamily: 'var(--font-mono)', fontSize: '0.8rem' }}>
+                    {c.rank === 1 ? '🥇' : c.rank === 2 ? '🥈' : c.rank === 3 ? '🥉' : c.rank}
+                  </td>
+                  <td className={c.rank === 1 ? 'winner' : ''}>{c.api}</td>
+                  <td style={{ fontFamily: 'var(--font-mono)', fontSize: '0.78rem', color: c.rank === 1 ? 'var(--teal)' : 'var(--white-80)' }}>{c.custo}</td>
+                  <td style={{ fontFamily: 'var(--font-mono)', fontSize: '0.78rem', color: c.rank === 1 ? 'var(--teal)' : 'var(--white-80)' }}>{c.vel}</td>
+                  <td style={{ fontSize: '0.78rem', color: c.rank === 1 ? 'var(--teal)' : 'var(--white-50)' }}>{c.tier}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+          <div className="card animate delay-3">
+            <div className="card-title">🔑 Automatic key resolution</div>
+            <div className="code-block" style={{ fontSize: '0.75rem', padding: '14px' }}>
+              <span className="keyword">def</span> <span className="function">_get_groq_key</span>() → str:<br />
+              {'  '}<span className="comment"># 1. st.secrets (Streamlit Cloud)</span><br />
+              {'  '}try: <span className="keyword">return</span> st.secrets[<span className="string">"GROQ_API_KEY"</span>]<br />
+              {'  '}<span className="keyword">except</span>: <span className="keyword">pass</span><br />
+              {'  '}<span className="comment"># 2. Variesble de ambiente (.env)</span><br />
+              {'  '}env = os.environ.get(<span className="string">"GROQ_API_KEY"</span>)<br />
+              {'  '}<span className="keyword">if</span> env: <span className="keyword">return</span> env<br />
+              {'  '}<span className="comment"># 3. Manual input (UI)</span><br />
+              {'  '}<span className="keyword">return</span> st.session_state.get(<span className="string">"groq_key_manual"</span>)
+            </div>
+          </div>
+          <div className="card animate delay-4">
+            <div className="card-title">⚡ Robust Fallback</div>
+            <div className="card-body" style={{ fontSize: '0.82rem' }}>
+              <strong style={{ color: 'var(--teal)' }}>Groq fails?</strong> → Shows clear error + automatic offline response<br /><br />
+              <strong style={{ color: 'var(--teal)' }}>Automatic retry:</strong> Rate limit (429) → waits 2s → tries again<br /><br />
+              <strong style={{ color: 'var(--teal)' }}>Never a blank screen</strong> — offline mode guarantees a response
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="slide-footer">AI · FIN · RISK · 2026</div>
+    </div>
+  );
+}
+
+/* ── SLIDE 9: ARCHITECTURE ── */
+function SlideArch() {
+  return (
+    <div id="architecture" className="slide">
+      <SlideNum n={9} label="ARCHITECTURE" />
+      <h2 className="headline animate delay-1" style={{ fontSize: 'clamp(2rem,4vw,3.5rem)', marginBottom: 32 }}>
+        <span className="accent">MLOps</span> Architecture<br />
+        Production-Grade
+      </h2>
+      <div className="grid-2 animate delay-2" style={{ gap: 24 }}>
+        <div>
+          <div className="code-block" style={{ fontSize: '0.78rem', lineHeight: 2 }}>
+            <span className="comment">╔══ SOURCES ═══════════════════════╗</span><br />
+            {'  '}<span className="string">AIID GraphQL</span> → <span className="function">cache JSON</span> → <span className="string">CSV</span><br />
+            <span className="comment">╠══ INGESTION (Notebook 1) ════════╣</span><br />
+            {'  '}filtering → features → SQLite<br />
+            <span className="comment">╠══ MODELING (Notebook 3) ═══════╣</span><br />
+            {'  '}LR → RF → <span className="function">XGBoost</span> → <span className="string">*.pkl</span><br />
+            <span className="comment">╠══ SERVING (Notebook 4) ══════════╣</span><br />
+            {'  '}Flask API → <span className="function">9 endpoints</span><br />
+            <span className="comment">╠══ FRONTEND ══════════════════════╣</span><br />
+            {'  '}Streamlit Dashboard ← API<br />
+            {'  '}Groq chatbot ← <span className="function">api.groq.com</span><br />
+            <span className="comment">╚══════════════════════════════════╝</span>
+          </div>
+        </div>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+          {[
+            { layer: 'Data Layer', items: ['SQLite (3 tables)', 'CSV processed', 'Modelos .pkl'], color: '#3b82f6' },
+            { layer: 'API Layer', items: ['Flask + Flask-CORS', '9 endpoints REST', 'JSON responses'], color: 'var(--teal)' },
+            { layer: 'Frontend Layer', items: ['Streamlit 7 páginas', 'Plotly interativo', 'Groq chatbot'], color: '#8b5cf6' },
+          ].map(l => (
+            <div key={l.layer} className="card" style={{ borderColor: `${l.color}40` }}>
+              <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', color: l.color, marginBottom: 8, letterSpacing: '0.12em' }}>{l.layer}</div>
+              <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                {l.items.map(i => (
+                  <span key={i} style={{ background: `${l.color}12`, border: `1px solid ${l.color}30`, borderRadius: 6, padding: '4px 10px', fontSize: '0.78rem', color: 'var(--white-80)' }}>{i}</span>
+                ))}
+              </div>
+            </div>
+          ))}
+          <div className="card">
+            <div className="card-title" style={{ fontSize: '0.85rem' }}>🔧 Recommended Evolution</div>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4px 16px', fontSize: '0.78rem', color: 'var(--white-50)' }}>
+              {['SQLite → PostgreSQL', 'Flask → FastAPI', '.pkl → MLflow', 'Jupyter → Airflow', 'Local → Docker', 'Render → AWS/GCP'].map(e => (
+                <span key={e}>→ {e}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="slide-footer">AI · FIN · RISK · 2026</div>
+    </div>
+  );
+}
+
+/* ── SLIDE 10: DEPLOY ── */
+function SlideDeploy() {
+  return (
+    <div id="deploy" className="slide">
+      <SlideNum n={10} label="GLOBAL DEPLOYMENT" />
+      <h2 className="headline animate delay-1" style={{ fontSize: 'clamp(2rem,4vw,3.5rem)', marginBottom: 32 }}>
+        Production on<br />
+        <span className="accent">3 Platforms</span>
+      </h2>
+      <div className="grid-3 animate delay-2" style={{ marginBottom: 32 }}>
+        {[
+          { plat: 'GitHub', icon: '🔗', role: 'Repository', steps: ['git init + git push', 'Code + Procfile', 'requirements.txt', 'ai_finance_incidents.db'] },
+          { plat: 'Render', icon: '🚀', role: 'API Flask', steps: ['New Web Service', 'Build: pip install -r requirements.txt', 'Start: gunicorn api.app_api:app', 'Env: FLASK_DEBUG=false'] },
+          { plat: 'Streamlit Cloud', icon: '🖥️', role: 'Dashboard', steps: ['share.streamlit.io', 'Main file: dashboard/app.py', 'Secrets: GROQ_API_KEY', 'API_BASE_URL = Render URL'] },
+        ].map(p => (
+          <div key={p.plat} className="card">
+            <div style={{ fontSize: '2.2rem', marginBottom: 8 }}>{p.icon}</div>
+            <div className="card-title">{p.plat}</div>
+            <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.65rem', color: 'var(--white-50)', marginBottom: 12, letterSpacing: '0.1em' }}>{p.role.toUpperCase()}</div>
+            {p.steps.map(s => (
+              <div key={s} style={{ fontSize: '0.8rem', color: 'var(--white-80)', padding: '4px 0', borderBottom: '1px solid var(--white-20)' }}>
+                <span style={{ color: 'var(--teal)', marginRight: 8 }}>›</span>{s}
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+      <div className="card animate delay-3" style={{ background: 'rgba(0,212,200,0.04)' }}>
+        <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.8rem', color: 'var(--white-80)', lineHeight: 2 }}>
+          <span style={{ color: 'var(--teal)' }}>GitHub</span> ────→ <span style={{ color: '#3b82f6' }}>Render</span> (API · https://ai-finance-api.onrender.com)
+          <br />{'          '}└───→ <span style={{ color: '#ff4b4b' }}>Streamlit Cloud</span> (Dashboard · https://seu-usuario-ai-finance.streamlit.app)
+          <br />{'                      '}└─── <span style={{ color: '#F55036' }}>Groq Cloud</span> (Chatbot · https://api.groq.com)
+        </div>
+      </div>
+      <div className="slide-footer">AI · FIN · RISK · 2026</div>
+    </div>
+  );
+}
+
+/* ── SLIDE 11: ROADMAP ── */
+function SlideRoadmap() {
+  const items = [
+    { done: true,  title: '✅ CRISP-DM Pipeline', desc: '4 notebooks: ETL, statistics, ML, API' },
+    { done: true,  title: '✅ Flask API 9 endpoints', desc: 'REST data, statistics, and predictions' },
+    { done: true,  title: '✅ Streamlit Dashboard', desc: '7 pages, dark mode, interactive Plotly' },
+    { done: true,  title: '✅ Groq Migration', desc: 'llama-3.1-8b-instant, free, 6x faster' },
+    { done: false, title: '⏳ Expand database', desc: 'Larger time window, more keywords, advanced NLP (FinBERT)' },
+    { done: false, title: '⏳ Fix imbalance', desc: 'SMOTE, class_weight, focused collection of minority cases' },
+    { done: false, title: '⏳ MLflow + tracking', desc: 'Experiment tracking, model registry, versioning' },
+    { done: false, title: '⏳ API Authentication', desc: 'JWT, rate limiting, logging estruturado, /v1/' },
+    { done: false, title: '⏳ Docker Containerization', desc: 'docker-compose: API + Dashboard + banco' },
+    { done: false, title: '⏳ Domain expansion', desc: 'Health, justice, HR — risk profiles by sector' },
+  ];
+  return (
+    <div id="roadmap" className="slide">
+      <SlideNum n={11} label="ROADMAP" />
+      <h2 className="headline animate delay-1" style={{ fontSize: 'clamp(2rem,4vw,3.5rem)', marginBottom: 32 }}>
+        Future <span className="accent">Evolution</span><br />
+        and Current Status
+      </h2>
+      <div className="grid-2 animate delay-2">
+        <div>
+          {items.slice(0,5).map(i => (
+            <div key={i.title} className="roadmap-item">
+              <div className={`roadmap-dot ${i.done ? '' : 'dim'}`} />
+              <div>
+                <div className="roadmap-title">{i.title}</div>
+                <div className="roadmap-desc">{i.desc}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div>
+          {items.slice(5).map(i => (
+            <div key={i.title} className="roadmap-item">
+              <div className={`roadmap-dot ${i.done ? '' : 'dim'}`} />
+              <div>
+                <div className="roadmap-title">{i.title}</div>
+                <div className="roadmap-desc">{i.desc}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="slide-footer">AI · FIN · RISK · 2026</div>
+    </div>
+  );
+}
+
+/* ── SLIDE 12: CONCLUSION ── */
+function SlideConclusion() {
+  return (
+    <div id="conclusion" className="slide" style={{ justifyContent: 'center', textAlign: 'center' }}>
+      <SlideNum n={12} label="CONCLUSION" />
+      <h2 className="headline animate delay-1" style={{ fontSize: 'clamp(2.5rem,5vw,4.5rem)', marginBottom: 24 }}>
+        Integrated <span className="accent">Architecture</span><br />
+        Before Accuracy
+      </h2>
+      <p className="subline animate delay-2" style={{ margin: '0 auto 40px', maxWidth: 720, textAlign: 'center' }}>
+        The main contribution is not a high-accuracy classifier — it is the demonstration of how
+        to transform imperfect public data into a complete, traceable, and
+        methodologically governed analytical ecosystem.
+      </p>
+      <div className="grid-4 animate delay-3" style={{ marginBottom: 40 }}>
+        {[
+          { v: 'Pipeline', d: 'CRISP-DM end-to-end with traceable artifacts' },
+          { v: 'API', d: '9 endpoints Flask with real-time data and predictions' },
+          { v: 'Dashboard', d: '7 páginas Streamlit with integrated Groq chatbot' },
+          { v: 'Deploy', d: 'Render + Streamlit Cloud — free production' },
+        ].map(i => <div key={i.v} className="kpi"><div className="kpi-value" style={{ fontSize: '1.2rem' }}>{i.v}</div><div className="kpi-label">{i.d}</div></div>)}
+      </div>
+      <div className="animate delay-4">
+        <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: 'var(--teal)', letterSpacing: '0.2em', marginBottom: 8 }}>PUC-SP · CAPSTONE PROJECT · 5TH SEMESTER · 2026</p>
+        <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.65rem', color: 'var(--white-20)', letterSpacing: '0.15em' }}>CRISP-DM · PYTHON · FLASK · STREAMLIT · XGBOOST · GROQ</p>
+      </div>
+      <div className="slide-footer">AI · FIN · RISK · 2026</div>
+    </div>
+  );
+}
+
+/* ── APP ── */
+function App() {
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            const idx = SLIDES.findIndex(s => s.id === e.target.id);
+            if (idx !== -1) setActiveSlide(idx);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+    SLIDES.forEach(s => {
+      const el = document.getElementById(s.id);
+      if (el) observer.observe(el);
+    });
+    return () => observer.disconnect();
+  }, []);
+
+  const scrollTo = (id) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  return (
+    <>
+      <Nav active={activeSlide} onDot={(id) => scrollTo(id)} />
+      <SlideHero />
+      <SlideProblem />
+      <SlideSolution />
+      <SlideData />
+      <SlidePipeline />
+      <SlideML />
+      <SlideAPI />
+      <SlideGroq />
+      <SlideArch />
+      <SlideDeploy />
+      <SlideRoadmap />
+      <SlideConclusion />
+      <div className="scroll-hint">
+        <span>SCROLL</span>
+        <div className="scroll-arrow" />
+      </div>
+    </>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+<button onclick="exportToPPTX()" style="position:fixed; bottom:20px; right:20px; z-index:9999; background:var(--teal); color:var(--bg); padding:12px 24px; border:none; border-radius:8px; font-weight:bold; cursor:pointer; font-family:var(--font-mono); box-shadow: 0 0 15px rgba(0,212,200,0.4);">📥 Export PPTX (Exact)</button>
+<script>
+async function exportToPPTX() {
+    const btn = document.querySelector('button[onclick="exportToPPTX()"]');
+    btn.innerText = "Generating... (Please wait)";
+    btn.disabled = true;
+
+    document.querySelectorAll('.animate').forEach(el => {
+        el.style.animation = 'none';
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
+    });
+
+    let pptx = new PptxGenJS();
+    pptx.layout = 'LAYOUT_16x9';
+
+    const slides = document.querySelectorAll('.slide');
+    const nav = document.querySelector('.nav');
+    const scrollHint = document.querySelector('.scroll-hint');
+    if(nav) nav.style.display = 'none';
+    if(scrollHint) scrollHint.style.display = 'none';
+    btn.style.display = 'none';
+
+    for (let i = 0; i < slides.length; i++) {
+        const slide = slides[i];
+        
+        const origWidth = slide.style.width;
+        const origHeight = slide.style.height;
+        const origMinHeight = slide.style.minHeight;
+        const origPadding = slide.style.padding;
+        
+        slide.style.width = '1920px';
+        slide.style.height = '1080px';
+        slide.style.minHeight = '1080px';
+        slide.style.padding = '120px 160px';
+
+        const canvas = await html2canvas(slide, {
+            width: 1920,
+            height: 1080,
+            scale: 2,
+            backgroundColor: '#040508',
+            windowWidth: 1920,
+            windowHeight: 1080,
+            logging: false
+        });
+
+        const imgData = canvas.toDataURL('image/png', 0.95);
+        let pptxSlide = pptx.addSlide();
+        pptxSlide.background = { color: '040508' };
+        pptxSlide.addImage({ data: imgData, x: 0, y: 0, w: '100%', h: '100%' });
+
+        slide.style.width = origWidth;
+        slide.style.height = origHeight;
+        slide.style.minHeight = origMinHeight;
+        slide.style.padding = origPadding;
+    }
+
+    if(nav) nav.style.display = 'flex';
+    if(scrollHint) scrollHint.style.display = 'flex';
+    btn.style.display = 'block';
+
+    pptx.writeFile({ fileName: "AI_Incidents_Financial_Services_Dark_Exact_EN.pptx" });
+    btn.innerText = "📥 Export PPTX (Exact)";
+    btn.disabled = false;
+}
+</script>
+</body>
+</html>
