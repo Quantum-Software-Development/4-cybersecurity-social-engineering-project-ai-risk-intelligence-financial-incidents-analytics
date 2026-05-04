@@ -59,7 +59,7 @@ streamlit>=1.32.0
 # 🔗 INTEGRATION / HTTP
 # ----------------------------------------------------------------
 # Communication with external APIs
-requests>=2.31.0
+requests>=2.33.0
 
 # ----------------------------------------------------------------
 # 🤖 GENERATIVE AI (GROQ)
