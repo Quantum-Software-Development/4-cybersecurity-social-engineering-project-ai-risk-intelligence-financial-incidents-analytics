@@ -34,5 +34,5 @@ pytz==2023.3
 gunicorn==21.2.0
 
 # Testes (opcional)
-pytest==7.4.0
+pytest==9.0.3
 requests==2.31.0
