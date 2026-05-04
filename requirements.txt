@@ -23,7 +23,7 @@ plotly>=5.18.0
 # ----------------------------------------------------------------
 # Statistical tests and analytical modeling
 scipy>=1.11.0
-statsmodels>=0.14.0
+statsmodels>=0.14.6
 
 # ----------------------------------------------------------------
 # 🤖 MACHINE LEARNING
