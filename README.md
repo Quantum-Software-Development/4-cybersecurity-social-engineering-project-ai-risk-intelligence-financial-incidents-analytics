@@ -22,6 +22,8 @@
 <!-- ========= END REPO TITLE ========= -->
 
 
+
+
 <!-- ========= START DashBoar Streamlit -->
 <p align="center">
   <a href="https://ai-incidents-financial-services.streamlit.app/" target="_blank" rel="noopener noreferrer">
@@ -37,7 +39,7 @@
 <p align="center">
   <a href="https://stellar-fenglisu-9274fc.netlify.app/" target="_blank" rel="noopener noreferrer">
     <img 
-      src="https://img.shields.io/badge/React-Interactive%20Slides-115e59?style=for-the-badge&logo=react&logoColor=white" 
+      src="https://img.shields.io/badge/React-Interactive%20Slides-14532d?style=for-the-badge&logo=react&logoColor=white" 
       alt="React Interactive Slides"
       style="height: 30px; width: auto;"
     />
