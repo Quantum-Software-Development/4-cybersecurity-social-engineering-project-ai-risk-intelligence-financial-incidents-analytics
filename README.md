@@ -332,13 +332,13 @@ The project uses the **AI Incident Database (AIID)** as its main data source, a 
 | [GraphQL API]()     | `https://incidentdatabase.ai/api/graphql`               | Programmatic data collection (Notebook 1) |
 | [Kaggle dataset]()  | `kaggle datasets download konradb/ai-incident-database` | Offline fallback                          |
 
-<br>
+<br><br>
 
 > [!IMPORTANT]
 >
 > Notebook 1 implements a **4-layer fallback strategy**: GraphQL API → JSON cache → CSV cache → local `incidents.csv`. This ensures reproducibility even without internet access.
 
-<br>
+<br><br>
 
 ### 3.2 [Thematic Scope: Financial Services]()
 
@@ -365,15 +365,15 @@ The project applies thematic filtering using more than 30 keywords across the `t
 | [Financial values rarely complete]()      | Severity proxy via text only      | Use keywords as indicators    |
 | [Heterogeneous text quality]()            | Noisy derived variables           | Conservative heuristics       |
 
-<br>
+<br><br>
 
-> [!NOTE]
+> [!IMPORTANT]
 >
 > These limitations do not invalidate the project, but require careful interpretation and moderation in conclusions.
 
-<br>
+<br><br>
 
-### 3.4 Paradigmatic Example: The 2010 Flash Crash
+### 3.4 [Paradigmatic Example: The 2010 Flash Crash]()
 
 The [**Flash Crash of May 6, 2010**]() is one of the most emblematic examples of operational risk and market risk associated with automation in financial environments. At 2:32 PM New York time, the U.S. stock market experienced a sudden drop that, in approximately 36 minutes, temporarily erased more than US$ 1 trillion in market value.
 
@@ -386,6 +386,8 @@ This configuration contributed to a chain reaction among [**high-frequency tradi
 <br>
 
 ### ➠ [**Impacts and institutional responses:**]()
+
+<br>
 
 * [**Regulatory investigation**](): the SEC ([*Securities and Exchange Commission*]() — U.S. securities regulator) and the CFTC ([*Commodity Futures Trading Commission*]() — U.S. derivatives regulator) conducted a joint formal investigation
 * [**Policy changes**](): mandatory review of algorithmic trading systems and risk controls
@@ -406,7 +408,7 @@ Within the analytical framework developed, the Flash Crash exemplifies the deriv
 * [**`regulatory_investigation: 1`**]() — formal SEC and CFTC investigation
 * [**`policy_change: 1`**]() — mandatory review of trading systems
 
-<br>
+<br><br>
 
 > [!IMPORTANT]
 >
