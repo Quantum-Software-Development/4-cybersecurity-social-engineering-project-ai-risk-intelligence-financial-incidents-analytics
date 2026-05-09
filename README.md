@@ -76,33 +76,15 @@ AI-powered ecosystem for semantic analytics, operational risk intelligence, inte
 <!-- ===================== END BADGE GROUP 1 ===================== -->
 
 
-<!-- ========= START INSTITUTIONAL CONTEXT ========= -->
-
-### **Institutional Context**
-
-**Institution:** Pontifical Catholic University of São Paulo (PUC-SP – Humanistic AI & Data Science • 5th Semester • 2026)  
-**School:** FACEI – Faculty of Interdisciplinary Studies  
-**Course:** AI Security, Cybersecurity & Social Engineering  
-**Professor:** ✨ Eduardo Savino Gomes  
-**Authors:** Fabiana ⚡ Campanari | Pedro Vyctor Almeida  
+<!-- ========= START Institutional INFO ========= -->
+[**Institution:**]() Pontifical Catholic University of São Paulo (PUC-SP – Humanistic AI & Data Science • 5th Semester • 2026)  
+[**School:**]() FACEI – Faculty of Interdisciplinary Studies  
+[**Course:**]() AI Security, Cybersecurity & Social Engineering  
+**Professor:** [✨ Eduardo Savino Gomes]()  
+**Authors:** [Fabiana ⚡️ Campanari](https://linktr.ee/fabianacampanari) and [Pedro Vyctor Almeida]()  <br>
+[**Context:**]() This project analyzes real-world Artificial Intelligence incidents in banks, financial services, and fintechs from the perspectives of AI security, cybersecurity, social engineering, governance, and regulatory compliance.
 
 <br><br>
-
-### **Project Context**
-
-This project is developed within an academic and applied research environment focused on Artificial Intelligence security, cybersecurity, and social engineering in financial ecosystems.
-
-It investigates real-world AI-related incidents across banking, financial services, and fintech environments, emphasizing the intersection between AI systems, operational risk, governance structures, and regulatory compliance frameworks.
-
-The study is grounded in applied data science methodologies and structured analytical pipelines inspired by the **CRISP-DM methodology**, aiming to transform unstructured incident data into actionable risk intelligence.
-
-The analysis explores algorithmic behavior, systemic vulnerabilities, and the socio-technical impact of AI-driven decision systems in regulated financial domains.
-
-The project is aligned with principles of **Responsible AI**, transparency, and governance-oriented analytics, contributing to both academic research and practical risk intelligence applications.
-
-<br><br><br>
-
-<!-- ========= END INSTITUTIONAL CONTEXT ========= -->
 
 
 <!-- ========= START SPONSOR ========= -->
