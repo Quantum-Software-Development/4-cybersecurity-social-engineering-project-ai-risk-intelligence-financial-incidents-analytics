@@ -323,9 +323,31 @@ Avaliar, com base em dados estruturados de incidentes de IA no setor financeiro,
 
 ### ➠ [**Nível de significância adotado**](): α = 0,05 em todos os testes.
 
-
 <br><br>
 
+## 3. [Base e Contexto dos Dados]()
+
+<br>
+
+### 3.1 [Base de Dados de Incidentes de IA (AIID)]()
+
+O projeto utiliza o **AI Incident Database (AIID)** como sua principal fonte de dados, um repositório de incidentes reais envolvendo sistemas de IA, documentados a partir de fontes públicas — mantido pela *Responsible AI Collaborative* e licenciado sob **CC BY-SA 4.0**.
+
+<br>
+
+| [Modo de acesso]() | [Endereço]()                                            | [Uso]()                          |
+| ------------------ | ------------------------------------------------------- | -------------------------------- |
+| [Portal oficial]() | `https://incidentdatabase.ai/`                          | Navegação e contexto             |
+| [API GraphQL]()    | `https://incidentdatabase.ai/api/graphql`               | Coleta programática (Notebook 1) |
+| [Dataset Kaggle]() | `kaggle datasets download konradb/ai-incident-database` | Fallback offline                 |
+
+<br>
+
+> [!IMPORTANT]
+>
+> O Notebook 1 implementa uma **estratégia de fallback em 4 camadas**: API GraphQL → cache JSON → cache CSV → `incidents.csv` local. Isso garante reprodutibilidade mesmo sem conexão com a internet.
+
+<br>
 
 
 
