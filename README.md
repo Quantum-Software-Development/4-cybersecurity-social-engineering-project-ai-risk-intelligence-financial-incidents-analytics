@@ -10,11 +10,8 @@
 <!-- ========= END LANGUAGE BUTTON ========= -->
 
 
-
-
 <!-- ========= START REPO TITLE ========= -->
-<!-- ========= START REPO TITLE ========= -->
-# 🔐 AI Incidents in Banking, Financial Services and Fintech
+# 🔐 [AI Incidents in Banking, Financial Services and Fintech]()
 
 <p align="center">
 Modular AI Risk Intelligence Infrastructure for Financial Incident Analytics, Governance, Compliance, and Regulatory Decision-Making
