@@ -13,15 +13,14 @@
 
 
 <!-- ========= START REPO TITLE ========= -->
+# <p align="center">🔐 Inteligência de Incidentes de IA em Bancos, Serviços Financeiros e Fintechs</p>
 
-# <p align="center"> 🔐 [Incidentes de IA em Bancos, Serviços Financeiros e Fintechs]()
-
-### <p align="center">
-Infraestrutura modular de inteligência de risco em IA para análise de incidentes financeiros, governança, conformidade e tomada de decisão regulatória.
+<p align="center">
+<strong>Infraestrutura modular de inteligência de risco baseada em IA para análise de incidentes financeiros, governança, conformidade e tomada de decisão regulatória</strong>
 </p>
 
-##### <p align="center">
-Ecossistema baseado em IA para análise semântica, inteligência de risco operacional, dashboards interativos, APIs e insights impulsionados por LLMs.
+<p align="center">
+Ecossistema ponta a ponta de IA para análise semântica, inteligência de risco operacional, dashboards interativos, APIs e insights impulsionados por LLMs
 </p>
 
 <br><br><br><br>
