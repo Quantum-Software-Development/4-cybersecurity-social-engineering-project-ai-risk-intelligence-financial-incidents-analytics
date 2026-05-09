@@ -1,5 +1,12 @@
 Prezado Professor Savino,
 
+Estou encaminhando os materiais por aqui, pois acabei de preparar o e-mail e, ao tentar realizar o envio pela função “Turn In / Turn Out” no Teams, a funcionalidade aparentava estar indisponível naquele momento.
+Dessa forma, para garantir o acesso ao conteúdo completo do projeto, estou enviando diretamente os links, documentações e demais materiais relacionados ao trabalho.
+
+Também gostaria de mencionar que o README do projeto é extremamente detalhado, reunindo toda a contextualização técnica, pesquisas complementares, referências relevantes, análises, justificativas metodológicas, decisões arquiteturais, construção do pipeline analítico e os critérios adotados ao longo do desenvolvimento do projeto.
+
+No momento, ainda estou finalizando alguns trechos e ajustes finais dessa documentação mais extensa do README, e pretendo concluir tudo ao longo deste final de semana. Porém, todos os entregáveis principais exigidos para o projeto já estão devidamente disponíveis e acessíveis no repositório.
+
 Estou enviando o link do repositório do nosso projeto, onde estão disponíveis os códigos, documentação, apresentações, dashboard, deploys e demais materiais relacionados ao desenvolvimento do trabalho:
 
 🔗 Repositório do Projeto:
