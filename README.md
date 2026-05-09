@@ -22,7 +22,6 @@ AI-powered ecosystem for semantic analytics, operational risk intelligence, inte
 </p>
 
 <br><br>
-
 <!-- ========= END REPO TITLE ========= -->
 
 
@@ -87,15 +86,11 @@ AI-powered ecosystem for semantic analytics, operational risk intelligence, inte
 <br><br>
 
 
-<!-- ========= START SPONSOR ========= -->
-
-#### <p align="center">
-[![Sponsor FabianaCampanari](https://img.shields.io/badge/Sponsor-FabianaCampanari-brightgreen?logo=github)](https://github.com/sponsors/FabianaCampanari)
-</p>
+<!-- ========= START SPONSOR BADGES ========= -->
+#### <p align="center"> [![Sponsor FabianaCampanari](https://img.shields.io/badge/Sponsor-%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7%20FabianaCampanari%20%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7-brightgreen?logo=GitHub)](https://github.com/sponsors/FabianaCampanari)
 
 <br><br>
-
-<!-- ========= END SPONSOR ========= -->
+<!-- ========= END SPONSOR BADGES ========= -->
 
 
 <!-- ========= START DEMO VIDEO ========= -->
