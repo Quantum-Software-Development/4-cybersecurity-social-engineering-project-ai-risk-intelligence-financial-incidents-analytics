@@ -210,12 +210,13 @@ O sistema responde a perguntas como:
 
 ## Table of Contents
 
+## 📋 Sumário
 
 1. [Introdução](#1-introdução)
 2. [Objetivos e Questões de Pesquisa](#2-objetivos-e-questões-de-pesquisa)
-3. [Fundamentação e Contexto dos Dados](#3-fundamentação-e-contexto-dos-dados)
+3. [Fundamentação Teórica e Contexto dos Dados](#3-fundamentação-teórica-e-contexto-dos-dados)
 4. [Metodologia CRISP-DM](#4-metodologia-crisp-dm)
-5. [Dados Utilizados e Preparação](#5-dados-utilizados-e-preparação)
+5. [Fontes de Dados e Preparação](#5-fontes-de-dados-e-preparação)
 6. [Variáveis Analíticas e Hipóteses](#6-variáveis-analíticas-e-hipóteses)
 7. [Análise Estatística e Resultados Inferenciais](#7-análise-estatística-e-resultados-inferenciais)
 8. [Modelagem de Machine Learning](#8-modelagem-de-machine-learning)
@@ -224,16 +225,18 @@ O sistema responde a perguntas como:
 11. [Arquitetura do Sistema](#11-arquitetura-do-sistema)
 12. [Estrutura Técnica dos Notebooks](#12-estrutura-técnica-dos-notebooks)
 13. [Resultados Consolidados](#13-resultados-consolidados)
-14. [Limitações e Cuidados Metodológicos](#14-limitações-e-cuidados-metodológicos)
+14. [Limitações e Considerações Metodológicas](#14-limitações-e-considerações-metodológicas)
 15. [Stack Tecnológica](#15-stack-tecnológica)
 16. [Guia de Execução Local](#16-guia-de-execução-local)
 17. [Configuração da API Groq](#17-configuração-da-api-groq)
 18. [Deploy em Produção](#18-deploy-em-produção)
-19. [Infraestrutura e Publicação da API no Render](#19-guia-da-hospedagem-da-api)
-20. [Estrutura de Arquivos](#20-estrutura-de-arquivos)
+19. [Infraestrutura e Deploy da API no Render](#19-infraestrutura-e-deploy-da-api-no-render)
+20. [Estrutura do Projeto](#20-estrutura-do-projeto)
 21. [Dependências](#21-dependências)
-22. [Conclusões e Próximos Passos](#22-conclusões-e-próximos-passos)
-23. [Referências](#23-referências)
+22. [Análise Geral dos Dados e Modelagem de Machine Learning](#22-análise-geral-dos-dados-e-modelagem-de-machine-learning)
+23. [Conclusões e Trabalhos Futuros](#23-conclusões-e-trabalhos-futuros)
+24. [Agradecimentos](#24-agradecimentos)
+25. [Referências](#25-referências)
 
 
 <br><br>
