@@ -132,22 +132,27 @@ https://github.com/user-attachments/assets/5d3c33b0-166e-414c-a561-8e8dd509be3d
 
 
 
-<!-- ========= START INTRO ========= -->
+<!-- ========= START Overview ========= -->
 ##  [Overview]()
 
-Este projeto consolida uma visão ponta a ponta sobre incidentes de IA em serviços financeiros, conectando dados públicos do AI Incident Database (AIID) a um pipeline completo de análise, modelagem e exposição via API e dashboard.
+Este projeto consolida uma visão ponta a ponta sobre incidentes de IA em serviços financeiros, conectando dados públicos do AI Incident Database (AIID) a um pipeline completo de análise, modelagem e exposição via API e dashboard.[web:1112]
 
-Do ponto de vista executivo, o trabalho mostra como incidentes dispersos podem ser transformados em indicadores estruturados de risco, com foco em [**viés algorítmico**](), [**risco operacional**]() e [**respostas de governança**](). A principal contribuição está na **arquitetura analítica integrada**: da aquisição dos dados à disponibilização de endpoints RESTful e camada de visualização.
+Do ponto de vista executivo, o trabalho mostra como incidentes dispersos podem ser transformados em indicadores estruturados de risco, com foco em [**viés algorítmico**](), [**risco operacional**]() e [**respostas de governança**]().[web:1113][web:1126] A principal contribuição está na **arquitetura analítica integrada**: da aquisição dos dados à disponibilização de endpoints RESTful e camada de visualização.[web:1112][web:1122]
 
 O sistema responde a perguntas como:
 
-[-]() Quais tipos de aplicação de IA geram mais incidentes no setor financeiro? <br>
-[-]() Viés algorítmico afeta segmentos de clientes de forma desigual? <br>
-[-]() É possível prever a severidade de um incidente antes de uma investigação regulatória?
+[-]() Quais tipos de aplicação de IA geram mais incidentes no setor financeiro (crédito, detecção de fraude, atendimento, trading algorítmico etc.) ? <br> 
+[-]() Viés algorítmico afeta segmentos de clientes de forma desigual (faixa de renda, região, gênero, grupos vulneráveis) ? <br>
+[-]() É possível prever a severidade de um incidente antes de uma investigação regulatória, a partir de atributos do caso e do contexto de uso do modelo ? <br> 
+[-]() Quais categorias de risco operacional são mais associadas a incidentes de IA em bancos, seguradoras e fintechs (fraude, falhas de processo, TI, terceirização) ? <br> 
+[-]() Como a frequência e o tipo de incidentes evoluem ao longo do tempo e se concentram em determinados tipos de instituição ou jurisdições regulatórias ? <br> 
+[-]() Que padrões de governança aparecem nas respostas a incidentes (suspensão de modelos, revisão de políticas, comunicação ao regulador, multas) ? <br> 
+[-]() Existem sinais precoces (early warning indicators) nos dados de incidentes que se correlacionam com maior exposição a perdas operacionais ou risco reputacional ? <br>[
+[-]() Em que medida incidentes envolvendo IA generativa diferem daqueles em modelos tradicionais de machine learning no contexto financeiro ? <br>
+[-]() Como métricas de risco de IA podem ser integradas a frameworks existentes de gestão de risco operacional, cibersegurança e compliance no setor financeiro ? <br>[ 
+[-]() Quais lacunas de transparência e reporte de incidentes ainda existem e como um monitoramento estruturado pode apoiar reguladores e áreas de risco ?  
 
-
-<br><br>
-
+<br>
 
 > [!IMPORTANT]
 >
@@ -160,7 +165,7 @@ O sistema responde a perguntas como:
 #
 
 <br><br>
-<!-- ========= END INTRO ========= -->
+<!-- ========= START Overview ========= -->
 
 
 
