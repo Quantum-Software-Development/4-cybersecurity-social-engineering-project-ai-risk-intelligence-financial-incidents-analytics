@@ -13,13 +13,14 @@
 
 
 <!-- ========= START REPO TITLE ========= -->
-# <p align="center"> 🔐 [AI Incidents in Banking, Financial Services and Fintech]()
-### <p align="center"> ### <p align="center"> Modular AI Risk Intelligence Infrastructure for Financial Incident Analytics, Governance, Compliance and Regulatory Decision-Making
-
+# 🔐 AI Incidents in Banking, Financial Services and Fintech
 <p align="center">
-AI-powered ecosystem for semantic analytics, operational risk intelligence, interactive dashboards, APIs and LLM-driven insights in banking and fintech environments.
+Modular AI Risk Intelligence Infrastructure for Financial Incident Analytics, Governance, Compliance and Regulatory Decision-Making
 </p>
 
+<p align="center">
+AI-powered ecosystem for semantic analytics, operational risk intelligence, interactive dashboards, APIs and LLM-driven insights.
+</p>
 
 <br><br>
 
