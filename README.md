@@ -312,13 +312,33 @@ To evaluate, based on structured data from AI incidents in the financial sector,
 | [H3]()         | Do more severe incidents generate greater regulatory response? | Chi-square and logistic regression  |
 | [H4]()         | Is there a temporal trend in incident volume?                  | Time correlation and trend analysis |
 
-
+**Nível de significância adotado**: α = 0,05 em todos os testes.
 
 <br><br>
 
+## 3. [Data Foundation and Context]()
 
+<br>
 
+### 3.1 [AI Incident Database (AIID)]()
 
+The project uses the **AI Incident Database (AIID)** as its main data source, a repository of real incidents involving AI systems, documented from public sources — maintained by the *Responsible AI Collaborative* and licensed under **CC BY-SA 4.0**.
+
+<br>
+
+| [Access mode]()     | [Address]()                                          | [Usage]()                                     |
+| --------------- | ------------------------------------------------------- | ----------------------------------------- |
+| [Official portal]() | `https://incidentdatabase.ai/`                          | Navigation and context                    |
+|[GraphQL API]()     | `https://incidentdatabase.ai/api/graphql`               | Programmatic data collection (Notebook 1) |
+| [Kaggle dataset]()  | `kaggle datasets download konradb/ai-incident-database` | Offline fallback                          |
+
+<br>
+
+> [!IMPORTANT]
+>
+> Notebook 1 implements a **4-layer fallback strategy**: GraphQL API → JSON cache → CSV cache → local `incidents.csv`. This ensures reproducibility even without internet access.
+
+<br>
 
 
 
