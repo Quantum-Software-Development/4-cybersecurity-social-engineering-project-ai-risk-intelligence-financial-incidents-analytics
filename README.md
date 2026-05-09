@@ -373,6 +373,46 @@ The project applies thematic filtering using more than 30 keywords across the `t
 
 <br>
 
+### 3.4 Paradigmatic Example: The 2010 Flash Crash
+
+The [**Flash Crash of May 6, 2010**]() is one of the most emblematic examples of operational risk and market risk associated with automation in financial environments. At 2:32 PM New York time, the U.S. stock market experienced a sudden drop that, in approximately 36 minutes, temporarily erased more than US$ 1 trillion in market value.
+
+During this interval, the [**Dow Jones Industrial Average**]() fell by more than 1,000 points, and some stocks briefly traded at extreme levels — in certain cases dropping from tens of dollars to just one cent — before rapidly returning to near-normal levels. The event demonstrated how highly automated markets can amplify disturbances at a systemic scale.
+
+Regulatory analyses of the case indicate that one of the main triggers was the automated execution of a large sell order involving [**75,000 E-mini S&P 500 contracts**]() (electronic futures contracts that allow trading the S&P 500 index — an indicator of the 500 largest U.S. companies — with leverage), estimated at around US$ 4.1 billion. The algorithm executed orders based on a fraction of the trading volume in the previous minute, without incorporating sufficient [**guardrails**]() (protective mechanisms such as price, time, or volatility limits).
+
+This configuration contributed to a chain reaction among [**high-frequency trading algorithms**]() ([*High-Frequency Trading*]() — HFT: automated systems that execute thousands of trades per second), which began trading contracts among themselves, amplifying volatility and temporarily degrading liquidity. As a consequence, containment mechanisms such as [**circuit breakers**]() (automatic trading halts triggered during extreme volatility) were activated to interrupt trading and stabilize the market.
+
+<br>
+
+### ➠ [**Impacts and institutional responses:**]()
+
+* [**Regulatory investigation**](): the SEC ([*Securities and Exchange Commission*]() — U.S. securities regulator) and the CFTC ([*Commodity Futures Trading Commission*]() — U.S. derivatives regulator) conducted a joint formal investigation
+* [**Policy changes**](): mandatory review of algorithmic trading systems and risk controls
+* [**Strengthening of circuit breakers**](): implementation of more robust automatic interruption mechanisms
+* [**Legal actions**](): prosecution against the trader responsible for the initial order
+
+<br>
+
+### ➠ [**Relevance to this project:**]()
+
+<br>
+
+Within the analytical framework developed, the Flash Crash exemplifies the derived variables implemented:
+
+* [**`application_type: algorithmic_trading`**]() — automated trading algorithms
+* [**`incident_type: market_disruption`**]() — systemic market disturbance
+* [**`severity_level: critical`**]() — systemic, multi-billion-dollar short-term impact
+* [**`regulatory_investigation: 1`**]() — formal SEC and CFTC investigation
+* [**`policy_change: 1`**]() — mandatory review of trading systems
+
+<br>
+
+> [!NOTE]
+>
+> This incident demonstrates how [**automated decision systems can generate billion-dollar operational losses within minutes, trigger severe regulatory investigations, and lead to mandatory institutional control revisions**]() — validating the need for robust analytical architectures for monitoring, governance, and algorithmic risk management in critical financial environments.
+
+<br><br>
 
 
 
