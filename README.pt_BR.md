@@ -335,7 +335,34 @@ Avaliar, com base em dados estruturados de incidentes de IA no setor financeiro,
 
 
 
-## Acknowledgements
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+<br><br>
+<br><br>
+
+
+
+## 24. [Acknowledgements]()
+
+<br>
 
 > [!NOTE]
 > Desenvolver este projeto end-to-end foi uma experiência extremamente enriquecedora e a realização de um grande objetivo acadêmico e pessoal.
@@ -362,10 +389,10 @@ Avaliar, com base em dados estruturados de incidentes de IA no setor financeiro,
 
 
 
+<br>
 
 
-
-
+## 25. [Referências]()
 
 
 
