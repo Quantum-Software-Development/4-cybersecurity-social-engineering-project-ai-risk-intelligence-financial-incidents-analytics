@@ -316,7 +316,7 @@ To evaluate, based on structured data from AI incidents in the financial sector,
 
 <br><br>
 
-## 3. [Data Foundation and Context]()
+## 3. [Theoretical Foundation and Data Context]()
 
 <br>
 
