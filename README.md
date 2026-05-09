@@ -142,9 +142,9 @@ https://github.com/user-attachments/assets/5d3c33b0-166e-414c-a561-8e8dd509be3d
 <!-- ========= START OVERVIEW ========= -->
 ##  [Overview]()
 
-This project consolidates an end-to-end perspective on AI incidents in financial services, connecting public data from the AI Incident Database (AIID) to a complete pipeline of analysis, modeling, and exposure via API and dashboard.[web:1112]
+This project consolidates an end-to-end perspective on AI incidents in financial services, connecting public data from the AI Incident Database (AIID) to a complete pipeline of analysis, modeling, and exposure via API and dashboard.
 
-From an executive perspective, the work demonstrates how dispersed incidents can be transformed into structured risk indicators, with a focus on [**algorithmic bias**](), [**operational risk**](), and [**governance responses**]().[web:1113][web:1126] The main contribution lies in the **integrated analytical architecture**: from data acquisition to the availability of RESTful endpoints and a visualization layer.[web:1112][web:1122]
+From an executive perspective, the work demonstrates how dispersed incidents can be transformed into structured risk indicators, with a focus on [**algorithmic bias**](), [**operational risk**](), and [**governance responses**](). The main contribution lies in the **integrated analytical architecture**: from data acquisition to the availability of RESTful endpoints and a visualization layer.
 
 <br>
 
@@ -170,7 +170,7 @@ From an executive perspective, the work demonstrates how dispersed incidents can
 
 [-]() What transparency and incident reporting gaps still exist, and how can structured monitoring support regulators and risk teams?
 
-<br><br>
+<br>
 
 > [!IMPORTANT]
 >
@@ -269,13 +269,12 @@ Given a set of AI incidents recorded across multiple sectors and filtered to the
 | [**Compliance**]()         | Identify regulatory gaps and prioritize audits               |
 | [**Investors**]()          | Understand the impact of AI incidents on institutional value |
 
-<br><br>
+<br>
 
 > [!TIP]
 >
 > For [**AI governance**](), the project illustrates how incident data can be transformed into indicators, predictive models, and APIs, enabling continuous monitoring and structured responses to risks.
 >
-
 
 <br><br>
 
@@ -332,7 +331,7 @@ The project uses the **AI Incident Database (AIID)** as its main data source, a 
 | [GraphQL API]()     | `https://incidentdatabase.ai/api/graphql`               | Programmatic data collection (Notebook 1) |
 | [Kaggle dataset]()  | `kaggle datasets download konradb/ai-incident-database` | Offline fallback                          |
 
-<br><br>
+<br><
 
 > [!IMPORTANT]
 >
@@ -365,7 +364,7 @@ The project applies thematic filtering using more than 30 keywords across the `t
 | [Financial values rarely complete]()      | Severity proxy via text only      | Use keywords as indicators    |
 | [Heterogeneous text quality]()            | Noisy derived variables           | Conservative heuristics       |
 
-<br><br>
+<br>
 
 > [!IMPORTANT]
 >
@@ -408,7 +407,7 @@ Within the analytical framework developed, the Flash Crash exemplifies the deriv
 * [**`regulatory_investigation: 1`**]() — formal SEC and CFTC investigation
 * [**`policy_change: 1`**]() — mandatory review of trading systems
 
-<br><br>
+<br>
 
 > [!IMPORTANT]
 >
@@ -417,7 +416,7 @@ Within the analytical framework developed, the Flash Crash exemplifies the deriv
 <br><br>
 
 
-
+## 4. [CRISP-DM Methodology]
 
 
 
