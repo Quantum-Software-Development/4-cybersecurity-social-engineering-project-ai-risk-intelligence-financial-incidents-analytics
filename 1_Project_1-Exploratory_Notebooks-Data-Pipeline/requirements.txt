@@ -38,5 +38,7 @@ gunicorn==26.0.0
 
 
 # Testes (opcional)
-pytest==7.4.0
+
+pytest==9.0.3
 requests==2.33.1
+
