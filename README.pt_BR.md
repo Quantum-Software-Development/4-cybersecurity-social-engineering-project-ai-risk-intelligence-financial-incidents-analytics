@@ -138,6 +138,15 @@ This project consolidates an end-to-end perspective on AI incidents in financial
 
 From an executive perspective, the work demonstrates how dispersed incidents can be transformed into structured risk indicators, with a focus on [**algorithmic bias**](), [**operational risk**](), and [**governance responses**]().[web:1113][web:1126] The main contribution lies in the **integrated analytical architecture**: from data acquisition to the availability of RESTful endpoints and a visualization layer.[web:1112][web:1122]
 
+
+<!-- ========= START Overview ========= -->
+##  [Overview]()
+
+Este projeto consolida uma visão ponta a ponta sobre incidentes de IA em serviços financeiros, conectando dados públicos do AI Incident Database (AIID) a um pipeline completo de análise, modelagem e exposição via API e dashboard.[web:1112]
+
+Do ponto de vista executivo, o trabalho mostra como incidentes dispersos podem ser transformados em indicadores estruturados de risco, com foco em [**viés algorítmico**](), [**risco operacional**]() e [**respostas de governança**]().[web:1113][web:1126] A principal contribuição está na **arquitetura analítica integrada**: da aquisição dos dados à disponibilização de endpoints RESTful e camada de visualização.[web:1112][web:1122]
+
+
 The system answers questions such as:
 
 [-]() Which types of AI applications generate the most incidents in the financial sector (credit, fraud detection, customer service, algorithmic trading, etc.)? <br>  
@@ -159,19 +168,6 @@ The system answers questions such as:
 [-]() How can AI risk metrics be integrated into existing frameworks for operational risk management, cybersecurity, and compliance in the financial sector? <br>
 
 [-]() What transparency and incident reporting gaps still exist, and how can structured monitoring support regulators and risk teams?
-
-<br><br>
-
-> [!IMPORTANT]
->
-> [**Correct positioning**:]() predictive models should be treated as a **methodological proof of concept**. The main deliverable is the integrated analytical architecture — not a high-accuracy classifier ready for production.
-> <br>
-
-<br><br>
-
-#
-
-<br><br>
 <!-- ========= END Overview ========= -->
 
 
@@ -262,7 +258,7 @@ The system answers questions such as:
 ### 1.1 [**Contextualização do tema**]()
 
 
-O uso de sistemas de Inteligência Artificial no setor financeiro tem crescido rapidamente em aplicações como [**credit scoring**](), [**fraud detection**](), [**algorithmic trading**](), *[*risk assessment**](), automação de atendimento e apoio à conformidade. Esse avanço amplia a capacidade operacional das instituições, mas também introduz novos vetores de risco, sobretudo em ambientes altamente regulados e sensíveis a falhas de decisão automatizada.
+O uso de sistemas de Inteligência Artificial no setor financeiro tem crescido rapidamente em aplicações como [**credit scoring**](), [**fraud detection**](), [**algorithmic trading**](), [**risk assessment**](), automação de atendimento e apoio à conformidade. Esse avanço amplia a capacidade operacional das instituições, mas também introduz novos vetores de risco, sobretudo em ambientes altamente regulados e sensíveis a falhas de decisão automatizada.
 
 No setor financeiro, falhas de IA não afetam apenas desempenho técnico. Elas podem gerar impactos reputacionais, vieses discriminatórios, perdas operacionais, questionamentos regulatórios e mudanças de políticas internas. Por isso, analisar incidentes reais de IA nesse domínio é uma forma concreta de aproximar governança algorítmica, gestão de risco e evidência empírica.
 
