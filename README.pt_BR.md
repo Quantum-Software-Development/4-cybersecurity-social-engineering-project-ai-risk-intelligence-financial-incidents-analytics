@@ -142,17 +142,26 @@ Do ponto de vista executivo, o trabalho mostra como incidentes dispersos podem s
 O sistema responde a perguntas como:
 
 [-]() Quais tipos de aplicação de IA geram mais incidentes no setor financeiro (crédito, detecção de fraude, atendimento, trading algorítmico etc.) ? <br> 
+
 [-]() Viés algorítmico afeta segmentos de clientes de forma desigual (faixa de renda, região, gênero, grupos vulneráveis) ? <br>
+
 [-]() É possível prever a severidade de um incidente antes de uma investigação regulatória, a partir de atributos do caso e do contexto de uso do modelo ? <br> 
+
 [-]() Quais categorias de risco operacional são mais associadas a incidentes de IA em bancos, seguradoras e fintechs (fraude, falhas de processo, TI, terceirização) ? <br> 
+
 [-]() Como a frequência e o tipo de incidentes evoluem ao longo do tempo e se concentram em determinados tipos de instituição ou jurisdições regulatórias ? <br> 
+
 [-]() Que padrões de governança aparecem nas respostas a incidentes (suspensão de modelos, revisão de políticas, comunicação ao regulador, multas) ? <br> 
-[-]() Existem sinais precoces (early warning indicators) nos dados de incidentes que se correlacionam com maior exposição a perdas operacionais ou risco reputacional ? <br>[
+
+[-]() Existem sinais precoces (early warning indicators) nos dados de incidentes que se correlacionam com maior exposição a perdas operacionais ou risco reputacional ? <br>
+
 [-]() Em que medida incidentes envolvendo IA generativa diferem daqueles em modelos tradicionais de machine learning no contexto financeiro ? <br>
-[-]() Como métricas de risco de IA podem ser integradas a frameworks existentes de gestão de risco operacional, cibersegurança e compliance no setor financeiro ? <br>[ 
+
+[-]() Como métricas de risco de IA podem ser integradas a frameworks existentes de gestão de risco operacional, cibersegurança e compliance no setor financeiro ? <br>
+
 [-]() Quais lacunas de transparência e reporte de incidentes ainda existem e como um monitoramento estruturado pode apoiar reguladores e áreas de risco ?  
 
-<br>
+<br><br>
 
 > [!IMPORTANT]
 >
@@ -255,7 +264,7 @@ O sistema responde a perguntas como:
 ### 1.1 [**Contextualização do tema**]()
 
 
-O uso de sistemas de Inteligência Artificial no setor financeiro tem crescido rapidamente em aplicações como [**credit scoring**](), [**fraud detection**](), [**algorithmic trading**](), *[*risk assessment**](), automação de atendimento e apoio à conformidade. Esse avanço amplia a capacidade operacional das instituições, mas também introduz novos vetores de risco, sobretudo em ambientes altamente regulados e sensíveis a falhas de decisão automatizada.
+O uso de sistemas de Inteligência Artificial no setor financeiro tem crescido rapidamente em aplicações como [**credit scoring**](), [**fraud detection**](), [**algorithmic trading**](), [**risk assessment**](), automação de atendimento e apoio à conformidade. Esse avanço amplia a capacidade operacional das instituições, mas também introduz novos vetores de risco, sobretudo em ambientes altamente regulados e sensíveis a falhas de decisão automatizada.
 
 No setor financeiro, falhas de IA não afetam apenas desempenho técnico. Elas podem gerar impactos reputacionais, vieses discriminatórios, perdas operacionais, questionamentos regulatórios e mudanças de políticas internas. Por isso, analisar incidentes reais de IA nesse domínio é uma forma concreta de aproximar governança algorítmica, gestão de risco e evidência empírica.
 
