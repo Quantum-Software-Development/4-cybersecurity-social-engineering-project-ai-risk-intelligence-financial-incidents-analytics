@@ -312,7 +312,7 @@ To evaluate, based on structured data from AI incidents in the financial sector,
 | [H3]()         | Do more severe incidents generate greater regulatory response? | Chi-square and logistic regression  |
 | [H4]()         | Is there a temporal trend in incident volume?                  | Time correlation and trend analysis |
 
-**Nível de significância adotado**: α = 0,05 em todos os testes.
+### ➠ [**Adopted significance level**](): α = 0.05 in all tests.
 
 <br><br>
 
