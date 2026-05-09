@@ -378,9 +378,50 @@ O projeto aplica filtragem temática com mais de 30 palavras-chave nos campos `t
 
 > [!NOTE]
 >
->Essas limitações não inviabilizam o projeto, mas exigem interpretação cuidadosa e moderação nas conclusões.
+> Essas limitações não inviabilizam o projeto, mas exigem interpretação cuidadosa e moderação nas conclusões.
 
 <br>
+
+### 3.4 Exemplo paradigmático: Flash Crash de 2010
+
+O [**Flash Crash de 6 de maio de 2010**]() é um dos exemplos mais emblemáticos de risco operacional e risco de mercado associados à automação em ambientes financeiros. Às 14h32, no horário de Nova York, o mercado acionário norte-americano sofreu uma queda abrupta que, em cerca de 36 minutos, eliminou temporariamente mais de US$ 1 trilhão em valor de mercado.
+
+Nesse intervalo, o [**Dow Jones Industrial Average**]() caiu mais de 1.000 pontos, e algumas ações chegaram a ser negociadas a valores extremos — em certos casos, de dezenas de dólares para apenas um centavo — antes de retornarem rapidamente a patamares próximos do normal. O episódio evidenciou como mercados altamente automatizados podem amplificar perturbações em escala sistêmica.
+
+A literatura regulatória sobre o caso aponta que um dos gatilhos centrais foi a execução automatizada de uma grande ordem de venda de [**75 mil contratos de E-mini S&P 500**]() (contratos futuros eletrônicos que permitem negociar o índice S&P 500 — indicador das 500 maiores empresas americanas — com alavancagem), estimada em cerca de US$ 4,1 bilhões. O algoritmo utilizado executava ordens com base em uma fração do volume negociado no minuto anterior, sem incorporar [**guardrails**]() (barreiras de proteção como limites de preço, tempo ou volatilidade) suficientes.
+
+Essa configuração contribuiu para uma reação em cadeia entre [**algoritmos de alta frequência**]() ([*High-Frequency Trading*]() — HFT: sistemas automatizados que executam milhares de operações por segundo), que passaram a comprar e revender contratos entre si, ampliando artificialmente a volatilidade e deteriorando momentaneamente a liquidez. Como consequência, mecanismos de contenção, como [**circuit breakers**]() (disjuntores automáticos que pausam negociações quando detectada volatilidade extrema), precisaram ser acionados para interromper parte das negociações e conter o colapso.
+
+<br>
+
+### ➠ [**Impactos e respostas institucionais:**]()
+
+- [**Investigação regulatória**](): SEC ([*Securities and Exchange Commission*]() — comissão que regula mercados de valores mobiliários nos EUA) e CFTC ([*Commodity Futures Trading Commission*]() — agência que regula mercados de derivativos e futuros) conduziram investigação formal conjunta
+- [**Mudanças de política**](): revisão compulsória de sistemas de trading algorítmico e controles de risco
+- [**Fortalecimento de circuit breakers**](): implementação de mecanismos mais robustos de interrupção automática
+- [**Ações judiciais**](): processo contra o trader responsável pela ordem inicial
+
+<br>
+
+### ➠  [**Relevância para este projeto:**]()
+
+<br>
+
+No contexto da base analítica construída, o Flash Crash exemplifica de forma paradigmática as variáveis derivadas implementadas:
+
+- [**`application_type: algorithmic_trading`**]() — algoritmos de negociação automatizada
+- [**`incident_type: market_disruption`**]() — perturbação sistêmica do mercado
+- [**`severity_level: critical`**]() — impacto bilionário, sistêmico e de curto prazo
+- [**`regulatory_investigation: 1`**]() — investigação formal da SEC e CFTC
+- [**`policy_change: 1`**]() — revisão compulsória de políticas e sistemas de trading
+
+<br>
+
+> [!NOTE]
+>
+> Este incidente demonstra como [**sistemas automatizados de decisão podem produzir perdas operacionais bilionárias em minutos, desencadear investigações regulatórias severas e levar à revisão compulsória de controles institucionais**]() — validando a necessidade de arquiteturas analíticas robustas para monitoramento, governança e gestão de risco algorítmico em ambientes financeiros críticos.
+
+<br><br>
 
 
 
