@@ -97,7 +97,7 @@ AI-powered ecosystem for semantic analytics, operational risk intelligence, inte
 https://github.com/user-attachments/assets/5d3c33b0-166e-414c-a561-8e8dd509be3d
 
 #### 🖤 Creative Direction, Music Curation & Editing by Fab⚡️  
-##### 🎶 Soundtrack: "Canon in D" — Johann Pachelbel
+##### 🎶 [Soundtrack:]() "Canon in D" — Johann Pachelbel
 
 <br><br><br>
 <!-- ========= END DEMO VIDEO ========= -->
@@ -127,7 +127,6 @@ https://github.com/user-attachments/assets/5d3c33b0-166e-414c-a561-8e8dd509be3d
 
 <br><br><br>
 <!-- ========= END BADGES GROUP 2 ========= -->
-
 
 <!-- ========= START NOTE ========= -->
 > [!NOTE]
@@ -276,7 +275,7 @@ Given a set of AI incidents recorded across multiple sectors and filtered to the
 >
 > For [**AI governance**](), the project illustrates how incident data can be transformed into indicators, predictive models, and APIs, enabling continuous monitoring and structured responses to risks.
 >
-> <br>
+
 
 <br><br>
 
@@ -300,7 +299,7 @@ To evaluate, based on structured data from AI incidents in the financial sector,
 [4.]() Build predictive models for severity classification and regulatory investigation. <br>
 [5.]() Organize results into an architecture composed of notebooks, relational database, RESTful API, and dashboard.
 
-<br><br>
+<br>
 
 ### 2.3 [Research hypotheses]()
 
@@ -312,6 +311,30 @@ To evaluate, based on structured data from AI incidents in the financial sector,
 | [H2]()         | Does algorithmic bias disproportionately affect segments?      | Chi-square test of independence     |
 | [H3]()         | Do more severe incidents generate greater regulatory response? | Chi-square and logistic regression  |
 | [H4]()         | Is there a temporal trend in incident volume?                  | Time correlation and trend analysis |
+
+
+
+<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
