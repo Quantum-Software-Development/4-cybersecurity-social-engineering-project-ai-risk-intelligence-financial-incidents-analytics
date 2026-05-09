@@ -286,7 +286,7 @@ Given a set of AI incidents recorded across multiple sectors and filtered to the
 
 To evaluate, based on structured data from AI incidents in the financial sector, whether there are relevant patterns of **algorithmic bias**, **operational risk**, and **governance**, producing evidence useful for analysis, monitoring, and decision support.
 
-<br><br>
+<br>
 
 ### 2.2 [Specific objectives]()
 
@@ -331,7 +331,7 @@ The project uses the **AI Incident Database (AIID)** as its main data source, a 
 | [GraphQL API]()     | `https://incidentdatabase.ai/api/graphql`               | Programmatic data collection (Notebook 1) |
 | [Kaggle dataset]()  | `kaggle datasets download konradb/ai-incident-database` | Offline fallback                          |
 
-<br><
+<br>
 
 > [!IMPORTANT]
 >
