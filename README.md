@@ -408,7 +408,7 @@ Within the analytical framework developed, the Flash Crash exemplifies the deriv
 
 <br>
 
-> [!NOTE]
+> [!IMPORTANT]
 >
 > This incident demonstrates how [**automated decision systems can generate billion-dollar operational losses within minutes, trigger severe regulatory investigations, and lead to mandatory institutional control revisions**]() — validating the need for robust analytical architectures for monitoring, governance, and algorithmic risk management in critical financial environments.
 
