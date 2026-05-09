@@ -13,13 +13,15 @@
 
 
 <!-- ========= START REPO TITLE ========= -->
+<!-- ========= START REPO TITLE ========= -->
 # 🔐 AI Incidents in Banking, Financial Services and Fintech
+
 <p align="center">
-Modular AI Risk Intelligence Infrastructure for Financial Incident Analytics, Governance, Compliance and Regulatory Decision-Making
+Modular AI Risk Intelligence Infrastructure for Financial Incident Analytics, Governance, Compliance, and Regulatory Decision-Making
 </p>
 
 <p align="center">
-AI-powered ecosystem for semantic analytics, operational risk intelligence, interactive dashboards, APIs and LLM-driven insights.
+AI-powered ecosystem for semantic analytics, operational risk intelligence, interactive dashboards, APIs, and LLM-driven insights.
 </p>
 
 <br><br>
@@ -27,9 +29,7 @@ AI-powered ecosystem for semantic analytics, operational risk intelligence, inte
 <!-- ========= END REPO TITLE ========= -->
 
 
-
-
-<!-- ========= START DashBoar Streamlit -->
+<!-- ========= START Dashboard Streamlit ========= -->
 <p align="center">
   <a href="https://ai-incidents-financial-services.streamlit.app/" target="_blank" rel="noopener noreferrer">
     <img 
@@ -39,9 +39,11 @@ AI-powered ecosystem for semantic analytics, operational risk intelligence, inte
     />
   </a>
 </p>
-<!-- ========= END Dashboard Streamlit -->
+<!-- ========= END Dashboard Streamlit ========= -->
+
 
 <p align="center">
+
   <a href="https://stellar-fenglisu-9274fc.netlify.app/" target="_blank" rel="noopener noreferrer">
     <img 
       src="https://img.shields.io/badge/React-Interactive%20Slides-14532d?style=for-the-badge&logo=react&logoColor=white" 
@@ -50,87 +52,86 @@ AI-powered ecosystem for semantic analytics, operational risk intelligence, inte
     />
   </a>
 
-  <a href="https://docs.google.com/presentation/d/1CeNA6D3Va2X8nc0dVeD1BKxV97d1SI-v/edit?slide=id.p1#slide=id.p1" target="_blank" rel="noopener noreferrer">
+  <a href="https://docs.google.com/presentation/d/1CeNA6D3Va2X8nc0dVeD1BKxV97d1SI-v/edit#slide=id.p1" target="_blank" rel="noopener noreferrer">
     <img 
-      src="https://img.shields.io/badge/PPTX-Strategic%20Presentation-0f766e?style=for-the-badge&logo=microsoftpowerpoint&logoColor=white" 
-      alt="PPTX Strategic Presentation"
+      src="https://img.shields.io/badge/Strategic%20Presentation-PPTX-0f766e?style=for-the-badge&logo=microsoftpowerpoint&logoColor=white" 
+      alt="Strategic Presentation"
       style="height: 30px; width: auto;"
     />
   </a>
+
 </p>
-<!-- ========= END PPTX -->
+
 
 <!-- ========= START DATA ANALYSING REPORT ========= -->
 <p align="center">
-  <a href="https://github.com/Quantum-Software-Development/4-cybersecurity-social-engineering-project-ai-risk-intelligence-financial-incidents-analytics/blob/5f4ae57543d61147d765d707852d85f616c09f1b/Data%20Analysing%20Report/%F0%9F%87%AC%F0%9F%87%A7data_analysis_report_abnt%20.pdf" target="_blank" rel="noopener noreferrer">
+  <a href="https://github.com/Quantum-Software-Development/4-cybersecurity-social-engineering-project-ai-risk-intelligence-financial-incidents-analytics/blob/5f4ae57543d61147d765d707852d85f616c09f1b/Data%20Analysing%20Report/%F0%9F%87%AC%F0%9F%87%A7data_analysis_report_abnt%20.pdf">
     <img 
-      src="https://img.shields.io/badge/Data%20Analysing-Executive%20Report-134e4a?style=for-the-badge&logo=googleanalytics&logoColor=white&labelColor=022c22" 
-      alt="Data Analysing Executive Report"
-      style="height: 30px; width: auto;"
+      src="https://img.shields.io/badge/Data%20Analysis-Executive%20Report-134e4a?style=for-the-badge&logo=googleanalytics&logoColor=white&labelColor=022c22" 
+      alt="Executive Report"
     />
   </a>
 </p>
 <!-- ========= END DATA ANALYSING REPORT ========= -->
 
+
 <br><br><br>
-<!-- =====================  END BADGE Group 1 ===================== -->
+<!-- ===================== END BADGE GROUP 1 ===================== -->
 
 
+<!-- ========= START INSTITUTIONAL CONTEXT ========= -->
 
-<!-- ========= START Institucional INFO ========= -->
+### **Institutional Context**
 
-
-
-<!-- ========= START Institucional INFO ========= -->
-
-
-<br>
-
-### [**Institutional Context**]()
-
-[**Institution:**]() Pontifical Catholic University of São Paulo (PUC-SP – Humanistic AI & Data Science • 5th Semester • 2026)  
-[**School:**]() FACEI – Faculty of Interdisciplinary Studies  
-[**Course:**]() AI Security, Cybersecurity & Social Engineering  
-**Professor:** ✨ [Eduardo Savino Gomes]()   
-**Authors:** [Fabiana ⚡ Campanari]() | [Pedro Vyctor Almeida]() 
+**Institution:** Pontifical Catholic University of São Paulo (PUC-SP – Humanistic AI & Data Science • 5th Semester • 2026)  
+**School:** FACEI – Faculty of Interdisciplinary Studies  
+**Course:** AI Security, Cybersecurity & Social Engineering  
+**Professor:** ✨ Eduardo Savino Gomes  
+**Authors:** Fabiana ⚡ Campanari | Pedro Vyctor Almeida  
 
 <br><br>
 
-### [**Project Context**]()
+### **Project Context**
 
-This project is developed within an academic and applied research context focused on Artificial Intelligence security, cybersecurity, and social engineering in financial ecosystems.
+This project is developed within an academic and applied research environment focused on Artificial Intelligence security, cybersecurity, and social engineering in financial ecosystems.
 
-It investigates real-world AI-related incidents across banking, financial services, and fintech environments, emphasizing the intersection between AI systems and operational risk, governance structures, and regulatory compliance frameworks.
+It investigates real-world AI-related incidents across banking, financial services, and fintech environments, emphasizing the intersection between AI systems, operational risk, governance structures, and regulatory compliance frameworks.
 
-The study is grounded in applied data science methodologies and structured analytical pipelines, aiming to transform unstructured incident data into actionable risk intelligence. The analysis explores algorithmic behavior, systemic vulnerabilities, and the socio-technical impact of AI-driven decision systems in regulated financial domains.
+The study is grounded in applied data science methodologies and structured analytical pipelines inspired by the **CRISP-DM methodology**, aiming to transform unstructured incident data into actionable risk intelligence.
 
-The project is aligned with principles of esponsible AI, transparency, and governance-oriented analytics, contributing to both academic research and practical risk intelligence applications.
+The analysis explores algorithmic behavior, systemic vulnerabilities, and the socio-technical impact of AI-driven decision systems in regulated financial domains.
+
+The project is aligned with principles of **Responsible AI**, transparency, and governance-oriented analytics, contributing to both academic research and practical risk intelligence applications.
 
 <br><br><br>
-<!-- ========= END Institucional INFO ========= -->
+
+<!-- ========= END INSTITUTIONAL CONTEXT ========= -->
 
 
+<!-- ========= START SPONSOR ========= -->
 
-<!-- ========= START SPONSOR BADGES ========= -->
-
-#### <p align="center"> [![Sponsor FabianaCampanari](https://img.shields.io/badge/Sponsor-%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7%20FabianaCampanari%20%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7-brightgreen?logo=GitHub)](https://github.com/sponsors/FabianaCampanari)
+#### <p align="center">
+[![Sponsor FabianaCampanari](https://img.shields.io/badge/Sponsor-FabianaCampanari-brightgreen?logo=github)](https://github.com/sponsors/FabianaCampanari)
+</p>
 
 <br><br>
-<!-- ========= END SPONSOR BADGES ========= -->
+
+<!-- ========= END SPONSOR ========= -->
 
 
 <!-- ========= START DEMO VIDEO ========= -->
 
 https://github.com/user-attachments/assets/5d3c33b0-166e-414c-a561-8e8dd509be3d
 
-#### 🖤 Creative Direction, Music Curation & Editing  by Fab⚡️ <br>
+#### 🖤 Creative Direction, Music Curation & Editing by Fab⚡️  
 ##### 🎶 Soundtrack: "Canon in D" — Johann Pachelbel
 
 <br><br><br>
+
 <!-- ========= END DEMO VIDEO ========= -->
 
 
-<!-- ========= START BADGES Group 2 ========= -->
+<!-- ========= START BADGES GROUP 2 ========= -->
 <p align="center">
   <img src="https://img.shields.io/badge/Python-Data%20Science-0f172a?logo=python&logoColor=white" />
   <img src="https://img.shields.io/badge/React-Interactive%20Presentation-101f2f?logo=react&logoColor=white" />
@@ -138,23 +139,60 @@ https://github.com/user-attachments/assets/5d3c33b0-166e-414c-a561-8e8dd509be3d
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Streamlit-Analytical%20Dashboard-123445?logo=streamlit&logoColor=white" />
+  <img src="https://img.shields.io/badge/Streamlit-Analytics-123445?logo=streamlit&logoColor=white" />
   <img src="https://img.shields.io/badge/Streamlit%20Cloud-Deployment-124050?logo=streamlit&logoColor=white" />
-  <img src="https://img.shields.io/badge/RESTful%20API-Built%20with%20Flask-134a4a?logo=flask&logoColor=white" />
-  <img src="https://img.shields.io/badge/Dashboard-Powered%20by%20Own%20API-134e4a?logo=fastapi&logoColor=white" />
+  <img src="https://img.shields.io/badge/RESTful%20API-FastAPI-134a4a?logo=fastapi&logoColor=white" />
+  <img src="https://img.shields.io/badge/Dashboard-Integrated%20System-134e4a?logo=fastapi&logoColor=white" />
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Groq%20API-LLM%20Inference-134e4a?logo=graphql&logoColor=white" />
+  <img src="https://img.shields.io/badge/Groq%20API-LLM%20Inference-134e4a?logo=openai&logoColor=white" />
   <img src="https://img.shields.io/badge/AI%20Chat-Embedded%20Assistant-134e4a?logo=openai&logoColor=white" />
   <img src="https://img.shields.io/badge/Machine%20Learning-Predictive%20Models-134e4a?logo=tensorflow&logoColor=white" />
-  <img src="https://img.shields.io/badge/Database-Relational%20SQL-134e4a?logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/Database-SQLite-134e4a?logo=sqlite&logoColor=white" />
   <img src="https://img.shields.io/badge/Render-Cloud%20Deployment-134e4a?logo=render&logoColor=white" />
 </p>
 
-
 <br><br><br>
-<!-- ========= END  BADGES Group 2 ========= -->
+<!-- ========= END BADGES GROUP 2 ========= -->
+
+
+<!-- ========= START OVERVIEW ========= -->
+
+## **Overview**
+
+This project consolidates an end-to-end perspective on AI incidents in financial services, connecting public data from the AI Incident Database (AIID) to a complete pipeline of analysis, modeling, and exposure through API and dashboard.
+
+From an executive perspective, the work demonstrates how dispersed incidents can be transformed into structured risk indicators, focusing on **algorithmic bias**, **operational risk**, and **governance responses**.
+
+The main contribution lies in an **integrated analytical architecture**, spanning data ingestion, relational storage, predictive modeling, RESTful APIs, and interactive visualization layers.
+
+The system addresses the following questions:
+
+- Which types of AI applications generate the most incidents in the financial sector?  
+- Does algorithmic bias affect customer segments unequally?  
+- Is it possible to predict incident severity before regulatory investigation?
+
+<br>
+
+> [!IMPORTANT]
+>
+> Predictive models are positioned as a **methodological proof of concept**, not as production-grade systems. The main deliverable is the integrated analytical architecture.
+
+<br><br>
+
+<!-- ========= END OVERVIEW ========= -->
+
+
+<!-- ========= START NOTE ========= -->
+
+> [!NOTE]
+>
+> ⚠️ Projects may be publicly shared when permitted.  
+> The focus is on applied, hands-on learning with real datasets in AI governance and security contexts.  
+> All sensitive content remains protected in private repositories when required.
+
+<!-- ========= END NOTE ========= -->
 
 
 <!-- ========= START INTRO ========= -->
@@ -187,19 +225,10 @@ The system answers questions such as:
 <!-- ========= START Confidentiality statement ========= -->
 
 > [!NOTE]
-> 
-> ⚠️ Heads Up
 >
-> * Projects and deliverables may be made [publicly available]() whenever possible.
->   
-> * The course emphasizes [**practical, hands-on experience**]() with real datasets to simulate professional consulting scenarios in the fields of **Machine Learning and Neural Networks** for partner organizations and institutions affiliated with the university.
->   
-> * All activities comply with the [**academic and ethical guidelines of PUC-SP**]().
->   
-> * Any content not authorized for public disclosure will remain [**confidential**]() and securely stored in [private repositories]().  
-> <br>
->
->
+> ⚠️ Projects may be publicly shared when permitted.  
+> The focus is on applied, hands-on learning with real datasets in AI governance and security contexts.  
+> All sensitive content remains protected in private repositories when required.
 
 <br><br> 
 
@@ -232,7 +261,7 @@ The system answers questions such as:
 
 1. [Introduction](#1-introduction)
 2. [Objectives and Research Questions](#2-objectives-and-research-questions)
-3. [Data Background and Context](#3-data-background-and-context)
+3. [Theoretical Foundation and Data Context](#3-theoretical-foundation-and-data-context)
 4. [CRISP-DM Methodology](#4-crisp-dm-methodology)
 5. [Data Sources and Preparation](#5-data-sources-and-preparation)
 6. [Analytical Variables and Hypotheses](#6-analytical-variables-and-hypotheses)
@@ -248,11 +277,13 @@ The system answers questions such as:
 16. [Local Execution Guide](#16-local-execution-guide)
 17. [Groq API Configuration](#17-groq-api-configuration)
 18. [Production Deployment](#18-production-deployment)
-19. [API Infrastructure and Publishing on Render](#19-api-infrastructure-and-publishing-on-render)
-20. [File Structure](#20-file-structure)
+19. [Infrastructure and API Deployment on Render](#19-infrastructure-and-api-deployment-on-render)
+20. [Project Structure](#20-project-structure)
 21. [Dependencies](#21-dependencies)
-22. [Conclusions and Next Steps](#22-conclusions-and-next-steps)
-23. [References](#23-references)
+22. [General Data Analysis and Machine Learning Modeling](#22-general-data-analysis-and-machine-learning-modeling)
+23. [Conclusions and Future Work](#23-conclusions-and-future-work)
+24. [Acknowledgements](#24-acknowledgements)
+25. [References](#25-references)
 
 <br><br>
 
