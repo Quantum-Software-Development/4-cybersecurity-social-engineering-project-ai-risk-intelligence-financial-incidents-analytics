@@ -134,7 +134,7 @@ https://github.com/user-attachments/assets/5d3c33b0-166e-414c-a561-8e8dd509be3d
 
 
 <!-- ========= START INTRO ========= -->
-##  [Visão Geral]()
+##  [Overview]()
 
 Este projeto consolida uma visão ponta a ponta sobre incidentes de IA em serviços financeiros, conectando dados públicos do AI Incident Database (AIID) a um pipeline completo de análise, modelagem e exposição via API e dashboard.
 
