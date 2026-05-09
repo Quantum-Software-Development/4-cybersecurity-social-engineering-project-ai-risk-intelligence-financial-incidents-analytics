@@ -326,6 +326,32 @@ Avaliar, com base em dados estruturados de incidentes de IA no setor financeiro,
 
 
 
+## Acknowledgements
+
+> [!NOTE]
+> Desenvolver este projeto end-to-end foi uma experiência extremamente enriquecedora e a realização de um grande objetivo acadêmico e pessoal.
+>
+> Desde sua concepção, o projeto foi estruturado com uma arquitetura modular e escalável, permitindo continuidade, evolução e expansão futura dentro desta mesma linha de pesquisa e aplicação tecnológica.
+>
+> Participei de todas as etapas do projeto, desde a pesquisa e definição da proposta até a implementação completa da solução final.
+>
+> As atividades desenvolvidas incluíram pesquisa e análise de incidentes envolvendo Inteligência Artificial no setor bancário, financeiro e de fintechs, coleta, limpeza, tratamento e estruturação dos dados, desenvolvimento do processo de feature engineering, criação de variáveis derivadas, construção de correlações analíticas e inferências semânticas aplicadas aos dados processados.
+>
+> Também participei da modelagem e organização do banco de dados SQLite, desenvolvimento da API para disponibilização e consumo dos dados, criação do dashboard analítico interativo em Streamlit, desenvolvimento de visualizações analíticas e plots interativos utilizando Dash e Plotly, além da integração do chatbot utilizando a API da Groq com o modelo Llama 3.1 Instant.
+>
+> O projeto também envolveu o desenvolvimento da apresentação interativa em React, realização dos deploys das aplicações e interfaces web, elaboração da documentação técnica, README detalhado, relatórios analíticos, Executive Summary e organização completa da arquitetura, infraestrutura e pipeline de processamento do projeto.
+>
+> Ao longo do desenvolvimento, foram produzidas mais de 1.750 linhas de código, desconsiderando toda a documentação técnica em Markdown e materiais complementares.
+>
+> O mais gratificante foi conseguir transformar toda essa arquitetura e infraestrutura em algo realmente funcional, operacional, acessível e utilizável na prática.
+>
+> Gostaria também de agradecer ao Professor Savino pela oportunidade, orientação e proposta deste projeto, que certamente se tornou um dos trabalhos mais desafiadores, completos e importantes que já desenvolvi até hoje.
+>
+> Sonho realizado.Com Sucesso ⚡️
+>
+> *“Põe quanto és no mínimo que fazes.”* — Fernando Pessoa
+
+
 
 
 
