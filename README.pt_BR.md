@@ -202,6 +202,8 @@ O sistema responde a perguntas como:
 > * 🔗 **[Cybersecurity, Social Engineering & AI Security — Main Hub Repository](https://github.com/Quantum-Software-Development/1-Cybersecurity-SocialEngineering_Main_Hub_Repository-PUCSP)**
 >
 > *Part of the Humanistic AI Data Modeling Series — where data connects with human insight… and occasionally gets socially engineered. ⚡️
+>
+>  <br>
 
 <br><br><br><br>
 <!-- ========= END Main Repo REFERENCE  ========= -->
@@ -212,7 +214,6 @@ O sistema responde a perguntas como:
 
 ## Table of Contents
 
-## 📋 Sumário
 
 1. [Introdução](#1-introdução)
 2. [Objetivos e Questões de Pesquisa](#2-objetivos-e-questões-de-pesquisa)
@@ -315,7 +316,7 @@ Avaliar, com base em dados estruturados de incidentes de IA no setor financeiro,
 [4.]() Construir modelos preditivos para classificação de severidade e investigação regulatória.  
 [5.]() Organizar os resultados em uma arquitetura composta por notebooks, base relacional, API RESTful e dashboard.
 
-<br><br>
+<br><
 
 
 ### 2.3 [Hipóteses de pesquisa]()
@@ -328,6 +329,9 @@ Avaliar, com base em dados estruturados de incidentes de IA no setor financeiro,
 |[H2]()      | Viés algorítmico afeta desproporcionalmente segmentos?     | Qui-quadrado de independência          |
 | [H3]()      | Incidentes mais severos geram maior resposta regulatória?  | Qui-quadrado e regressão logística     |
 | [H4]()      | Existe tendência temporal no volume de incidentes?         | Correlação temporal e análise de tendência |
+
+
+### ➠ [**Nível de significância adotado**](): α = 0,05 em todos os testes.
 
 
 <br><br>
