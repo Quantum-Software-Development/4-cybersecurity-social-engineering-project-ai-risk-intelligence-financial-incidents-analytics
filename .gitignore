@@ -1,79 +1,72 @@
-############################
-# Environments
-############################
+# ============================================================
+# .gitignore — AI Finance Incidents Project
+# ============================================================
+
+# ── Ambiente virtual ────────────────────────────────────────
 .venv/
 venv/
 env/
 ENV/
-conda-meta/
+.env
+.env.local
+.env.production
+.env.staging
 
-############################
-# Python
-############################
-__pycache__/
-*.py[cod]
-*.pyc
-.Python
+# ── Segredos e chaves ───────────────────────────────────────
+*.key
+*.pem
+*.p12
+secrets.toml
+.streamlit/secrets.toml
 
-############################
-# Jupyter
-############################
+# ── Dados sensíveis / grandes ───────────────────────────────
+*.csv
+*.db
+*.sqlite
+*.sqlite3
+database/
+!database/.gitkeep
+
+# ── Modelos ML serializados ─────────────────────────────────
+models/
+!models/.gitkeep
+
+# ── Cache Jupyter ───────────────────────────────────────────
 .ipynb_checkpoints/
 **/.ipynb_checkpoints/
 
-############################
-# Data (NEVER version raw data)
-############################
-data/raw/
-data/external/
-*.csv
-*.json
-*.parquet
-*.db
+# ── Python ──────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
 
-############################
-# Models / Artifacts
-############################
-models/trained_models/
-models/checkpoints/
-*.pkl
-*.joblib
-*.h5
-*.pt
+# ── OS ──────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+Thumbs.db
+desktop.ini
 
-############################
-# Environment Variables
-############################
-.env
-.env.*
+# ── IDEs ────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
 
-############################
-# Logs
-############################
+# ── Logs ────────────────────────────────────────────────────
 *.log
 logs/
 
-############################
-# OS Files
-############################
-.DS_Store
-Thumbs.db
+# ── Streamlit ───────────────────────────────────────────────
+.streamlit/secrets.toml
 
-############################
-# IDEs
-############################
-.vscode/
-.idea/
-
-############################
-# MLflow / Experiments
-############################
-mlruns/
-*.mlflow
-
-############################
-# Docker
-############################
-.dockerignore
-
-EOF
+# ── Pytest / coverage ───────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/

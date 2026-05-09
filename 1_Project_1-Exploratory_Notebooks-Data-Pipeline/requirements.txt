@@ -17,11 +17,13 @@ joblib==1.3.2
 
 # Estatística
 scipy==1.11.2
-statsmodels==0.14.0
+statsmodels==0.14.6
 
 # API
+
 Flask==2.3.3
 Flask-CORS==6.0.0
+
 
 # Banco de Dados
 # sqlite3 (já incluído no Python)
@@ -31,7 +33,7 @@ python-dateutil==2.8.2
 pytz==2023.3
 
 # Produção (opcional)
-gunicorn==21.2.0
+gunicorn==26.0.0
 
 # Testes (opcional)
 pytest==7.4.0

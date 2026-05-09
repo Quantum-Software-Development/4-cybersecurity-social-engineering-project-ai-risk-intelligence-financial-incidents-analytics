@@ -10,18 +10,22 @@
 <!-- ========= END LANGUAGE BUTTON ========= -->
 
 
-
 <!-- ========= START REPO TITLE ========= -->
-# <p align="center"> 🔐 [AI Incidents in Banking, Financial Services and Fintech]()
+# 🔐 [AI Incidents in Banking, Financial Services and Fintech]()
 
-###  <p align="center"> An Analysis of Algorithmic Bias, Operational Risk and Governance for Regulatory Compliance
+<p align="center">
+Modular AI Risk Intelligence Infrastructure for Financial Incident Analytics, Governance, Compliance, and Regulatory Decision-Making
+</p>
+
+<p align="center">
+AI-powered ecosystem for semantic analytics, operational risk intelligence, interactive dashboards, APIs, and LLM-driven insights.
+</p>
 
 <br><br>
-
 <!-- ========= END REPO TITLE ========= -->
 
 
-<!-- ========= START DashBoar Streamlit -->
+<!-- ========= START Dashboard Streamlit ========= -->
 <p align="center">
   <a href="https://ai-incidents-financial-services.streamlit.app/" target="_blank" rel="noopener noreferrer">
     <img 
@@ -31,55 +35,58 @@
     />
   </a>
 </p>
+<!-- ========= END Dashboard Streamlit ========= -->
 
-<!-- ========= END Dashboard Streamlit -->
 
 <p align="center">
-  <a href="https://stellar-fenglisu-9274fc.netlify.app/">
+
+  <a href="https://stellar-fenglisu-9274fc.netlify.app/" target="_blank" rel="noopener noreferrer">
     <img 
-      src="https://img.shields.io/badge/React-Interactive%20Slides-115e59?style=for-the-badge&logo=react&logoColor=white" 
+      src="https://img.shields.io/badge/React-Interactive%20Slides-14532d?style=for-the-badge&logo=react&logoColor=white" 
       alt="React Interactive Slides"
       style="height: 30px; width: auto;"
     />
   </a>
 
-  <a href="https://docs.google.com/presentation/d/1CeNA6D3Va2X8nc0dVeD1BKxV97d1SI-v/edit?slide=id.p1#slide=id.p1">
+  <a href="https://docs.google.com/presentation/d/1CeNA6D3Va2X8nc0dVeD1BKxV97d1SI-v/edit#slide=id.p1" target="_blank" rel="noopener noreferrer">
     <img 
-      src="https://img.shields.io/badge/PPTX-Strategic%20Presentation-0f766e?style=for-the-badge&logo=microsoftpowerpoint&logoColor=white" 
-      alt="PPTX Strategic Presentation"
+      src="https://img.shields.io/badge/Strategic%20Presentation-PPTX-0f766e?style=for-the-badge&logo=microsoftpowerpoint&logoColor=white" 
+      alt="Strategic Presentation"
       style="height: 30px; width: auto;"
     />
   </a>
-<!-- ========= END PPTX -->
 
-<br><br><br><br>
-<!-- ========= END BADGE  ========= -->
+</p>
 
 
+<!-- ========= START DATA ANALYSING REPORT ========= -->
+<p align="center">
+  <a href="https://github.com/Quantum-Software-Development/4-cybersecurity-social-engineering-project-ai-risk-intelligence-financial-incidents-analytics/blob/5f4ae57543d61147d765d707852d85f616c09f1b/Data%20Analysing%20Report/%F0%9F%87%AC%F0%9F%87%A7data_analysis_report_abnt%20.pdf">
+    <img 
+      src="https://img.shields.io/badge/Data%20Analysis-Executive%20Report-134e4a?style=for-the-badge&logo=googleanalytics&logoColor=white&labelColor=022c22" 
+      alt="Executive Report"
+    />
+  </a>
+</p>
+<!-- ========= END DATA ANALYSING REPORT ========= -->
 
-<!-- ========= START Institucional INFO ========= -->
+
+<br><br><br>
+<!-- ===================== END BADGE GROUP 1 ===================== -->
 
 
-
-<!-- ========= START Institucional INFO ========= -->
-
-
-<br>
-
-[**Institution:**]() Pontifical Catholic University of São Paulo (PUC‑SP – Humanistic AI & Data Science • 5º Semester • 2026)  
+<!-- ========= START Institutional INFO ========= -->
+[**Institution:**]() Pontifical Catholic University of São Paulo (PUC-SP – Humanistic AI & Data Science • 5th Semester • 2026)  
 [**School:**]() FACEI – Faculty of Interdisciplinary Studies  
 [**Course:**]() AI Security, Cybersecurity & Social Engineering  
 **Professor:** [✨ Eduardo Savino Gomes]()  
-**Authors:**[Fabiana ⚡️ Campanari](https://linktr.ee/fabianacampanari) e [Perdro Vyctor Almeida]()  <br>
-[**Context:**]() This project analyzes real-world AI incidents in banking, financial services and fintech through the lenses of AI security, cybersecurity, social engineering, governance and regulatory compliance.
+**Authors:** [Fabiana ⚡️ Campanari](https://linktr.ee/fabianacampanari) and [Pedro Vyctor Almeida]()  <br>
+[**Context:**]() This project analyzes real-world Artificial Intelligence incidents in banks, financial services, and fintechs from the perspectives of AI security, cybersecurity, social engineering, governance, and regulatory compliance.
 
 <br><br>
-<!-- ========= END Institucional INFO ========= -->
-
 
 
 <!-- ========= START SPONSOR BADGES ========= -->
-
 #### <p align="center"> [![Sponsor FabianaCampanari](https://img.shields.io/badge/Sponsor-%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7%20FabianaCampanari%20%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7-brightgreen?logo=GitHub)](https://github.com/sponsors/FabianaCampanari)
 
 <br><br>
@@ -87,87 +94,95 @@
 
 
 <!-- ========= START DEMO VIDEO ========= -->
-
 https://github.com/user-attachments/assets/5d3c33b0-166e-414c-a561-8e8dd509be3d
 
-🖤 Creative Direction, Music Curation & Editing  by Fab⚡️ <br>
-🎶 Soundtrack: "Canon in D" — Johann Pachelbel
+#### 🖤 Creative Direction, Music Curation & Editing by Fab⚡️  
+##### 🎶 [Soundtrack:]() "Canon in D" — Johann Pachelbel
 
 <br><br><br>
 <!-- ========= END DEMO VIDEO ========= -->
 
 
-<!-- ========= START BADGES ========= -->
+<!-- ========= START BADGES GROUP 2 ========= -->
 <p align="center">
   <img src="https://img.shields.io/badge/Python-Data%20Science-0f172a?logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/React-Interactive%20Presentation-123c4a?logo=react&logoColor=white" />
-  <img src="https://img.shields.io/badge/PowerPoint-Strategic%20Deck-115e59?logo=microsoftpowerpoint&logoColor=white" />
-  <img src="https://img.shields.io/badge/Streamlit-Analytical%20Dashboard-0f766e?logo=streamlit&logoColor=white" />
-  <img src="https://img.shields.io/badge/RESTful%20API-Built%20with%20Flask-0ea5a4?logo=flask&logoColor=white" />
-  <img src="https://img.shields.io/badge/Dashboard-Powered%20by%20Own%20API-14b8a6?logo=fastapi&logoColor=white" />
-  <img src="https://img.shields.io/badge/Groq%20API-LLM%20Inference-22d3ee?logo=graphql&logoColor=white" />
-  <img src="https://img.shields.io/badge/AI%20Chat-Embedded%20Assistant-0891b2?logo=openai&logoColor=white" />
-  <img src="https://img.shields.io/badge/Machine%20Learning-Predictive%20Models-06b6d4?logo=tensorflow&logoColor=white" />
-  <img src="https://img.shields.io/badge/Database-Relational%20SQL-67e8f9?logo=postgresql&logoColor=0f172a" />
-  <img src="https://img.shields.io/badge/Render-Cloud%20Deployment-164e63?logo=render&logoColor=white" />
+  <img src="https://img.shields.io/badge/React-Interactive%20Presentation-101f2f?logo=react&logoColor=white" />
+  <img src="https://img.shields.io/badge/PowerPoint-Strategic%20Deck-112a3a?logo=microsoftpowerpoint&logoColor=white" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Streamlit-Analytics-123445?logo=streamlit&logoColor=white" />
+  <img src="https://img.shields.io/badge/Streamlit%20Cloud-Deployment-124050?logo=streamlit&logoColor=white" />
+  <img src="https://img.shields.io/badge/RESTful%20API-FastAPI-134a4a?logo=fastapi&logoColor=white" />
+  <img src="https://img.shields.io/badge/Dashboard-Integrated%20System-134e4a?logo=fastapi&logoColor=white" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Groq%20API-LLM%20Inference-134e4a?logo=openai&logoColor=white" />
+  <img src="https://img.shields.io/badge/AI%20Chat-Embedded%20Assistant-134e4a?logo=openai&logoColor=white" />
+  <img src="https://img.shields.io/badge/Machine%20Learning-Predictive%20Models-134e4a?logo=tensorflow&logoColor=white" />
+  <img src="https://img.shields.io/badge/Database-SQLite-134e4a?logo=sqlite&logoColor=white" />
+  <img src="https://img.shields.io/badge/Render-Cloud%20Deployment-134e4a?logo=render&logoColor=white" />
 </p>
 
 <br><br><br>
-<!-- ========= END  BADGES ========= -->
+<!-- ========= END BADGES GROUP 2 ========= -->
 
+<!-- ========= START NOTE ========= -->
+> [!NOTE]
+>
+> ⚠️ Projects may be publicly shared when permitted.  
+> The focus is on applied, hands-on learning with real datasets in AI governance and security contexts.  
+> All sensitive content remains protected in private repositories when required.
+>
 
-<!-- ========= START INTRO ========= -->
-## [Overview]()
+<br><br>
+<!-- ========= END NOTE ========= -->
 
-This project consolidates an end-to-end perspective on AI incidents in financial services, connecting public data from the AI Incident Database (AIID) to a complete pipeline of analysis, modeling, and exposure through API and dashboard.
+<!-- ========= START OVERVIEW ========= -->
+##  [Overview]()
 
-From an executive perspective, the work demonstrates how dispersed incidents can be transformed into structured risk indicators, with a focus on [**algorithmic bias**](), [**operational risk**](), and [**governance responses**](). The main contribution lies in the **integrated analytical architecture**: from data acquisition to the availability of RESTful endpoints and a visualization layer.
+This project consolidates an end-to-end perspective on AI incidents in financial services, connecting public data from the AI Incident Database (AIID) to a complete pipeline of analysis, modeling, and exposure via API and dashboard.[web:1112]
 
-The system answers questions such as:
+From an executive perspective, the work demonstrates how dispersed incidents can be transformed into structured risk indicators, with a focus on [**algorithmic bias**](), [**operational risk**](), and [**governance responses**]().[web:1113][web:1126] The main contribution lies in the **integrated analytical architecture**: from data acquisition to the availability of RESTful endpoints and a visualization layer.[web:1112][web:1122]
 
-[-]() Which types of AI applications generate the most incidents in the financial sector? <br>
-[-]() Does algorithmic bias affect customer segments unequally? <br>
-[-]() Is it possible to predict the severity of an incident before a regulatory investigation?
+<br>
+
+[***The system answers questions such as:***]()
+
+[-]() Which types of AI applications generate the most incidents in the financial sector (credit, fraud detection, customer service, algorithmic trading, etc.)? <br>  
+
+[-]() Does algorithmic bias affect customer segments unevenly (income level, region, gender, vulnerable groups)? <br>
+
+[-]() Is it possible to predict incident severity before a regulatory investigation, based on case attributes and model usage context? <br>  
+
+[-]() Which categories of operational risk are most associated with AI incidents in banks, insurers, and fintechs (fraud, process failures, IT issues, outsourcing)? <br>  
+
+[-]() How do incident frequency and types evolve over time, and do they concentrate in specific institutions or regulatory jurisdictions? <br>  
+
+[-]() What governance patterns appear in incident responses (model suspension, policy review, regulator notification, fines)? <br>  
+
+[-]() Are there early warning indicators in incident data that correlate with higher exposure to operational losses or reputational risk? <br>
+
+[-]() To what extent do incidents involving generative AI differ from those involving traditional machine learning models in the financial context? <br>
+
+[-]() How can AI risk metrics be integrated into existing frameworks for operational risk management, cybersecurity, and compliance in the financial sector? <br>
+
+[-]() What transparency and incident reporting gaps still exist, and how can structured monitoring support regulators and risk teams?
 
 <br><br>
 
 > [!IMPORTANT]
 >
-> [**Correct positioning**:]() predictive models should be treated as a **methodological proof of concept**. The main deliverable is the integrated analytical architecture — not a high-accuracy classifier ready for production. <br>
-
-<br><br>
-
-#
-
-<br><br>
-<!-- ========= END INTRO ========= -->
-
-
-<!-- ========= START Confidentiality statement ========= -->
-
-> [!NOTE]
-> 
-> ⚠️ Heads Up
->
-> * Projects and deliverables may be made [publicly available]() whenever possible.
->   
-> * The course emphasizes [**practical, hands-on experience**]() with real datasets to simulate professional consulting scenarios in the fields of **Machine Learning and Neural Networks** for partner organizations and institutions affiliated with the university.
->   
-> * All activities comply with the [**academic and ethical guidelines of PUC-SP**]().
->   
-> * Any content not authorized for public disclosure will remain [**confidential**]() and securely stored in [private repositories]().  
+> [**Correct positioning**:]() predictive models should be treated as a **methodological proof of concept**. The main deliverable is the integrated analytical architecture — not a high-accuracy classifier ready for production.
 > <br>
->
->
 
-<br><br> 
+<br><br>
 
 #
 
 <br><br>
-<!-- ========= END Confidentiality statement  ========= -->
-
-
+<!-- ========= END Overview ========= -->
 
 <!-- ========= START Main Repo REFERENCE  ========= -->
 > [!TIP]
@@ -183,15 +198,13 @@ The system answers questions such as:
 
 <br><br><br><br>
 <!-- ========= END Main Repo REFERENCE  ========= -->
-
-
 <!-- ======================================= END DEFAULT HEADER ⚡️ ===========================================  -->
 
 ## Table of Contents
 
 1. [Introduction](#1-introduction)
 2. [Objectives and Research Questions](#2-objectives-and-research-questions)
-3. [Data Background and Context](#3-data-background-and-context)
+3. [Theoretical Foundation and Data Context](#3-theoretical-foundation-and-data-context)
 4. [CRISP-DM Methodology](#4-crisp-dm-methodology)
 5. [Data Sources and Preparation](#5-data-sources-and-preparation)
 6. [Analytical Variables and Hypotheses](#6-analytical-variables-and-hypotheses)
@@ -207,11 +220,13 @@ The system answers questions such as:
 16. [Local Execution Guide](#16-local-execution-guide)
 17. [Groq API Configuration](#17-groq-api-configuration)
 18. [Production Deployment](#18-production-deployment)
-19. [API Infrastructure and Publishing on Render](#19-api-infrastructure-and-publishing-on-render)
-20. [File Structure](#20-file-structure)
+19. [Infrastructure and API Deployment on Render](#19-infrastructure-and-api-deployment-on-render)
+20. [Project Structure](#20-project-structure)
 21. [Dependencies](#21-dependencies)
-22. [Conclusions and Next Steps](#22-conclusions-and-next-steps)
-23. [References](#23-references)
+22. [General Data Analysis and Machine Learning Modeling](#22-general-data-analysis-and-machine-learning-modeling)
+23. [Conclusions and Future Work](#23-conclusions-and-future-work)
+24. [Acknowledgements](#24-acknowledgements)
+25. [References](#25-references)
 
 <br><br>
 
@@ -260,11 +275,11 @@ Given a set of AI incidents recorded across multiple sectors and filtered to the
 >
 > For [**AI governance**](), the project illustrates how incident data can be transformed into indicators, predictive models, and APIs, enabling continuous monitoring and structured responses to risks.
 >
-> <br>
+
 
 <br><br>
 
-## 2. [Objectives and Questions]()
+## 2. [Objectives and Research Questions]()
 
 <br>
 
@@ -284,7 +299,7 @@ To evaluate, based on structured data from AI incidents in the financial sector,
 [4.]() Build predictive models for severity classification and regulatory investigation. <br>
 [5.]() Organize results into an architecture composed of notebooks, relational database, RESTful API, and dashboard.
 
-<br><br>
+<br>
 
 ### 2.3 [Research hypotheses]()
 
@@ -297,11 +312,107 @@ To evaluate, based on structured data from AI incidents in the financial sector,
 | [H3]()         | Do more severe incidents generate greater regulatory response? | Chi-square and logistic regression  |
 | [H4]()         | Is there a temporal trend in incident volume?                  | Time correlation and trend analysis |
 
+### ➠ [**Adopted significance level**](): α = 0.05 in all tests.
 
+<br><br>
 
+## 3. [Data Foundation and Context]()
 
+<br>
 
+### 3.1 [AI Incident Database (AIID)]()
 
+The project uses the **AI Incident Database (AIID)** as its main data source, a repository of real incidents involving AI systems, documented from public sources — maintained by the *Responsible AI Collaborative* and licensed under **CC BY-SA 4.0**.
+
+<br>
+
+| [Access mode]()     | [Address]()                                             | [Usage]()                                 |
+| ------------------- | ------------------------------------------------------- | ----------------------------------------- |
+| [Official portal]() | `https://incidentdatabase.ai/`                          | Navigation and context                    |
+| [GraphQL API]()     | `https://incidentdatabase.ai/api/graphql`               | Programmatic data collection (Notebook 1) |
+| [Kaggle dataset]()  | `kaggle datasets download konradb/ai-incident-database` | Offline fallback                          |
+
+<br>
+
+> [!IMPORTANT]
+>
+> Notebook 1 implements a **4-layer fallback strategy**: GraphQL API → JSON cache → CSV cache → local `incidents.csv`. This ensures reproducibility even without internet access.
+
+<br>
+
+### 3.2 [Thematic Scope: Financial Services]()
+
+The project applies thematic filtering using more than 30 keywords across the `title` and `description` fields, targeting incidents related to:
+
+<br>
+
+[-]() credit, loans, mortgages, and credit scoring; <br>
+[-]() fraud, AML, and money laundering; <br>
+[-]() banks, fintechs, and payments; <br>
+[-]() algorithmic trading and financial markets; <br>
+[-]() insurance and automated underwriting; <br>
+[-]() risk and asset management; <br>
+[-]() robo-advisors.
+
+<br>
+
+### 3.3 [Source Limitations]()
+
+| [Limitation]()                            | [Impact]()                        | [Adopted strategy]()          |
+| ----------------------------------------- | --------------------------------- | ----------------------------- |
+| [Only publicly reported incidents]()      | Underrepresentation of true total | Treat as a biased sample      |
+| [Geographic bias (US and EU dominance)]() | Limited generalizability          | Restrict conclusions to scope |
+| [Financial values rarely complete]()      | Severity proxy via text only      | Use keywords as indicators    |
+| [Heterogeneous text quality]()            | Noisy derived variables           | Conservative heuristics       |
+
+<br>
+
+> [!NOTE]
+>
+> These limitations do not invalidate the project, but require careful interpretation and moderation in conclusions.
+
+<br>
+
+### 3.4 Paradigmatic Example: The 2010 Flash Crash
+
+The [**Flash Crash of May 6, 2010**]() is one of the most emblematic examples of operational risk and market risk associated with automation in financial environments. At 2:32 PM New York time, the U.S. stock market experienced a sudden drop that, in approximately 36 minutes, temporarily erased more than US$ 1 trillion in market value.
+
+During this interval, the [**Dow Jones Industrial Average**]() fell by more than 1,000 points, and some stocks briefly traded at extreme levels — in certain cases dropping from tens of dollars to just one cent — before rapidly returning to near-normal levels. The event demonstrated how highly automated markets can amplify disturbances at a systemic scale.
+
+Regulatory analyses of the case indicate that one of the main triggers was the automated execution of a large sell order involving [**75,000 E-mini S&P 500 contracts**]() (electronic futures contracts that allow trading the S&P 500 index — an indicator of the 500 largest U.S. companies — with leverage), estimated at around US$ 4.1 billion. The algorithm executed orders based on a fraction of the trading volume in the previous minute, without incorporating sufficient [**guardrails**]() (protective mechanisms such as price, time, or volatility limits).
+
+This configuration contributed to a chain reaction among [**high-frequency trading algorithms**]() ([*High-Frequency Trading*]() — HFT: automated systems that execute thousands of trades per second), which began trading contracts among themselves, amplifying volatility and temporarily degrading liquidity. As a consequence, containment mechanisms such as [**circuit breakers**]() (automatic trading halts triggered during extreme volatility) were activated to interrupt trading and stabilize the market.
+
+<br>
+
+### ➠ [**Impacts and institutional responses:**]()
+
+* [**Regulatory investigation**](): the SEC ([*Securities and Exchange Commission*]() — U.S. securities regulator) and the CFTC ([*Commodity Futures Trading Commission*]() — U.S. derivatives regulator) conducted a joint formal investigation
+* [**Policy changes**](): mandatory review of algorithmic trading systems and risk controls
+* [**Strengthening of circuit breakers**](): implementation of more robust automatic interruption mechanisms
+* [**Legal actions**](): prosecution against the trader responsible for the initial order
+
+<br>
+
+### ➠ [**Relevance to this project:**]()
+
+<br>
+
+Within the analytical framework developed, the Flash Crash exemplifies the derived variables implemented:
+
+* [**`application_type: algorithmic_trading`**]() — automated trading algorithms
+* [**`incident_type: market_disruption`**]() — systemic market disturbance
+* [**`severity_level: critical`**]() — systemic, multi-billion-dollar short-term impact
+* [**`regulatory_investigation: 1`**]() — formal SEC and CFTC investigation
+* [**`policy_change: 1`**]() — mandatory review of trading systems
+
+<br>
+
+> [!NOTE]
+>
+> This incident demonstrates how [**automated decision systems can generate billion-dollar operational losses within minutes, trigger severe regulatory investigations, and lead to mandatory institutional control revisions**]() — validating the need for robust analytical architectures for monitoring, governance, and algorithmic risk management in critical financial environments.
+
+<br><br>
 
 
 
@@ -325,41 +436,110 @@ To evaluate, based on structured data from AI incidents in the financial sector,
 <br><br>
 <br><br>
 <br><br>
+
 
 ## System Architecture (MLOps Design)
 
 
 <br>
 
+
+
 ```mermaid
 %%{init: {'theme':'dark'}}%%
 flowchart LR
 
-A["AIID / Kaggle"] --> B["Prep (NB1)"]
-B --> C["CSV Clean"]
+subgraph L1["Source Layer"]
+    A1["External AI Incident DB"]
+    A2["Kaggle Dataset"]
+end
 
-C --> D["Stats (NB2)"]
-C --> E["ML (NB3)"]
+subgraph L2["Data Preparation Layer"]
+    B1["Notebook 1\nIngestion & Cleaning"]
+    B2["Feature Engineering"]
+    B3["Validated Analytical CSV"]
+end
 
-C --> F[("SQLite")]
-E --> G[("Models .pkl")]
+subgraph L3["Analytical & Modeling Layer"]
+    C1["Notebook 2\nStatistical Analysis"]
+    C2["Notebook 3\nML Training"]
+    C3["Model Evaluation"]
+end
 
-F --> H["API (Flask)"]
-G --> H
+subgraph L4["Storage & Governance Layer"]
+    D1[("SQLite Analytical Store")]
+    D2[("Model Registry")]
+    D3["GitHub Repository\nVersion Control"]
+end
 
-H --> I["Dashboard (Streamlit)"]
+subgraph L5["Deployment & Orchestration Layer"]
+    E1["Render Deployment Pipeline"]
+    E2["Streamlit Cloud Deployment"]
+end
 
-%% STYLE TURQUOISE
+subgraph L6["Serving & Inference Layer"]
+    F1["Flask REST API\nPrediction Endpoints"]
+    F2["Public HTTPS Interface"]
+    F3["Groq API\nllama-3.1-8b-instant"]
+end
 
-classDef node fill:#0d1117,stroke:#00d1c1,stroke-width:1px,color:#ffffff;
-classDef db fill:#0d1117,stroke:#00d1c1,stroke-width:2px,color:#ffffff;
+subgraph L7["Consumption & Experience Layer"]
+    G1["Executive Dashboard"]
+    G2["Risk Scoring Interface"]
+    G3["AI Assistant for Analysis"]
+end
 
-class A,B,C,D,E,H,I node;
-class F,G db;
+subgraph L8["Stakeholder Layer"]
+    H1["Researchers & Academics"]
+    H2["Risk / Compliance Teams"]
+    H3["Decision Makers & Reviewers"]
+end
+
+A1 --> B1
+A2 --> B1
+B1 --> B2
+B2 --> B3
+B3 --> C1
+B3 --> C2
+B3 --> D1
+C2 --> C3
+C3 --> D2
+B1 --> D3
+C1 --> D3
+C2 --> D3
+D1 --> F1
+D2 --> F1
+D3 --> E1
+D3 --> E2
+E1 --> F1
+F1 --> F2
+F2 --> G1
+F2 --> G2
+F2 --> G3
+F3 --> G3
+E2 --> G1
+G1 --> H1
+G1 --> H2
+G2 --> H2
+G3 --> H1
+G3 --> H3
+
+%% STYLE
+classDef node fill:#0d1117,stroke:#00d1c1,stroke-width:1.6px,color:#ffffff;
+classDef db fill:#0d1117,stroke:#00d1c1,stroke-width:2.4px,color:#ffffff;
+classDef cloud fill:#0d1117,stroke:#00d1c1,stroke-width:1.9px,color:#ffffff;
+classDef layer fill:#111827,stroke:#00d1c1,stroke-width:1.4px,color:#ffffff;
+
+class A1,A2,B1,B2,B3,C1,C2,C3,F1,F2,F3,G1,G2,G3,H1,H2,H3 node;
+class D1,D2 db;
+class D3,E1,E2 cloud;
+class L1,L2,L3,L4,L5,L6,L7,L8 layer;
 ```
 
+>  [Click here to view the diagram in higher resolution.](https://github.com/Quantum-Software-Development/4-cybersecurity-social-engineering-project-ai-risk-intelligence-financial-incidents-analytics/blob/99fe399886300a088411de18650726f4441bb71c/MLOps-Architecture%20.md)
 
 
+<br><br>
 
 
 

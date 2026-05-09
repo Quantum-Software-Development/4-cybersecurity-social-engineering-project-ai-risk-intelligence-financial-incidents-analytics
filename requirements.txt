@@ -23,7 +23,7 @@ plotly>=5.18.0
 # ----------------------------------------------------------------
 # Statistical tests and analytical modeling
 scipy>=1.11.0
-statsmodels>=0.14.0
+statsmodels>=0.14.6
 
 # ----------------------------------------------------------------
 # 🤖 MACHINE LEARNING
@@ -40,14 +40,15 @@ joblib>=1.3.0
 # Interactive environment for development and experimentation
 jupyter>=1.0.0
 ipykernel>=6.25.0
-ipywidgets>=8.1.0
+ipywidgets>=8.1.8
 
 # ----------------------------------------------------------------
 # 🌐 API RESTFUL
 # ----------------------------------------------------------------
 # Backend for exposing data and models
-flask>=2.3.0
 flask-cors>=6.0.0
+flask>=3.1.3
+
 
 # ----------------------------------------------------------------
 # 📊 DASHBOARD
@@ -71,12 +72,12 @@ groq>=0.9.0
 # 🧰 UTILITIES
 # ----------------------------------------------------------------
 # Environment setup and date handling
-python-dotenv>=1.0.0
+python-dotenv>=1.2.2
 python-dateutil>=2.8.2
 
 # ----------------------------------------------------------------
 # 🚀 PRODUCTION (OPTIONAL)
 # ----------------------------------------------------------------
 # Uncomment for production deployment
-# gunicorn>=21.2.0
-# pytest>=7.4.0
+gunicorn>=26.0.0
+pytest>=7.4.0
