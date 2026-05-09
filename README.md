@@ -185,13 +185,14 @@ The system addresses the following questions:
 
 
 <!-- ========= START NOTE ========= -->
-
 > [!NOTE]
 >
 > ⚠️ Projects may be publicly shared when permitted.  
 > The focus is on applied, hands-on learning with real datasets in AI governance and security contexts.  
 > All sensitive content remains protected in private repositories when required.
+>
 
+<br><br>
 <!-- ========= END NOTE ========= -->
 
 
@@ -336,7 +337,7 @@ Given a set of AI incidents recorded across multiple sectors and filtered to the
 
 <br><br>
 
-## 2. [Objectives and Questions]()
+## 2. [Objectives and Research Questions]()
 
 <br>
 
