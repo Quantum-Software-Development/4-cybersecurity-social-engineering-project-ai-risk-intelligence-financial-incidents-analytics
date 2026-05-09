@@ -72,7 +72,7 @@ AI-powered ecosystem for semantic analytics, operational risk intelligence, inte
 </p>
 <!-- ========= END DATA ANALYSING REPORT ========= -->
 
-<br><br><br><br>
+<br><br><br>
 <!-- =====================  END BADGE Group 1 ===================== -->
 
 
@@ -86,7 +86,7 @@ AI-powered ecosystem for semantic analytics, operational risk intelligence, inte
 
 <br>
 
-- [Institutional Context]()
+### [Institutional Context]()
 
 [**Institution:**]() Pontifical Catholic University of São Paulo (PUC-SP – Humanistic AI & Data Science • 5th Semester • 2026)  
 [**School:**]() FACEI – Faculty of Interdisciplinary Studies  
@@ -96,7 +96,7 @@ AI-powered ecosystem for semantic analytics, operational risk intelligence, inte
 
 <br><br>
 
-- [Project Context]()
+### [Project Context]()
 
 This project is developed within an academic and applied research context focused on Artificial Intelligence security, cybersecurity, and social engineering in financial ecosystems.
 
@@ -105,6 +105,8 @@ It investigates real-world AI-related incidents across banking, financial servic
 The study is grounded in applied data science methodologies and structured analytical pipelines, aiming to transform unstructured incident data into actionable risk intelligence. The analysis explores algorithmic behavior, systemic vulnerabilities, and the socio-technical impact of AI-driven decision systems in regulated financial domains.
 
 The project is aligned with principles of esponsible AI, transparency, and governance-oriented analytics, contributing to both academic research and practical risk intelligence applications.
+
+<br><br><br>
 <!-- ========= END Institucional INFO ========= -->
 
 
