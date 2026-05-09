@@ -154,6 +154,17 @@ https://github.com/user-attachments/assets/5d3c33b0-166e-414c-a561-8e8dd509be3d
 <!-- ========= END BADGES GROUP 2 ========= -->
 
 
+<!-- ========= START NOTE ========= -->
+> [!NOTE]
+>
+> ⚠️ Projects may be publicly shared when permitted.  
+> The focus is on applied, hands-on learning with real datasets in AI governance and security contexts.  
+> All sensitive content remains protected in private repositories when required.
+>
+
+<br><br>
+<!-- ========= END NOTE ========= -->
+
 <!-- ========= START OVERVIEW ========= -->
 ##  [Overview]()
 
@@ -191,47 +202,7 @@ The main contribution lies in the [**integrated analytical architecture**:]() fr
 <!-- ========= END Overview ========= -->
 
 
-<!-- ========= START NOTE ========= -->
-> [!NOTE]
->
-> ⚠️ Projects may be publicly shared when permitted.  
-> The focus is on applied, hands-on learning with real datasets in AI governance and security contexts.  
-> All sensitive content remains protected in private repositories when required.
->
-
-<br><br>
-<!-- ========= END NOTE ========= -->
-
-
-<!-- ========= START INTRO ========= -->
-## [Overview]()
-
-This project consolidates an end-to-end perspective on AI incidents in financial services, connecting public data from the AI Incident Database (AIID) to a complete pipeline of analysis, modeling, and exposure through API and dashboard.
-
-From an executive perspective, the work demonstrates how dispersed incidents can be transformed into structured risk indicators, with a focus on [**algorithmic bias**](), [**operational risk**](), and [**governance responses**](). The main contribution lies in the **integrated analytical architecture**: from data acquisition to the availability of RESTful endpoints and a visualization layer.
-
-The system answers questions such as:
-
-[-]() Which types of AI applications generate the most incidents in the financial sector? <br>
-[-]() Does algorithmic bias affect customer segments unequally? <br>
-[-]() Is it possible to predict the severity of an incident before a regulatory investigation?
-
-<br><br>
-
-> [!IMPORTANT]
->
-> [**Correct positioning**:]() predictive models should be treated as a **methodological proof of concept**. The main deliverable is the integrated analytical architecture — not a high-accuracy classifier ready for production. <br>
-
-<br><br>
-
-#
-
-<br><br>
-<!-- ========= END INTRO ========= -->
-
-
 <!-- ========= START Confidentiality statement ========= -->
-
 > [!NOTE]
 >
 > ⚠️ Projects may be publicly shared when permitted.  
