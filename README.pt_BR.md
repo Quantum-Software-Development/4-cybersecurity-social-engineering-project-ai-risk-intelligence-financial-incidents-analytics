@@ -130,15 +130,6 @@ https://github.com/user-attachments/assets/5d3c33b0-166e-414c-a561-8e8dd509be3d
 <br><br><br>
 <!-- ========= END BADGES GROUP 2 ========= -->
 
-
-<!-- ========= START Overview ========= -->
-##  [Overview]()
-
-This project consolidates an end-to-end perspective on AI incidents in financial services, connecting public data from the AI Incident Database (AIID) to a complete pipeline of analysis, modeling, and exposure via API and dashboard.[web:1112]
-
-From an executive perspective, the work demonstrates how dispersed incidents can be transformed into structured risk indicators, with a focus on [**algorithmic bias**](), [**operational risk**](), and [**governance responses**]().[web:1113][web:1126] The main contribution lies in the **integrated analytical architecture**: from data acquisition to the availability of RESTful endpoints and a visualization layer.[web:1112][web:1122]
-
-
 <!-- ========= START Overview ========= -->
 ##  [Overview]()
 
