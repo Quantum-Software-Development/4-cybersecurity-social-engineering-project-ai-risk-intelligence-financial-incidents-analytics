@@ -20,7 +20,7 @@
 Infraestrutura modular de inteligência de risco em IA para análise de incidentes financeiros, governança, conformidade e tomada de decisão regulatória.
 </p>
 
-#### <p align="center">
+##### <p align="center">
 Ecossistema baseado em IA para análise semântica, inteligência de risco operacional, dashboards interativos, APIs e insights impulsionados por LLMs.
 </p>
 
