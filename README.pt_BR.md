@@ -290,7 +290,7 @@ Dado um conjunto de incidentes de IA registrados em múltiplos setores e filtrad
 >
 > Para a [**governança de IA**](), o projeto ilustra como dados de incidentes podem ser transformados em indicadores, modelos preditivos e APIs, viabilizando monitoramento contínuo e respostas estruturadas a riscos.
 >
-> <br>
+
 
 
 <br><br>
