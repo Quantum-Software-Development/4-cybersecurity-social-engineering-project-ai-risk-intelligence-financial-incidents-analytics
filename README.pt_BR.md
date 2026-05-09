@@ -285,8 +285,7 @@ Dado um conjunto de incidentes de IA registrados em múltiplos setores e filtrad
 
 <br><br>
 
-
-## 2. [Objetivos e Questões de ]()
+## 2. [Objetivos e Questões de Pesquisa]()
 
 <br>
 
@@ -325,27 +324,27 @@ Avaliar, com base em dados estruturados de incidentes de IA no setor financeiro,
 
 <br><br>
 
-## 3. [Data Foundation and Context]()
+3. [Fundamentação Teórica e Contexto dos Dados]()
 
 <br>
 
 ### 3.1 [AI Incident Database (AIID)]()
 
-The project uses the **AI Incident Database (AIID)** as its main data source, a repository of real incidents involving AI systems, documented from public sources — maintained by the *Responsible AI Collaborative* and licensed under **CC BY-SA 4.0**.
+O projeto utiliza o **AI Incident Database (AIID)** como sua principal fonte de dados, um repositório de incidentes reais envolvendo sistemas de IA, documentados a partir de fontes públicas — mantido pela *Responsible AI Collaborative* e licenciado sob **CC BY-SA 4.0**.
 
 <br>
 
-| [Access mode]()     | [Address]()                                          | [Usage]()                                     |
-| --------------- | ------------------------------------------------------- | ----------------------------------------- |
-| [Official portal]() | `https://incidentdatabase.ai/`                          | Navigation and context                    |
-|[GraphQL API]()     | `https://incidentdatabase.ai/api/graphql`               | Programmatic data collection (Notebook 1) |
-| [Kaggle dataset]()  | `kaggle datasets download konradb/ai-incident-database` | Offline fallback                          |
+| [Modo de acesso]() | [Endereço]()                                            | [Uso]()                          |
+| ------------------ | ------------------------------------------------------- | -------------------------------- |
+| [Portal oficial]() | `https://incidentdatabase.ai/`                          | Navegação e contexto             |
+| [API GraphQL]()    | `https://incidentdatabase.ai/api/graphql`               | Coleta programática (Notebook 1) |
+| [Dataset Kaggle]() | `kaggle datasets download konradb/ai-incident-database` | Fallback offline                 |
 
 <br>
 
 > [!IMPORTANT]
 >
-> Notebook 1 implements a **4-layer fallback strategy**: GraphQL API → JSON cache → CSV cache → local `incidents.csv`. This ensures reproducibility even without internet access.
+> O Notebook 1 implementa uma **estratégia de fallback em 4 camadas**: API GraphQL → cache JSON → cache CSV → `incidents.csv` local. Isso garante reprodutibilidade mesmo sem acesso à internet.
 
 <br>
 
@@ -382,7 +381,7 @@ O projeto aplica filtragem temática com mais de 30 palavras-chave nos campos `t
 
 <br>
 
-### 3.4 Exemplo paradigmático: Flash Crash de 2010
+### 3.4 [Exemplo paradigmático: Flash Crash de 2010]()
 
 O [**Flash Crash de 6 de maio de 2010**]() é um dos exemplos mais emblemáticos de risco operacional e risco de mercado associados à automação em ambientes financeiros. Às 14h32, no horário de Nova York, o mercado acionário norte-americano sofreu uma queda abrupta que, em cerca de 36 minutos, eliminou temporariamente mais de US$ 1 trilhão em valor de mercado.
 
@@ -408,6 +407,8 @@ Essa configuração contribuiu para uma reação em cadeia entre [**algoritmos d
 <br>
 
 No contexto da base analítica construída, o Flash Crash exemplifica de forma paradigmática as variáveis derivadas implementadas:
+
+<br>
 
 - [**`application_type: algorithmic_trading`**]() — algoritmos de negociação automatizada
 - [**`incident_type: market_disruption`**]() — perturbação sistêmica do mercado
