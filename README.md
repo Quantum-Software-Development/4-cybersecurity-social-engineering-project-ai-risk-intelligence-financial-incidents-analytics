@@ -326,10 +326,10 @@ The project uses the **AI Incident Database (AIID)** as its main data source, a 
 
 <br>
 
-| [Access mode]()     | [Address]()                                          | [Usage]()                                     |
-| --------------- | ------------------------------------------------------- | ----------------------------------------- |
+| [Access mode]()     | [Address]()                                             | [Usage]()                                 |
+| ------------------- | ------------------------------------------------------- | ----------------------------------------- |
 | [Official portal]() | `https://incidentdatabase.ai/`                          | Navigation and context                    |
-|[GraphQL API]()     | `https://incidentdatabase.ai/api/graphql`               | Programmatic data collection (Notebook 1) |
+| [GraphQL API]()     | `https://incidentdatabase.ai/api/graphql`               | Programmatic data collection (Notebook 1) |
 | [Kaggle dataset]()  | `kaggle datasets download konradb/ai-incident-database` | Offline fallback                          |
 
 <br>
@@ -340,9 +340,38 @@ The project uses the **AI Incident Database (AIID)** as its main data source, a 
 
 <br>
 
+### 3.2 [Thematic Scope: Financial Services]()
 
+The project applies thematic filtering using more than 30 keywords across the `title` and `description` fields, targeting incidents related to:
 
+<br>
 
+[-]() credit, loans, mortgages, and credit scoring; <br>
+[-]() fraud, AML, and money laundering; <br>
+[-]() banks, fintechs, and payments; <br>
+[-]() algorithmic trading and financial markets; <br>
+[-]() insurance and automated underwriting; <br>
+[-]() risk and asset management; <br>
+[-]() robo-advisors.
+
+<br>
+
+### 3.3 [Source Limitations]()
+
+| [Limitation]()                            | [Impact]()                        | [Adopted strategy]()          |
+| ----------------------------------------- | --------------------------------- | ----------------------------- |
+| [Only publicly reported incidents]()      | Underrepresentation of true total | Treat as a biased sample      |
+| [Geographic bias (US and EU dominance)]() | Limited generalizability          | Restrict conclusions to scope |
+| [Financial values rarely complete]()      | Severity proxy via text only      | Use keywords as indicators    |
+| [Heterogeneous text quality]()            | Noisy derived variables           | Conservative heuristics       |
+
+<br>
+
+> [!NOTE]
+>
+> These limitations do not invalidate the project, but require careful interpretation and moderation in conclusions.
+
+<br>
 
 
 
