@@ -325,29 +325,85 @@ Avaliar, com base em dados estruturados de incidentes de IA no setor financeiro,
 
 <br><br>
 
-## 3. [Base e Contexto dos Dados]()
+## 3. [Data Foundation and Context]()
 
 <br>
 
-### 3.1 [Base de Dados de Incidentes de IA (AIID)]()
+### 3.1 [AI Incident Database (AIID)]()
 
-O projeto utiliza o **AI Incident Database (AIID)** como sua principal fonte de dados, um repositório de incidentes reais envolvendo sistemas de IA, documentados a partir de fontes públicas — mantido pela *Responsible AI Collaborative* e licenciado sob **CC BY-SA 4.0**.
+The project uses the **AI Incident Database (AIID)** as its main data source, a repository of real incidents involving AI systems, documented from public sources — maintained by the *Responsible AI Collaborative* and licensed under **CC BY-SA 4.0**.
 
 <br>
 
-| [Modo de acesso]() | [Endereço]()                                            | [Uso]()                          |
-| ------------------ | ------------------------------------------------------- | -------------------------------- |
-| [Portal oficial]() | `https://incidentdatabase.ai/`                          | Navegação e contexto             |
-| [API GraphQL]()    | `https://incidentdatabase.ai/api/graphql`               | Coleta programática (Notebook 1) |
-| [Dataset Kaggle]() | `kaggle datasets download konradb/ai-incident-database` | Fallback offline                 |
+| [Access mode]()     | [Address]()                                          | [Usage]()                                     |
+| --------------- | ------------------------------------------------------- | ----------------------------------------- |
+| [Official portal]() | `https://incidentdatabase.ai/`                          | Navigation and context                    |
+|[GraphQL API]()     | `https://incidentdatabase.ai/api/graphql`               | Programmatic data collection (Notebook 1) |
+| [Kaggle dataset]()  | `kaggle datasets download konradb/ai-incident-database` | Offline fallback                          |
 
 <br>
 
 > [!IMPORTANT]
 >
-> O Notebook 1 implementa uma **estratégia de fallback em 4 camadas**: API GraphQL → cache JSON → cache CSV → `incidents.csv` local. Isso garante reprodutibilidade mesmo sem conexão com a internet.
+> Notebook 1 implements a **4-layer fallback strategy**: GraphQL API → JSON cache → CSV cache → local `incidents.csv`. This ensures reproducibility even without internet access.
 
 <br>
+
+### 3.2 [Recorte temático: serviços financeiros]() 
+
+O projeto aplica filtragem temática com mais de 30 palavras-chave nos campos `title` e `description`, buscando incidentes relacionados a:
+
+<br>
+
+[-]() crédito, empréstimos, hipotecas e score de crédito; <br>
+[-]() fraude, AML e lavagem de dinheiro; <br>
+[-]() bancos, fintechs e pagamentos; <br>
+[-]() negociação algorítmica e mercados financeiros; br>
+[-]() seguros e subscrição automatizada; br>
+[-]() gestão de risco e ativos; br>
+[-]() robo-advisors.
+
+<br>
+
+### 3.3 [Limitações da fonte-]() 
+
+| [Limitação-]()  | [Impacto-]()  | [Estratégia adotada-]()  |
+|---|---|---|
+| [Apenas incidentes publicizados-]()  | Sub-representação do total real | Interpretar como amostra enviesada |
+| [Viés geográfico (EUA e UE dominam)-]()  | Dificuldade de generalização | Restringir conclusões ao recorte |
+| [Valores financeiros raramente completos-]()  | Proxy de severidade via texto | Usar keywords como indicadores |
+| [Qualidade textual heterogênea-]()  | Variáveis derivadas com ruído | Heurísticas conservadoras |
+
+<br>
+
+> [!NOTE]
+>
+>Essas limitações não inviabilizam o projeto, mas exigem interpretação cuidadosa e moderação nas conclusões.
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
