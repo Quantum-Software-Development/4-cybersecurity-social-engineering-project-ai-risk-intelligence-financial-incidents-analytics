@@ -94,14 +94,12 @@ AI-powered ecosystem for semantic analytics, operational risk intelligence, inte
 
 
 <!-- ========= START DEMO VIDEO ========= -->
-
 https://github.com/user-attachments/assets/5d3c33b0-166e-414c-a561-8e8dd509be3d
 
 #### 🖤 Creative Direction, Music Curation & Editing by Fab⚡️  
 ##### 🎶 Soundtrack: "Canon in D" — Johann Pachelbel
 
 <br><br><br>
-
 <!-- ========= END DEMO VIDEO ========= -->
 
 
@@ -145,26 +143,35 @@ https://github.com/user-attachments/assets/5d3c33b0-166e-414c-a561-8e8dd509be3d
 <!-- ========= START OVERVIEW ========= -->
 ##  [Overview]()
 
-This project consolidates an end-to-end perspective on AI incidents in financial services, connecting public data from the AI Incident Database (AIID) to a complete pipeline of analysis, modeling, and exposure via API and dashboard.
+This project consolidates an end-to-end perspective on AI incidents in financial services, connecting public data from the AI Incident Database (AIID) to a complete pipeline of analysis, modeling, and exposure via API and dashboard.[web:1112]
 
-From an executive perspective, the work demonstrates how dispersed incidents can be transformed into structured risk indicators, with a focus on [**algorithmic bias**](), [**operational risk**](), and [**governance responses**](). 
-
-The main contribution lies in the [**integrated analytical architecture**:]() from data acquisition to the availability of RESTful endpoints and a visualization layer.
-
-[The system answers questions such as:]()
-
-[-]() Which types of AI applications generate the most incidents in the financial sector (credit, fraud detection, customer service, algorithmic trading, etc.) ? <br>  
-[-]() Does algorithmic bias affect customer segments unevenly (income level, region, gender, vulnerable groups) ? <br>
-[-]() Is it possible to predict incident severity before a regulatory investigation, based on case attributes and model usage context  ? <br>  
-[-]() Which categories of operational risk are most associated with AI incidents in banks, insurers, and fintechs (fraud, process failures, IT issues, outsourcing) ? <br>  
-[-]() How do incident frequency and types evolve over time, and do they concentrate in specific institutions or regulatory jurisdictions ? <br>  
-[-]() What governance patterns appear in incident responses (model suspension, policy review, regulator notification, fines) ? <br>  
-[-]() Are there early warning indicators in incident data that correlate with higher exposure to operational losses or reputational risk ? <br>
-[-]() To what extent do incidents involving generative AI differ from those involving traditional machine learning models in the financial context ? <br>
-[-]() How can AI risk metrics be integrated into existing frameworks for operational risk management, cybersecurity, and compliance in the financial sector ? <br>  
-[-]() What transparency and incident reporting gaps still exist, and how can structured monitoring support regulators and risk teams ?
+From an executive perspective, the work demonstrates how dispersed incidents can be transformed into structured risk indicators, with a focus on [**algorithmic bias**](), [**operational risk**](), and [**governance responses**]().[web:1113][web:1126] The main contribution lies in the **integrated analytical architecture**: from data acquisition to the availability of RESTful endpoints and a visualization layer.[web:1112][web:1122]
 
 <br>
+
+[***The system answers questions such as:***]()
+
+[-]() Which types of AI applications generate the most incidents in the financial sector (credit, fraud detection, customer service, algorithmic trading, etc.)? <br>  
+
+[-]() Does algorithmic bias affect customer segments unevenly (income level, region, gender, vulnerable groups)? <br>
+
+[-]() Is it possible to predict incident severity before a regulatory investigation, based on case attributes and model usage context? <br>  
+
+[-]() Which categories of operational risk are most associated with AI incidents in banks, insurers, and fintechs (fraud, process failures, IT issues, outsourcing)? <br>  
+
+[-]() How do incident frequency and types evolve over time, and do they concentrate in specific institutions or regulatory jurisdictions? <br>  
+
+[-]() What governance patterns appear in incident responses (model suspension, policy review, regulator notification, fines)? <br>  
+
+[-]() Are there early warning indicators in incident data that correlate with higher exposure to operational losses or reputational risk? <br>
+
+[-]() To what extent do incidents involving generative AI differ from those involving traditional machine learning models in the financial context? <br>
+
+[-]() How can AI risk metrics be integrated into existing frameworks for operational risk management, cybersecurity, and compliance in the financial sector? <br>
+
+[-]() What transparency and incident reporting gaps still exist, and how can structured monitoring support regulators and risk teams?
+
+<br><br>
 
 > [!IMPORTANT]
 >
@@ -177,23 +184,6 @@ The main contribution lies in the [**integrated analytical architecture**:]() fr
 
 <br><br>
 <!-- ========= END Overview ========= -->
-
-
-<!-- ========= START Confidentiality statement ========= -->
-> [!NOTE]
->
-> ⚠️ Projects may be publicly shared when permitted.  
-> The focus is on applied, hands-on learning with real datasets in AI governance and security contexts.  
-> All sensitive content remains protected in private repositories when required.
-
-<br><br> 
-
-#
-
-<br><br>
-<!-- ========= END Confidentiality statement  ========= -->
-
-
 
 <!-- ========= START Main Repo REFERENCE  ========= -->
 > [!TIP]
@@ -209,8 +199,6 @@ The main contribution lies in the [**integrated analytical architecture**:]() fr
 
 <br><br><br><br>
 <!-- ========= END Main Repo REFERENCE  ========= -->
-
-
 <!-- ======================================= END DEFAULT HEADER ⚡️ ===========================================  -->
 
 ## Table of Contents
