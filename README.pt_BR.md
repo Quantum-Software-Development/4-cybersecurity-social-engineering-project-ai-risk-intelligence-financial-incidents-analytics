@@ -417,7 +417,7 @@ No contexto da base analítica construída, o Flash Crash exemplifica de forma p
 
 <br>
 
-> [!NOTE]
+> [!IMPORTANT]
 >
 > Este incidente demonstra como [**sistemas automatizados de decisão podem produzir perdas operacionais bilionárias em minutos, desencadear investigações regulatórias severas e levar à revisão compulsória de controles institucionais**]() — validando a necessidade de arquiteturas analíticas robustas para monitoramento, governança e gestão de risco algorítmico em ambientes financeiros críticos.
 
