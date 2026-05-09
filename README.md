@@ -86,7 +86,7 @@ AI-powered ecosystem for semantic analytics, operational risk intelligence, inte
 
 <br>
 
-### [Institutional Context]()
+### [**Institutional Context**]()
 
 [**Institution:**]() Pontifical Catholic University of São Paulo (PUC-SP – Humanistic AI & Data Science • 5th Semester • 2026)  
 [**School:**]() FACEI – Faculty of Interdisciplinary Studies  
@@ -96,7 +96,7 @@ AI-powered ecosystem for semantic analytics, operational risk intelligence, inte
 
 <br><br>
 
-### [Project Context]()
+### [**Project Context**]()
 
 This project is developed within an academic and applied research context focused on Artificial Intelligence security, cybersecurity, and social engineering in financial ecosystems.
 
