@@ -447,8 +447,6 @@ class D3,E1,E2 cloud;
 class L1,L2,L3,L4,L5,L6,L7,L8 layer;
 ```
 
-<br>
-
 >  [Click here to view the diagram in higher resolution.](https://github.com/Quantum-Software-Development/4-cybersecurity-social-engineering-project-ai-risk-intelligence-financial-incidents-analytics/blob/99fe399886300a088411de18650726f4441bb71c/MLOps-Architecture%20.md)
 
 
