@@ -131,36 +131,48 @@ https://github.com/user-attachments/assets/5d3c33b0-166e-414c-a561-8e8dd509be3d
 <!-- ========= END  BADGES ========= -->
 
 
-
-<!-- ========= START INTRO ========= -->
+<!-- ========= START Overview ========= -->
 ##  [Overview]()
 
-Este projeto consolida uma visão ponta a ponta sobre incidentes de IA em serviços financeiros, conectando dados públicos do AI Incident Database (AIID) a um pipeline completo de análise, modelagem e exposição via API e dashboard.
+This project consolidates an end-to-end perspective on AI incidents in financial services, connecting public data from the AI Incident Database (AIID) to a complete pipeline of analysis, modeling, and exposure via API and dashboard.[web:1112]
 
-Do ponto de vista executivo, o trabalho mostra como incidentes dispersos podem ser transformados em indicadores estruturados de risco, com foco em [**viés algorítmico**](), [**risco operacional**]() e [**respostas de governança**](). A principal contribuição está na **arquitetura analítica integrada**: da aquisição dos dados à disponibilização de endpoints RESTful e camada de visualização.
+From an executive perspective, the work demonstrates how dispersed incidents can be transformed into structured risk indicators, with a focus on [**algorithmic bias**](), [**operational risk**](), and [**governance responses**]().[web:1113][web:1126] The main contribution lies in the **integrated analytical architecture**: from data acquisition to the availability of RESTful endpoints and a visualization layer.[web:1112][web:1122]
 
-O sistema responde a perguntas como:
+The system answers questions such as:
 
-[-]() Quais tipos de aplicação de IA geram mais incidentes no setor financeiro? <br>
-[-]() Viés algorítmico afeta segmentos de clientes de forma desigual? <br>
-[-]() É possível prever a severidade de um incidente antes de uma investigação regulatória?
+[-]() Which types of AI applications generate the most incidents in the financial sector (credit, fraud detection, customer service, algorithmic trading, etc.)? <br>  
 
+[-]() Does algorithmic bias affect customer segments unevenly (income level, region, gender, vulnerable groups)? <br>
+
+[-]() Is it possible to predict incident severity before a regulatory investigation, based on case attributes and model usage context? <br>  
+
+[-]() Which categories of operational risk are most associated with AI incidents in banks, insurers, and fintechs (fraud, process failures, IT issues, outsourcing)? <br>  
+
+[-]() How do incident frequency and types evolve over time, and do they concentrate in specific institutions or regulatory jurisdictions? <br>  
+
+[-]() What governance patterns appear in incident responses (model suspension, policy review, regulator notification, fines)? <br>  
+
+[-]() Are there early warning indicators in incident data that correlate with higher exposure to operational losses or reputational risk? <br>
+
+[-]() To what extent do incidents involving generative AI differ from those involving traditional machine learning models in the financial context? <br>
+
+[-]() How can AI risk metrics be integrated into existing frameworks for operational risk management, cybersecurity, and compliance in the financial sector? <br>
+
+[-]() What transparency and incident reporting gaps still exist, and how can structured monitoring support regulators and risk teams?
 
 <br><br>
 
-
 > [!IMPORTANT]
 >
->  [**Posicionamento correto**:]() os modelos preditivos devem ser tratados como **prova de conceito metodológica**. A principal entrega é a arquitetura analítica integrada — não um classificador de alta acurácia pronto para produção.
+> [**Correct positioning**:]() predictive models should be treated as a **methodological proof of concept**. The main deliverable is the integrated analytical architecture — not a high-accuracy classifier ready for production.
 > <br>
->
 
 <br><br>
 
 #
 
 <br><br>
-<!-- ========= END INTRO ========= -->
+<!-- ========= END Overview ========= -->
 
 
 
