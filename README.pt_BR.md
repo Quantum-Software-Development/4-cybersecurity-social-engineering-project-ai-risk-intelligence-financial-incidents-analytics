@@ -10,8 +10,6 @@
 <!-- ========= END LANGUAGE BUTTON ========= -->
 
 
-
-
 <!-- ========= START REPO TITLE ========= -->
 # <p align="center">🔐 [Inteligência de Incidentes de IA em Bancos, Serviços Financeiros e Fintechs]()</p>
 
@@ -98,7 +96,8 @@ Ecossistema ponta a ponta de IA para análise semântica, inteligência de risco
 https://github.com/user-attachments/assets/5d3c33b0-166e-414c-a561-8e8dd509be3d
 
 #### 🖤 Creative Direction, Music Curation & Editing by Fab⚡️  
-##### 🎶 Soundtrack: "Canon in D" — Johann Pachelbel
+##### 🎶 [Soundtrack:]() "Canon in D" — Johann Pachelbel
+
 
 <br><br><br>
 <!-- ========= END DEMO VIDEO ========= -->>
@@ -130,15 +129,27 @@ https://github.com/user-attachments/assets/5d3c33b0-166e-414c-a561-8e8dd509be3d
 <br><br><br>
 <!-- ========= END BADGES GROUP 2 ========= -->
 
-<!-- ========= START Overview ========= -->
+<!-- ========= START NOTE ========= -->
+> [!NOTE]
+>
+> ⚠️ Projects may be publicly shared when permitted.  
+> The focus is on applied, hands-on learning with real datasets in AI governance and security contexts.  
+> All sensitive content remains protected in private repositories when required.
+>
+
+<br><br>
+<!-- ========= END NOTE ========= -->
+
+<!-- ========= START OVERVIEW ========= -->
 ##  [Overview]()
 
-Este projeto consolida uma visão ponta a ponta sobre incidentes de IA em serviços financeiros, conectando dados públicos do AI Incident Database (AIID) a um pipeline completo de análise, modelagem e exposição via API e dashboard.[web:1112]
+This project consolidates an end-to-end perspective on AI incidents in financial services, connecting public data from the AI Incident Database (AIID) to a complete pipeline of analysis, modeling, and exposure via API and dashboard.[web:1112]
 
-Do ponto de vista executivo, o trabalho mostra como incidentes dispersos podem ser transformados em indicadores estruturados de risco, com foco em [**viés algorítmico**](), [**risco operacional**]() e [**respostas de governança**]().[web:1113][web:1126] A principal contribuição está na **arquitetura analítica integrada**: da aquisição dos dados à disponibilização de endpoints RESTful e camada de visualização.[web:1112][web:1122]
+From an executive perspective, the work demonstrates how dispersed incidents can be transformed into structured risk indicators, with a focus on [**algorithmic bias**](), [**operational risk**](), and [**governance responses**]().[web:1113][web:1126] The main contribution lies in the **integrated analytical architecture**: from data acquisition to the availability of RESTful endpoints and a visualization layer.[web:1112][web:1122]
 
+<br>
 
-The system answers questions such as:
+[***The system answers questions such as:***]()
 
 [-]() Which types of AI applications generate the most incidents in the financial sector (credit, fraud detection, customer service, algorithmic trading, etc.)? <br>  
 
@@ -159,20 +170,20 @@ The system answers questions such as:
 [-]() How can AI risk metrics be integrated into existing frameworks for operational risk management, cybersecurity, and compliance in the financial sector? <br>
 
 [-]() What transparency and incident reporting gaps still exist, and how can structured monitoring support regulators and risk teams?
-<!-- ========= END Overview ========= -->
-
-
-
-<!-- ========= START NOTE ========= -->
-> [!NOTE]
->
-> ⚠️ Projects may be publicly shared when permitted.  
-> The focus is on applied, hands-on learning with real datasets in AI governance and security contexts.  
-> All sensitive content remains protected in private repositories when required.
->
 
 <br><br>
-<!-- ========= END NOTE ========= -->
+
+> [!IMPORTANT]
+>
+> [**Correct positioning**:]() predictive models should be treated as a **methodological proof of concept**. The main deliverable is the integrated analytical architecture — not a high-accuracy classifier ready for production.
+> <br>
+
+<br><br>
+
+#
+
+<br><br>
+<!-- ========= END Overview ========= -->
 
 <!-- ========= START Main Repo REFERENCE  ========= -->
 > [!TIP]
@@ -317,6 +328,125 @@ Avaliar, com base em dados estruturados de incidentes de IA no setor financeiro,
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+<br><br>
+<br><br>
+
+
+## System Architecture (MLOps Design)
+
+
+<br>
+
+
+
+```mermaid
+%%{init: {'theme':'dark'}}%%
+flowchart LR
+
+subgraph L1["Source Layer"]
+    A1["External AI Incident DB"]
+    A2["Kaggle Dataset"]
+end
+
+subgraph L2["Data Preparation Layer"]
+    B1["Notebook 1\nIngestion & Cleaning"]
+    B2["Feature Engineering"]
+    B3["Validated Analytical CSV"]
+end
+
+subgraph L3["Analytical & Modeling Layer"]
+    C1["Notebook 2\nStatistical Analysis"]
+    C2["Notebook 3\nML Training"]
+    C3["Model Evaluation"]
+end
+
+subgraph L4["Storage & Governance Layer"]
+    D1[("SQLite Analytical Store")]
+    D2[("Model Registry")]
+    D3["GitHub Repository\nVersion Control"]
+end
+
+subgraph L5["Deployment & Orchestration Layer"]
+    E1["Render Deployment Pipeline"]
+    E2["Streamlit Cloud Deployment"]
+end
+
+subgraph L6["Serving & Inference Layer"]
+    F1["Flask REST API\nPrediction Endpoints"]
+    F2["Public HTTPS Interface"]
+    F3["Groq API\nllama-3.1-8b-instant"]
+end
+
+subgraph L7["Consumption & Experience Layer"]
+    G1["Executive Dashboard"]
+    G2["Risk Scoring Interface"]
+    G3["AI Assistant for Analysis"]
+end
+
+subgraph L8["Stakeholder Layer"]
+    H1["Researchers & Academics"]
+    H2["Risk / Compliance Teams"]
+    H3["Decision Makers & Reviewers"]
+end
+
+A1 --> B1
+A2 --> B1
+B1 --> B2
+B2 --> B3
+B3 --> C1
+B3 --> C2
+B3 --> D1
+C2 --> C3
+C3 --> D2
+B1 --> D3
+C1 --> D3
+C2 --> D3
+D1 --> F1
+D2 --> F1
+D3 --> E1
+D3 --> E2
+E1 --> F1
+F1 --> F2
+F2 --> G1
+F2 --> G2
+F2 --> G3
+F3 --> G3
+E2 --> G1
+G1 --> H1
+G1 --> H2
+G2 --> H2
+G3 --> H1
+G3 --> H3
+
+%% STYLE
+classDef node fill:#0d1117,stroke:#00d1c1,stroke-width:1.6px,color:#ffffff;
+classDef db fill:#0d1117,stroke:#00d1c1,stroke-width:2.4px,color:#ffffff;
+classDef cloud fill:#0d1117,stroke:#00d1c1,stroke-width:1.9px,color:#ffffff;
+classDef layer fill:#111827,stroke:#00d1c1,stroke-width:1.4px,color:#ffffff;
+
+class A1,A2,B1,B2,B3,C1,C2,C3,F1,F2,F3,G1,G2,G3,H1,H2,H3 node;
+class D1,D2 db;
+class D3,E1,E2 cloud;
+class L1,L2,L3,L4,L5,L6,L7,L8 layer;
+```
+
+>  [Click here to view the diagram in higher resolution.](https://github.com/Quantum-Software-Development/4-cybersecurity-social-engineering-project-ai-risk-intelligence-financial-incidents-analytics/blob/99fe399886300a088411de18650726f4441bb71c/MLOps-Architecture%20.md)
+
+
+<br><br>
 
 
 
