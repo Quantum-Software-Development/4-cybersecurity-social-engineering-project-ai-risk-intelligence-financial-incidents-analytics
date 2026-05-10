@@ -37,7 +37,7 @@ AI-powered ecosystem for semantic analytics, operational risk intelligence, inte
 </p>
 <!-- ========= END Dashboard Streamlit ========= -->
 
-
+<!-- ========= START REACT APP ========= -->
 <p align="center">
 
   <a href="https://resilient-sorbet-9836d4.netlify.app/" target="_blank" rel="noopener noreferrer">
@@ -47,8 +47,10 @@ AI-powered ecosystem for semantic analytics, operational risk intelligence, inte
       style="height: 30px; width: auto;"
     />
   </a>
+  <!-- ========= END REACT APP ========= -->
 
-  <a href="https://docs.google.com/presentation/d/1CeNA6D3Va2X8nc0dVeD1BKxV97d1SI-v/edit#slide=id.p1" target="_blank" rel="noopener noreferrer">
+<!-- ========= START PPTX ========= -->
+  <a href="https://docs.google.com/presentation/d/1nVb2i7pirzJpoeF4YCc4BVRMSXNYWmgs/edit?slide=id.p1#slide=id.p1" target="_blank" rel="noopener noreferrer">
     <img 
       src="https://img.shields.io/badge/Strategic%20Presentation-PPTX-0f766e?style=for-the-badge&logo=microsoftpowerpoint&logoColor=white" 
       alt="Strategic Presentation"
@@ -57,7 +59,7 @@ AI-powered ecosystem for semantic analytics, operational risk intelligence, inte
   </a>
 
 </p>
-
+<!-- ========= END PPTX ========= -->
 
 <!-- ========= START DATA ANALYSING REPORT ========= -->
 <p align="center">
