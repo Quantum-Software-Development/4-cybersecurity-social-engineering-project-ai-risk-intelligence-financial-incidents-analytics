@@ -62,7 +62,26 @@ https://ai-finance-incidents-analysis-api.onrender.com/
 Aproveito para informar que o README do projeto já está bastante extenso e muito bem documentado. Ainda estou finalizando alguns detalhes e pretendo concluir toda a documentação ao longo deste final de semana. Porém, caso o senhor queira acompanhar desde já a evolução do projeto, o repositório já está totalmente acessível pelo link acima.
 
 Atenciosamente, <br>
-Fabiana ⚡️ Campanari
+Fabiana ⚡️ Campanari\
+
+ <br>
+ 
+#
+
+ <br>
+ 
+Professor Savino, boa tarde!
+
+Realizei uma nova melhoria nas apresentações em React do projeto. Agora elas incluem suporte completo para Light Mode e Dark Mode, permitindo uma visualização mais moderna e confortável em diferentes ambientes.
+Também disponibilizei o download das apresentações em formato PPTX nas duas versões (Light e Dark), além de revisar e enriquecer o conteúdo, aprimorando tanto a parte visual quanto a estrutura das informações apresentadas. O design também foi refinado com uma interface mais sofisticada e profissional.
+As apresentações agora também estão disponíveis em versões em Português e Inglês, e já realizei o deploy de ambas as versões.
+
+Links:  🇧🇷https://startling-raindrop-05d953.netlify.app/
+ 🇬🇧https://resilient-sorbet-9836d4.netlify.app/
+
+
+Acredito que a apresentação ficou mais elegante, interativa e alinhada com um padrão visual mais premium.
+
 
 
 
