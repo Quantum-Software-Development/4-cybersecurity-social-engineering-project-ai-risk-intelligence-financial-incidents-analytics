@@ -69,7 +69,7 @@ This project integrates multiple layers of an AI-driven incident analysis system
 ### 🇧🇷 Versão em Português
 
 
-* [🇧🇷 New React App Deployment Showcase[](https://startling-raindrop-05d953.netlify.app/)
+* [🇧🇷 New React App Deployment Showcase](https://startling-raindrop-05d953.netlify.app/)
 
 
 
@@ -80,7 +80,7 @@ This project integrates multiple layers of an AI-driven incident analysis system
 
 ### 🇬🇧 English
 
-* [Dark Mode](https://docs.google.com/presentation/d/1nVb2i7pirzJpoeF4YCc4BVRMSXNYWmgs/edit?usp=sharing&ouid=102317517900075068974&rtpof=true&sd=true\)
+* [Dark Mode](https://docs.google.com/presentation/d/1nVb2i7pirzJpoeF4YCc4BVRMSXNYWmgs/edit?usp=sharing&ouid=102317517900075068974&rtpof=true&sd=true)
 
 * [Light Mode](https://docs.google.com/presentation/d/1bHDmDQwKG4CVS5svffsGcOgh5CWgo5f9/edit?usp=sharing&ouid=102317517900075068974&rtpof=true&sd=true)
 
