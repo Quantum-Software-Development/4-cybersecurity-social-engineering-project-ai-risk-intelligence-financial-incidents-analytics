@@ -76,9 +76,10 @@ This project integrates multiple layers of an AI-driven incident analysis system
 
 ### 🇬🇧 English
 
-* [Dark Mode]()
+* [Dark Mode](https://docs.google.com/presentation/d/1nVb2i7pirzJpoeF4YCc4BVRMSXNYWmgs/edit?usp=sharing&ouid=102317517900075068974&rtpof=true&sd=true\)
 
 * [Light Mode]()
+
 
 
 <br>
@@ -86,6 +87,6 @@ This project integrates multiple layers of an AI-driven incident analysis system
 
 ### 🇧🇷 Português
 
-* [Dark Mode]()
+* [Dark Mode](https://docs.google.com/presentation/d/1WNUD8CG916PIs5c-T5cUkjwESEknsGKl/edit?usp=sharing&ouid=102317517900075068974&rtpof=true&sd=true)
 
 * [Light Mode]()
