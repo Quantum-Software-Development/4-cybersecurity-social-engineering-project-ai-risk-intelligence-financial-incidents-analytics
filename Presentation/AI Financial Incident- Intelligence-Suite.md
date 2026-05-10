@@ -82,7 +82,7 @@ This project integrates multiple layers of an AI-driven incident analysis system
 
 * [Dark Mode](https://docs.google.com/presentation/d/1nVb2i7pirzJpoeF4YCc4BVRMSXNYWmgs/edit?usp=sharing&ouid=102317517900075068974&rtpof=true&sd=true\)
 
-* [Light Mode]()
+* [Light Mode](https://docs.google.com/presentation/d/1bHDmDQwKG4CVS5svffsGcOgh5CWgo5f9/edit?usp=sharing&ouid=102317517900075068974&rtpof=true&sd=true)
 
 
 
@@ -93,4 +93,4 @@ This project integrates multiple layers of an AI-driven incident analysis system
 
 * [Dark Mode](https://docs.google.com/presentation/d/1WNUD8CG916PIs5c-T5cUkjwESEknsGKl/edit?usp=sharing&ouid=102317517900075068974&rtpof=true&sd=true)
 
-* [Light Mode]()
+* [Light Mode](https://docs.google.com/presentation/d/1QaSH6Kda7tfxuyakhWCrxDlC0pPUziZR/edit?usp=sharing&ouid=102317517900075068974&rtpof=true&sd=true)
