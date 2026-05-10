@@ -61,7 +61,7 @@ This project integrates multiple layers of an AI-driven incident analysis system
 
 ### 🇬🇧 English Version
 
-* [🇬🇧 bNew React App Deployment Showcase](https://resilient-sorbet-9836d4.netlify.app/)
+* [🇬🇧 New React App Deployment Showcase](https://resilient-sorbet-9836d4.netlify.app/)
 
 <br>
 
