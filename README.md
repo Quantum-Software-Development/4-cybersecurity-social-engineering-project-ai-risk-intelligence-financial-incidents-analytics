@@ -151,7 +151,7 @@ From an executive perspective, the work demonstrates how dispersed incidents can
 
 <br>
 
-[***The system answers questions such as:***]()
+➠ [***The system answers questions such as:***]()
 
 [-]() Which types of AI applications generate the most incidents in the financial sector (credit, fraud detection, customer service, algorithmic trading, etc.)? <br>  
 
@@ -202,7 +202,7 @@ From an executive perspective, the work demonstrates how dispersed incidents can
 >
 > #
 >
-> ✨ Part of the *Humanistic AI & Data Modeling Series*
+> ✨ Part of the **Humanistic AI & Data Modeling Series**
 > 
 > *Integrating cybersecurity, artificial intelligence, financial risk analytics, data science, and human insight through applied research and intelligent systems.* ⚡
 >
