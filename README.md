@@ -70,10 +70,9 @@ AI-powered ecosystem for semantic analytics, operational risk intelligence, inte
     />
   </a>
 </p>
-<!-- ========= END DATA ANALYSING REPORT ========= -->
-
 
 <br><br><br>
+<!-- ========= END DATA ANALYSING REPORT ========= -->
 <!-- ===================== END BADGE GROUP 1 ===================== -->
 
 
@@ -86,10 +85,11 @@ AI-powered ecosystem for semantic analytics, operational risk intelligence, inte
 [**Context:**]() This project analyzes real-world Artificial Intelligence incidents in banks, financial services, and fintechs from the perspectives of AI security, cybersecurity, social engineering, governance, and regulatory compliance.
 
 <br><br>
+<!-- ========= end Institutional INFO ========= -->
 
 
 <!-- ========= START SPONSOR BADGES ========= -->
-#### <p align="center"> [![Sponsor FabianaCampanari](https://img.shields.io/badge/Sponsor-%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7%20FabianaCampanari%20%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7-brightgreen?logo=GitHub)](https://github.com/sponsors/FabianaCampanari)
+### <p align="center"> [![Sponsor Quantum Software Development](https://img.shields.io/badge/Sponsor-Quantum%20Software%20Development-brightgreen?logo=GitHub)](https://github.com/sponsors/Quantum-Software-Development)
 
 <br><br>
 <!-- ========= END SPONSOR BADGES ========= -->
