@@ -198,7 +198,7 @@ From an executive perspective, the work demonstrates how dispersed incidents can
 >
 > Explore the central repository containing complementary materials, technical documentation, analyses, and related projects:
 >
-> 🔗 **[Cybersecurity, Social Engineering & AI Security —  Hub](https://github.com/Quantum-Software-Development/1-Cybersecurity-SocialEngineering_Main_Hub_Repository-PUCSP)**
+> 🔗 **[Cybersecurity, Social Engineering & AI Security —  Hub](https://github.com/Quantum-Software-Development/1-Cybersecurity-SocialEngineering_Hub)**
 >
 > #
 >
