@@ -86,7 +86,7 @@ Ecossistema ponta a ponta de IA para análise semântica, inteligência de risco
 
 
 <!-- ========= START SPONSOR BADGES ========= -->
-#### <p align="center"> [![Sponsor FabianaCampanari](https://img.shields.io/badge/Sponsor-%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7%20FabianaCampanari%20%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7-brightgreen?logo=GitHub)](https://github.com/sponsors/FabianaCampanari)
+### <p align="center"> [![Sponsor Quantum Software Development](https://img.shields.io/badge/Sponsor-Quantum%20Software%20Development-brightgreen?logo=GitHub)](https://github.com/sponsors/Quantum-Software-Development)
 
 <br><br>
 <!-- ========= END SPONSOR BADGES ========= -->
