@@ -2,7 +2,7 @@
 
 # 📦 **AI Financial Incidents Intelligence Suite**
 
-<br><br>
+<br>
 
 ## 🧭 Overview
 
@@ -16,20 +16,19 @@ This project integrates multiple layers of an AI-driven incident analysis system
 <br><br>
 
 
-
 ## 🚀 Deploys & Access Links
 
 ### 📊 Streamlit Dashboard
 
-* 🌐 [https://ai-incidents-financial-services.streamlit.app/](https://ai-incidents-financial-services.streamlit.app/)
-
-<br><br>
+* 🌐 [Streamlit Dashboard ](https://ai-incidents-financial-services.streamlit.app/)
 
 ### ☁️ Render Cloud API
 
-* 🔗 [https://ai-finance-incidents-analysis-api.onrender.com](https://ai-finance-incidents-analysis-api.onrender.com)
+* 🔗 [Render Cloud API](https://ai-finance-incidents-analysis-api.onrender.com)
+
 
 <br><br>
+
 
 ## ⚛️ Old React App Deployment Showcase
 
@@ -37,37 +36,37 @@ This project integrates multiple layers of an AI-driven incident analysis system
 
 * [Old React App Deployment Showcase](https://stellar-fenglisu-9274fc.netlify.app/)
 
+
 ### 🇧🇷 Versão em Português
 
 * [Old React App Deployment Showcase](https://symphonious-sherbet-0cbe05.netlify.app/)
 
+
 <br><br>
+
 
 ## 📽️ Old PowerPoint Presentations
 
 ### 🇬🇧 English
 
-* [https://docs.google.com/presentation/d/1CeNA6D3Va2X8nc0dVeD1BKxV97d1SI-v/edit?slide=id.p1#slide=id.p1](https://docs.google.com/presentation/d/1CeNA6D3Va2X8nc0dVeD1BKxV97d1SI-v/edit?slide=id.p1#slide=id.p1)
+* [Dark Mode](https://docs.google.com/presentation/d/1CeNA6D3Va2X8nc0dVeD1BKxV97d1SI-v/edit?slide=id.p1#slide=id.p1)
+
 
 ### 🇧🇷 Português
 
-* [https://docs.google.com/presentation/d/1BVQKF-1sYxSaoBiAuCJXMrjbXbYMqoqp/edit?usp=sharing&ouid=102317517900075068974&rtpof=true&sd=true](https://docs.google.com/presentation/d/1BVQKF-1sYxSaoBiAuCJXMrjbXbYMqoqp/edit?usp=sharing&ouid=102317517900075068974&rtpof=true&sd=true)
+* [Dark Mode](https://docs.google.com/presentation/d/1BVQKF-1sYxSaoBiAuCJXMrjbXbYMqoqp/edit?usp=sharing&ouid=102317517900075068974&rtpof=true&sd=true)
 
 
 <br><br>
 
 ## ⚛️ New React App Deployment Showcase
 
-
 ### 🇬🇧 English Version
 
 * [🇬🇧 New React App Deployment Showcase](https://resilient-sorbet-9836d4.netlify.app/)
 
-<br>
-
 
 ### 🇧🇷 Versão em Português
-
 
 * [🇧🇷 New React App Deployment Showcase](https://startling-raindrop-05d953.netlify.app/)
 
