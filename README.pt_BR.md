@@ -149,7 +149,7 @@ Sob uma perspectiva executiva, o trabalho demonstra como incidentes dispersos po
 
 <br>
 
-[***O sistema responde a questões como:***]()
+➠ [***O sistema responde a questões como:***]()
 
 [-]() Quais tipos de aplicações de IA geram mais incidentes no setor financeiro (crédito, detecção de fraude, atendimento ao cliente, negociação algorítmica etc.)? <br>
 
@@ -191,17 +191,21 @@ Sob uma perspectiva executiva, o trabalho demonstra como incidentes dispersos po
 >
 > ## 🔐 Cybersecurity, Social Engineering & AI Security — Main Hub
 >
-> This repository is part of a broader academic and technical ecosystem dedicated to Cybersecurity, Social Engineering, Artificial Intelligence Security, and Human-Centered Technology.
+> This repository is part of a broader academic and technical ecosystem dedicated to Cybersecurity, Social Engineering, Artificial Intelligence Security, Financial Risk Intelligence, and Human-Centered Technology.
 >
-> Explore the central repository containing:
+> The project explores AI incident analysis, operational risk monitoring, governance frameworks, compliance intelligence, semantic analytics, and regulatory-oriented AI infrastructures for banking, financial services, and fintech environments.
+>
+> Explore the central repository containing complementary materials, technical documentation, analyses, and related projects:
 >
 > 🔗 **[Access the Main Hub Repository](https://github.com/Quantum-Software-Development/1-Cybersecurity-SocialEngineering_Main_Hub_Repository-PUCSP)**
 >
->#
+> #
 >
-> ✨ Part of the *Humanistic AI & Data Modeling Series*  
-> Integrating cybersecurity, artificial intelligence, data science, and human insight through applied research and interactive systems. ⚡
+> ✨ Part of the **Humanistic AI & Data Modeling Series**
 > 
+> *Integrating cybersecurity, artificial intelligence, financial risk analytics, data science, and human insight through applied research and intelligent systems.* ⚡
+>
+> ***Where intelligent systems monitor financial risk… and humans monitor the intelligent systems.***
 
 <br><br><br><br>
 <!-- ========= END Main Repo REFERENCE  ========= -->
