@@ -190,14 +190,19 @@ From an executive perspective, the work demonstrates how dispersed incidents can
 <!-- ========= START Main Repo REFERENCE  ========= -->
 > [!TIP]
 >
-> This repository is part of the flagship project:
-> **🔐 Cybersecurity, Social Engineering & AI Security — Main Hub**
+> ## 🔐 Cybersecurity, Social Engineering & AI Security — Main Hub
 >
-> Explore the complete ecosystem of materials, analyses, and notebooks in the central repository:
+> This repository is part of a broader academic and technical ecosystem dedicated to Cybersecurity, Social Engineering, Artificial Intelligence Security, and Human-Centered Technology.
 >
-> * 🔗 **[Cybersecurity, Social Engineering & AI Security — Main Hub Repository](https://github.com/Quantum-Software-Development/1-Cybersecurity-SocialEngineering_Main_Hub_Repository-PUCSP)**
+> Explore the central repository containing:
 >
-> *Part of the Humanistic AI Data Modeling Series — where data connects with human insight… and occasionally gets socially engineered. ⚡️
+> 🔗 **[Access the Main Hub Repository](https://github.com/Quantum-Software-Development/1-Cybersecurity-SocialEngineering_Main_Hub_Repository-PUCSP)**
+>
+>#
+>
+> ✨ Part of the *Humanistic AI & Data Modeling Series*  
+> Integrating cybersecurity, artificial intelligence, data science, and human insight through applied research and interactive systems. ⚡
+> 
 
 <br><br><br><br>
 <!-- ========= END Main Repo REFERENCE  ========= -->
