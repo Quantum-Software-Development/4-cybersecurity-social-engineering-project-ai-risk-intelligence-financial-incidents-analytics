@@ -22,8 +22,11 @@ AI-powered ecosystem for semantic analytics, operational risk intelligence, inte
 </p>
 
 <br><br>
-<!-- ========= END REPO TITLE ========= -->
 
+#
+
+<br><br>
+<!-- ========= END REPO TITLE ========= -->
 
 <!-- ========= START Dashboard Streamlit ========= -->
 <p align="center">
