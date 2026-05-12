@@ -74,7 +74,11 @@ AI-powered ecosystem for semantic analytics, operational risk intelligence, inte
   </a>
 </p>
 
-<br><br><br>
+<br><br>
+
+#
+
+<br><br>
 <!-- ========= END DATA ANALYSING REPORT ========= -->
 <!-- ===================== END BADGE GROUP 1 ===================== -->
 
