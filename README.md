@@ -213,7 +213,7 @@ From an executive perspective, the work demonstrates how dispersed incidents can
 > 
 > *Integrating cybersecurity, artificial intelligence, financial risk analytics, data science, and human insight through applied research and intelligent systems.* ⚡
 >
-> ***Where intelligent systems monitor financial risk… and humans monitor the intelligent systems.***
+> ]***Where intelligent systems monitor financial risk… and humans monitor the intelligent systems.***]()
 
 <br><br><br><br>
 <!-- ========= END Main Repo REFERENCE  ========= -->
