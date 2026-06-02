@@ -139,7 +139,7 @@ https://github.com/user-attachments/assets/5d3c33b0-166e-414c-a561-8e8dd509be3d
 
 
 <!-- ========= START NOTE ========= -->
-> [!NOTE]
+> [!WARNING]
 >
 > ⚠️ Projects may be publicly shared when permitted.  
 > The focus is on applied, hands-on learning with real datasets in AI governance and security contexts.  
