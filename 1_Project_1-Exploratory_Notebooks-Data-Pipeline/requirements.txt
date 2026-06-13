@@ -22,7 +22,7 @@ statsmodels==0.14.6
 # API
 
 Flask==2.3.3
-Flask-CORS==6.0.2
+Flask-CORS==6.0.5
 
 
 # Banco de Dados
