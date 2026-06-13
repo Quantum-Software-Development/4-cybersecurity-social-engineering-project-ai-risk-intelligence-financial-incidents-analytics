@@ -3,7 +3,7 @@
 
 # Core
 pandas==2.0.3
-numpy==1.24.3
+numpy==2.4.6
 
 # Visualização
 matplotlib==3.7.2
