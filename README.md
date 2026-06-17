@@ -11,7 +11,7 @@
 
 
 <!-- ========= START REPO TITLE ========= -->
-#<p align="center">  🔐 [AI Incidents in Banking, Financial Services and Fintech]()
+# <p align="center">  🔐 [AI Incidents in Banking, Financial Services and Fintech]()
 
 <p align="center">
 Modular AI Risk Intelligence Infrastructure for Financial Incident Analytics, Governance, Compliance, and Regulatory Decision-Making
@@ -83,7 +83,7 @@ AI-powered ecosystem for semantic analytics, operational risk intelligence, inte
 <!-- ===================== END BADGE GROUP 1 ===================== -->
 
 
-<!-- ========= START Institutional INFO ========= -->
+
 <!-- ========= START Institutional INFO ========= -->
 ## 🎓 Academic 
 
@@ -96,11 +96,11 @@ AI-powered ecosystem for semantic analytics, operational risk intelligence, inte
 **Project Authors:** [Fabiana ⚡️ Campanari](https://linktr.ee/fabianacampanari) and [Pedro Vyctor  Almeida](https://www.linkedin.com/in/pedro-vyctor-almeida-285b89273/)
 
 <br>
+
 #
 
 <br>
 <!-- ========= END Institutional INFO ========= --br>
-<!-- ========= end Institutional INFO ========= -->
 
 
 <!-- ========= START SPONSOR BADGES ========= -->
