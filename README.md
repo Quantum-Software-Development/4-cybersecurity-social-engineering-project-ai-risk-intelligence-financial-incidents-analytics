@@ -620,7 +620,7 @@ This inference is an [**interpretable and reproducible heuristic**](), not deep 
 
 <br>
 
-### [7.2 [H2 - Algorithmic Bias by Customer Segment]()
+### 7.2 [H2 - Algorithmic Bias by Customer Segment]()
 
 - [**Test**](): Chi-square test of independence
 - [**Relevance**](): Connects AI ethics with operational and reputational risk; unequally affected segments can generate regulatory scrutiny and lawsuits
@@ -920,7 +920,7 @@ def _get_groq_key() -> str:
 
 <br><br>
 
-## 11. [System Architecture (MLOps Design)]()
+## 11. [System Architecture - MLOps Design]()
 
 
 <br>
@@ -1022,9 +1022,229 @@ class L1,L2,L3,L4,L5,L6,L7,L8 layer;
 ➠  [Click here to view the diagram in higher resolution.](https://github.com/Quantum-Software-Development/4-cybersecurity-social-engineering-project-ai-risk-intelligence-financial-incidents-analytics/blob/99fe399886300a088411de18650726f4441bb71c/MLOps-Architecture%20.md)
 
 
+<br>
+
+### 11.2 [Components and Responsibilities]()
+
+| Component | Current Technology | Recommended Evolution |
+|---|---|---|
+| Data Sources | AIID API, Kaggle CSV | Streaming with Kafka |
+| Data Ingestion | pandas + requests | Airflow + dbt |
+| Feature Store | Processed CSV | Feast / Tecton |
+| Training Pipeline | Jupyter + scikit-learn | MLflow + Kubeflow |
+| Model Registry | .pkl on disk | MLflow Registry |
+| Data Warehouse | SQLite | PostgreSQL / BigQuery |
+| Inference API | Flask | FastAPI + Gunicorn |
+| Presentation Layer | Streamlit | Tableau / PowerBI |
+
+
+
+<br>
+
+### 11.3 [Complete Data Flow]()
+
+```
+Ingestion → Processing → Feature Engineering → Training → Serialization
+    → Flask API (serving) → Streamlit Dashboard (consumption) → Groq (chatbot)
+```
+
+<br>
+
+### 11.4 [File Architecture Decisions]()
+
+> [**Why is `ai_finance_incidents.db` in the root?**]()
+> The database is accessed by the API (`api/`) and the notebooks (`notebooks/`). Keeping it in the root with `os.path.abspath` eliminates ambiguity in any OS.
+
+
+<br>
+
+> [**Why `api/app_api.py` and not `app.py` in the root?**]()
+> To eliminate conflict with `dashboard/app.py`. Both were called `app.py` <br> <br> distinct subfolder + name resolve this permanently.
+
+
 <br><br>
 
 
+## [12. Technical Structure of Notebooks]()
+
+
+### [Notebook 1 - Exploration and Preparation]()
+
+[**CRISP-DM Phase**](): Data Understanding + Data Preparation
+
+[**Deliverables**]():
+
+<br>
+
+
+```
+data/incidents_finance_filtered.csv   ← analytical base of all notebooks
+ai_finance_incidents.db               ← database with 3 tables for the API
+assets/distribuicao_variaveis.png     ← distributions dashboard
+```
+
+<br>
+
+### [Notebook 2 - Statistical Analysis]()
+
+[**CRISP-DM Phase**](): Evaluation
+
+Produces results of the H1–H4 tests and analytical visualizations.
+
+<br>
+
+### [Notebook 3 <br> <br> ML Modeling]()
+
+[**CRISP-DM Phase**](): Modeling
+
+[**Deliverables**]():
+
+<br>
+
+
+```
+models/severity_classifier.pkl        ← Serialized Model 1
+models/investigation_classifier.pkl   ← Serialized Model 2
+models/features_severity.pkl          ← Feature list for Model 1
+models/features_investigation.pkl     ← Feature list for Model 2
+```
+
+<br>
+
+### [Notebook 4 <br> <br> RESTful API and Deployment]()
+
+[**CRISP-DM Phase**](): Deployment
+
+[**Deliverable**]():
+
+<br>
+
+```
+api/app_api.py    ← Flask API ready for independent execution
+```
+
+<br><br>
+
+
+## [13. Consolidated Results]()
+
+### [13.1 What the project delivers solidly]()
+
+<br>
+
+| Deliverable | Status |
+|---|---|
+| Thematic base of financial incidents | ✅ Solid |
+| 8 derived variables with explicit logic | ✅ Solid |
+| Formalized H1–H4 hypothesis tests | ✅ Solid |
+| Complete and serialized ML pipeline | ✅ Solid (technical) |
+| Relational SQLite database with 3 tables | ✅ Solid |
+| RESTful API with 9 functional endpoints | ✅ Solid |
+| Dashboard with 7 interactive pages | ✅ Solid |
+| Groq chatbot with offline fallback | ✅ Solid |
+
+<br>
+
+### [13.2 What should be stated with caution]()
+
+<br>
+
+| Statement | Caution Needed |
+|---|---|
+| "The predictive models are ready for use" | ❌ F1 = 0 indicates insufficient base |
+| "XGBoost outperformed the other algorithms" | ⚠️ With 31 samples, comparisons are unstable |
+| "The results are generalizable" | ⚠️ Only for the observed AIID scope |
+| "The API can be used in production" | ⚠️ Lacks authentication, logging, and versioning |
+
+<br>
+
+### [13.3 Interpretative Synthesis]()
+
+The statistical analysis suggests a concentration of incidents in certain types of applications, signs of unequal exposure among customer segments in cases of algorithmic bias, and evidence of a misalignment between potential severity and formal governance response. In managerial terms, this reinforces that AI systems in financial services should be evaluated not only for technical performance but also for distributive impact, operational criticality, and institutional response capacity.
+
+
+<br><br>
+
+
+## [14. Limitations and Methodological Care]()
+
+### [14.1 Data Limitations]()
+
+- [**Reduced base**](): only 31 incidents in the modeled scope
+- [**Strong imbalance**](): 90.3% in a single severity class
+- [**Only publicized incidents**](): underrepresentation of the real total
+- [**Geographic bias**](): US and EU dominate the base
+- [**Textual dependency**](): variable quality between incidents impacts the features
+
+<br>
+
+
+### [14.2 Statistical Limitations]()
+
+- Low statistical power for strong inferences in small scopes
+- High sensitivity to a few extreme cases (e.g., Flash Crash distorts H4)
+- Fragility of tests applied to subgroups with fewer than 5 observations
+
+
+<br>
+
+### [14.3 ML and Deployment Limitations]()
+
+- Classes too rare to guarantee robust generalization
+- High risk of overfitting with F1 = 0 in the final metrics
+- Functional API without typical production controls:
+  - no authentication (JWT or API key)
+  - no structured logging
+  - no endpoint versioning (`/v1/`)
+  - no rate limiting
+  - no robust payload validation
+
+
+<br><br>
+
+## [15. Technology Stack]()
+
+### [Backend]()
+
+<br>
+
+| Library | Version | Use |
+|---|---|---|
+| `flask` | ≥ 2.3 | RESTful API |
+| `flask-cors` | ≥ 4.0 | Cross-origin for the dashboard |
+| `pandas` | ≥ 2.0 | Data manipulation |
+| `numpy` | ≥ 1.24 | Numerical operations |
+| `scipy` | ≥ 1.11 | Statistical tests (H1–H4) |
+| `statsmodels` | ≥ 0.14 | Logistic regression, OLS |
+| `scikit-learn` | ≥ 1.3 | Preprocessing and models |
+| `xgboost` | ≥ 1.7 | Main model |
+| `joblib` | ≥ 1.3 | Model serialization |
+
+
+<br>
+
+### [Frontend]()
+
+| Library | Version | Use |
+|---|---|---|
+| `streamlit` | ≥ 1.32 | Interactive dashboard |
+| `plotly` | ≥ 5.18 | Interactive charts |
+| `requests` | ≥ 2.31 | Calls to Flask and Groq API |
+
+<br>
+
+### [AI and Chatbot]()
+
+| Provider | Model | Cost | Integration |
+|---|---|---|---|
+| [**Groq**]() *(main)* | llama-3.1-8b-instant | [**Free**]() | REST via `requests` |
+| [**Offline mode**]() *(fallback)* | keywords | Zero | Local |
+
+
+<br><br>
+
+
+## [16. Local Execution Guide]()
 
 
 
