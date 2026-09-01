@@ -606,9 +606,123 @@ This inference is an [**interpretable and reproducible heuristic**](), not deep 
 
 <br><br>
 
+
 ## 7. [Statistical Analysis and Inferential Results]()
 
+[**Notebook 2**]() implements the [**Evaluation**]() phase with descriptive statistics, bivariate analysis, and hypothesis testing on the 31 incidents from the 2003–2023 period.
 
+<br>
+
+### [7.1 H1 <br> <br> Concentration by Application Type]()
+
+- [**Test**](): Chi-square goodness of fit (uniform distribution as H₀)
+- [**Managerial interpretation**](): Rejection of uniformity identifies where governance must be more intensive (credit, fraud, algorithmic trading)
+
+<br>
+
+### [7.2 H2 <br> <br> Algorithmic Bias by Customer Segment]()
+
+- [**Test**](): Chi-square test of independence
+- [**Relevance**](): Connects AI ethics with operational and reputational risk; unequally affected segments can generate regulatory scrutiny and lawsuits
+
+<br>
+
+### [7.3 H3 <br> <br> Severity and Regulatory Response]()
+
+- [**Tests**](): Chi-square test of association + Logistic Regression (Odds Ratio)
+- [**Complement**](): The logistic regression studies the relationship between incident attributes and the probability of regulatory investigation
+
+<br>
+
+### [7.4 H4 <br> <br> Temporal Trend]()
+
+- [**Tests**](): Spearman Correlation + Linear Regression (OLS)
+- [**Caution**](): With a small base and short series, robust temporal patterns require more data
+
+<br>
+
+### [7.5 Critical Reading of the Results]()
+
+The most valuable contribution of Notebook 2 is not in "proving" hypotheses, but in organizing the analytical reasoning in a rigorous way. Even with limited statistical power, the notebook provides a coherent evaluation structure for the distribution of incidents, asymmetry between segments, the severity-governance relationship, and temporal evolution <br> <br> supporting the [**empirical evidence layer**]() of the project.
+
+
+<br><br>
+
+
+## 8. [Machine Learning Modeling]()
+
+[**Notebook 3**]() implements the [**Modeling**]() phase, developing supervised models for two tasks.
+
+<br>
+
+### 8.1[ Modeling Dataset]()
+
+| Attribute | Value |
+|---|---|
+| Total incidents | 31 |
+| Initial features | 19 |
+| Features after encoding | 14 |
+| Missing values | None |
+
+<br>
+
+### 8.2 [Targets and Imbalance]()
+
+[**Model 1 <br> <br> Binary Severity**]() (`severity_binary`):
+- Class 0 (low/medium): 28 cases <br> <br> [**90.3%**]()
+- Class 1 (high/critical): 3 cases <br> <br> [**9.7%**]()
+- Imbalance ratio: [**9.33**]()
+
+  <br>
+
+[**Model 2 <br> <br> Regulatory Investigation**]() (`regulatory_investigation`):
+- Class 0 (no investigation): 30 cases <br> <br> [**96.8%**]()
+- Class 1 (with investigation): 1 case <br> <br> [**3.2%**]()
+
+<br>
+
+> This distribution is the [**central methodological problem**]() of the project.
+
+<br>
+
+### [8.3 [Implemented Algorithms]()
+
+| Algorithm | Role |
+|---|---|
+| [**Logistic Regression**]() | Interpretable linear baseline |
+| [**Random Forest**]() | Tree ensemble, robust to noise |
+| [**XGBoost**]() | High-performance gradient boosting |
+
+<br>
+
+
+### [8.4 Reported Results]()
+
+| Model | Algorithm | F1-Score | ROC-AUC |
+|---|---|---|---|
+| Severity | XGBoost | [**0.0000**]() | 0.0833 |
+| Investigation | XGBoost | [**0.0000**]() | NaN |
+
+<br>
+
+### [8.5 Correct Technical Interpretation]()
+
+These results show that the modeling, in its current form, [**has not achieved reliable predictive performance**](). The correct reading is:
+
+- the ML pipeline was implemented correctly;
+- feature engineering and serialization of the artifacts were performed;
+- the base is too small and heavily imbalanced for robust generalization;
+- the models should be treated as a [**proof of concept**](), not as a mature predictive solution.
+
+<br>
+
+### [8.6 Value of the Notebook despite low performance]()
+
+Notebook 3 has academic value because it demonstrates: data preparation for ML, encoding, defining targets, comparing algorithms, evaluating with metrics, and serializing for integration with the API <br> <br> fulfilling the [**Modeling**]() phase of CRISP-DM in a didactic and traceable manner.
+
+<br><br>
+
+## [9. Relational Database and RESTful API]()
 
 
 
