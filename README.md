@@ -92,7 +92,9 @@ AI-powered ecosystem for semantic analytics, operational risk intelligence, inte
 **Institution:** Pontifical Catholic University of São Paulo (PUC-SP) — FACEI  
 [**Bachelor’s Program:**]() Humanistic AI & Data Science • 5th Semester • 2026  
 [**Course:**]() AI Security, Cybersecurity & Social Engineering  
-**Professors** [✨ Carlos Eduardo Paes](https://www.linkedin.com/in/carlos-eduardo-de-barros-paes-ph-d-7b137a4/)  and  [✨ Eduardo Savino Gomes]() **Project Authors:** [Fabiana ⚡️ Campanari](https://linktr.ee/fabianacampanari) 
+**Professors** [✨ Carlos Eduardo Paes](https://www.linkedin.com/in/carlos-eduardo-de-barros-paes-ph-d-7b137a4/)  and  [✨ Eduardo Savino Gomes]() 
+**Author:** [Fabiana ⚡️ Campanari](https://linktr.ee/fabianacampanari) 
+
 <br>
 
 #
@@ -453,7 +455,7 @@ The project was structured according to the [**CRISP-DM**]() (*Cross-Industry St
 
 ### [4.1 Applied Stages]()
 
-| [CRISP-DM Phase]( | [Implementation in the project]( | [Notebook]( |
+| [CRISP-DM Phase]() | [Implementation in the project]() | [Notebook]() |
 |---|---|---|
 | [**Business Understanding**]() | Definition of the problem, objectives, and hypotheses | <br> <br> (README) |
 | [**Data Understanding**]() | Initial exploration, quality, and analytical potential | Notebook 1 |
@@ -465,6 +467,8 @@ The project was structured according to the [**CRISP-DM**]() (*Cross-Industry St
 <br>
 
 ### [4.2 Pipeline Flow]()
+
+<br>
 
 ```mermaid
 flowchart TD
@@ -494,6 +498,8 @@ The processed base used in the analyses contains [**31 incidents**]() from the f
 <br>
 
 ### [5.2 Main Variables Used]()
+
+<br>
 
 | Field | Origin | Use |
 |---|---|---|
@@ -537,6 +543,93 @@ Although the official AIID API is useful for acquisition and updates, the analyt
 <br>
 
 ### [6.1 The 8 Derived Variables]()
+
+
+The variables were constructed by [**heuristic inference on free text**](), using the consolidated `text` field. This approach is deterministic, explicit, and reproducible < although it depends on the semantic density of the textual fields.
+
+<br>
+
+| Variable | Type | Analytical Purpose |
+|---|---|---|
+| `application_type` | Categorical (7 classes) | Type of financial AI application |
+| `incident_type` | Categorical (6 classes) | Nature of the incident |
+| `customer_segment` | Categorical (5 classes) | Affected customer group |
+| `severity_level` | Ordinal (4 levels) | Severity of the incident |
+| `regulatory_investigation` | Binary | Formal regulatory investigation |
+| `fine_imposed` | Binary | Fine or sanction applied |
+| `policy_change` | Binary | Policy or system change |
+| `third_party_audit` | Binary | Independent audit conducted |
+
+<br>
+
+### [6.2 Semantic Matching by Keywords]()
+
+The [**"semantic correlation"**]() in the project was implemented as a match by keywords and textual radicals <br> <br> not with embeddings, TF-IDF, or advanced NLP. Each incident receives the class of the [**first**]() compatible set found in the `text`, with fallback categories when there is not enough evidence.
+
+<br>
+
+[**`application_type`**]() <br> <br> keyword examples:
+- `credit_scoring`: credit scor, loan, lending, mortgage
+- `fraud_detection`: fraud, aml, anti-money laundering
+- `algorithmic_trading`: trading, high-frequency, flash crash
+- `risk_assessment`: underwriting, insurance, risk assessment
+
+<br>
+
+[**`incident_type`**]() <br> <br> keyword examples:
+- `algorithmic_bias`: bias, discriminat, racial, unfair, disparate impact
+- `operational_failure`: crash, failure, outage, bug, error
+- `market_disruption`: flash crash, volatility, circuit breaker
+- `data_breach`: breach, leak, hack, privacy violation
+
+  <br>
+
+[**`severity_level`**]() <br> <br> gradual impact logic:
+- `critical`: bankrupt, systemic, shutdown, billion, flash crash, tens of thousands
+- `high`: investigation, lawsuit, fine, penalty, significant loss, deepfake
+- `medium`: complaint, concern, review, criticized, alleged
+- `low`: absence of the signs above
+
+<br>
+
+[**Governance Flags**]() <br> <br> specific keywords:
+- `regulatory_investigation`: investigation, inquiry, probe, sec, regulator
+- `fine_imposed`: fine, penalty, sanction, settlement
+- `policy_change`: policy change, suspended, discontinued, halted
+- `third_party_audit`: audit, independent review, third-party
+
+<br>
+
+### [6.3 Methodological Limitations of Derived Variables]()
+
+This inference is an [**interpretable and reproducible heuristic**](), not deep semantic understanding. When `title` or `description` are poor or incomplete, the quality of derived variables weakens. Among the recommended next steps is to evolve to embeddings (FinBERT) and TF-IDF at the corpus scale.
+
+<br><br>
+
+## [7. Statistical Analysis and Inferential Results]()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
