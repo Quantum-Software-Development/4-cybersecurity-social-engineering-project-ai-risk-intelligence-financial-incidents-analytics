@@ -465,9 +465,12 @@ Within the analytical framework developed, the Flash Crash exemplifies the deriv
 <br><br>
 <br><br>
 <br><br>
+<br><br>
+<br><br>
+<br><br>
 
 
-## System Architecture (MLOps Design)
+## 11. [System Architecture (MLOps Design)]()
 
 
 <br>
