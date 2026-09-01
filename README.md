@@ -444,10 +444,48 @@ Within the analytical framework developed, the Flash Crash exemplifies the deriv
 <br><br>
 
 
-## 4. [CRISP-DM Methodology]
+## 4. [CRISP-DM Methodology]()
 
 
+The project was structured according to the [**CRISP-DM**]() (*Cross-Industry Standard Process for Data Mining*) methodology, which organizes the analytical lifecycle into six iterative phases.
 
+<br>
+
+### [4.1 Applied Stages]()
+
+| CRISP-DM Phase | Implementation in the project | Notebook |
+|---|---|---|
+| [**Business Understanding**]() | Definition of the problem, objectives, and hypotheses | <br> <br> (README) |
+| [**Data Understanding**]() | Initial exploration, quality, and analytical potential | Notebook 1 |
+| [**Data Preparation**]() | Filtering, cleaning, derived features, SQLite | Notebook 1 |
+| [**Modeling**]() | Encoding, targets, training, and model evaluation | Notebook 3 |
+| [**Evaluation**]() | H1–H4 tests, statistical interpretation | Notebook 2 |
+| [**Deployment**]() | Flask RESTful API, Streamlit dashboard | Notebook 4 + dashboard/app.py |
+
+<br>
+
+### [4.2 Pipeline Flow]()
+
+```mermaid
+flowchart TD
+    A[AI Incident Database / Kaggle / Local Cache] --> B[Notebook 1 <br> <br> Exploration and Preparation]
+    B --> C[Treated CSV\nincidents_finance_filtered.csv]
+    B --> D[(SQLite\nai_finance_incidents.db)]
+    C --> E[Notebook 2 <br> <br> Statistics\nH1 to H4]
+    C --> F[Notebook 3 <br> <br> ML\nLR + RF + XGBoost]
+    F --> G[models/*.pkl]
+    D --> H[Notebook 4 <br> <br> Flask API\n9 endpoints]
+    G --> H
+    H --> I[Streamlit Dashboard\ndashboard/app.py]
+```
+
+<br>
+
+> [**Rule of thumb**](): always run the notebooks in the order 1 → 2 → 3 → 4. Running out of order will cause file not found errors.
+
+<br><br>
+
+## [5. Data Used and Preparation]()
 
 
 
