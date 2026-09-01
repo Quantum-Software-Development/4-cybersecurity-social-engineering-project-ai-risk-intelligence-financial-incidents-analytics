@@ -453,7 +453,7 @@ The project was structured according to the [**CRISP-DM**]() (*Cross-Industry St
 
 ### [4.1 Applied Stages]()
 
-| CRISP-DM Phase | Implementation in the project | Notebook |
+| [CRISP-DM Phase]( | [Implementation in the project]( | [Notebook]( |
 |---|---|---|
 | [**Business Understanding**]() | Definition of the problem, objectives, and hypotheses | <br> <br> (README) |
 | [**Data Understanding**]() | Initial exploration, quality, and analytical potential | Notebook 1 |
@@ -487,6 +487,56 @@ flowchart TD
 
 ## [5. Data Used and Preparation]()
 
+### [5.1 Analytical Base]()
+
+The processed base used in the analyses contains [**31 incidents**]() from the financial sector, covering the period from [**2003 to 2023**](). This subset was treated as the main dataset for statistics and modeling.
+
+<br>
+
+### [5.2 Main Variables Used]()
+
+| Field | Origin | Use |
+|---|---|---|
+| `incident_id` | Original | Primary key |
+| `title` | Original | Filter and features |
+| `text` | Derived (title + description) | Base of all derived variables |
+| `year` | Derived from `date` | Temporal analysis (H4) |
+| `application_type` | Feature engineered | H1, ML |
+| `incident_type` | Feature engineered | H2, ML |
+| `customer_segment` | Feature engineered | H2, ML |
+| `severity_level` | Feature engineered | H3, ML target |
+| `regulatory_investigation` | Feature engineered | H3, ML target |
+| `fine_imposed` | Feature engineered | ML feature |
+| `policy_change` | Feature engineered | ML feature |
+| `third_party_audit` | Feature engineered | ML feature |
+
+<br>
+
+### [5.3 Preparation Pipeline (Notebook 1)]()
+
+1. Standardization of column names to `snake_case`
+2. Conversion of dates → `datetime` + extraction of `year`
+3. Creation of the `text` field = `title + " " + description` (lowercase)
+4. Removal of duplicates by `incident_id`
+5. Thematic filtering by financial keywords
+6. Feature engineering <br> <br> 8 derived variables
+7. Saving the `incidents_finance_filtered.csv`
+8. Creation and population of the SQLite database (3 tables)
+
+<br>
+
+### [5.4 Justification for Using the Treated CSV]()
+
+Although the official AIID API is useful for acquisition and updates, the analytical stage depends heavily on the semantic quality of the textual fields. The project adopts the [**treated and enriched CSV**]() as the main source for the subsequent stages, offering greater consistency and reproducibility.
+
+
+<br><br>
+
+## [6. Analytical Variables and Hypotheses]()
+
+<br>
+
+### [6.1 The 8 Derived Variables]()
 
 
 
