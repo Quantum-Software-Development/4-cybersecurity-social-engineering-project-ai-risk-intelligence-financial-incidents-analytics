@@ -668,14 +668,14 @@ The most valuable contribution of Notebook 2 is not in "proving" hypotheses, but
 
 ### 8.2 [Targets and Imbalance]()
 
-[**Model 1 <br> <br> Binary Severity**]() (`severity_binary`):
+#### ➠ [**Model 1 <br> <br> Binary Severity**]() (`severity_binary`):
 - Class 0 (low/medium): 28 cases <br> <br> [**90.3%**]()
 - Class 1 (high/critical): 3 cases <br> <br> [**9.7%**]()
 - Imbalance ratio: [**9.33**]()
 
   <br>
 
-[**Model 2 <br> <br> Regulatory Investigation**]() (`regulatory_investigation`):
+#### ➠ [**Model 2 <br> <br> Regulatory Investigation**]() (`regulatory_investigation`):
 - Class 0 (no investigation): 30 cases <br> <br> [**96.8%**]()
 - Class 1 (with investigation): 1 case <br> <br> [**3.2%**]()
 
@@ -770,8 +770,6 @@ CREATE TABLE regulatory_responses (
 
 <br>
 
-
-
 | Group | Method | Route | Description |
 |---|---|---|---|
 | [**Documentation**]() | GET | `/` | Status and list of endpoints |
@@ -853,6 +851,8 @@ The dashboard (`dashboard/app.py`, built with Streamlit) is the visual consumpti
 # [2. os.environ["API_BASE_URL"] → Local .env]()
 # [3. "http://localhost:5000"    → Standard fallback]()
 ```
+
+<br>
 
 When the API is offline, the dashboard loads the local CSV as an [**automatic fallback**]()  it never breaks during the demonstration.
 
