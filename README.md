@@ -400,7 +400,7 @@ The project applies thematic filtering using more than 30 keywords across the `t
 >
 > These limitations do not invalidate the project, but require careful interpretation and moderation in conclusions.
 
-<br><br>
+<br>
 
 ### 3.4 [Paradigmatic Example: The 2010 Flash Crash]()
 
@@ -453,7 +453,7 @@ The project was structured according to the [**CRISP-DM**]() (*Cross-Industry St
 
 <br>
 
-### [4.1 Applied Stages]()
+### 4.1 [Applied Stages]()
 
 | [CRISP-DM Phase]() | [Implementation in the project]() | [Notebook]() |
 |---|---|---|
@@ -466,7 +466,7 @@ The project was structured according to the [**CRISP-DM**]() (*Cross-Industry St
 
 <br>
 
-### [4.2 Pipeline Flow]()
+### 4.2 [Pipeline Flow]()
 
 <br>
 
@@ -489,15 +489,15 @@ flowchart TD
 
 <br><br>
 
-## [5. Data Used and Preparation]()
+## 5. [Data Used and Preparation]()
 
-### [5.1 Analytical Base]()
+### 5.1 [Analytical Base]()
 
 The processed base used in the analyses contains [**31 incidents**]() from the financial sector, covering the period from [**2003 to 2023**](). This subset was treated as the main dataset for statistics and modeling.
 
 <br>
 
-### [5.2 Main Variables Used]()
+### 5.2 [Main Variables Used]()
 
 <br>
 
@@ -518,7 +518,7 @@ The processed base used in the analyses contains [**31 incidents**]() from the f
 
 <br>
 
-### [5.3 Preparation Pipeline (Notebook 1)]()
+### 5.3 [Preparation Pipeline (Notebook 1)]()
 
 1. Standardization of column names to `snake_case`
 2. Conversion of dates → `datetime` + extraction of `year`
@@ -531,18 +531,18 @@ The processed base used in the analyses contains [**31 incidents**]() from the f
 
 <br>
 
-### [5.4 Justification for Using the Treated CSV]()
+### 5.4 [Justification for Using the Treated CSV]()
 
 Although the official AIID API is useful for acquisition and updates, the analytical stage depends heavily on the semantic quality of the textual fields. The project adopts the [**treated and enriched CSV**]() as the main source for the subsequent stages, offering greater consistency and reproducibility.
 
 
 <br><br>
 
-## [6. Analytical Variables and Hypotheses]()
+## 6. [Analytical Variables and Hypotheses]()
 
 <br>
 
-### [6.1 The 8 Derived Variables]()
+### 6.1 [The 8 Derived Variables]()
 
 
 The variables were constructed by [**heuristic inference on free text**](), using the consolidated `text` field. This approach is deterministic, explicit, and reproducible < although it depends on the semantic density of the textual fields.
@@ -562,7 +562,7 @@ The variables were constructed by [**heuristic inference on free text**](), usin
 
 <br>
 
-### [6.2 Semantic Matching by Keywords]()
+### 6.2 [Semantic Matching by Keywords]()
 
 The [**"semantic correlation"**]() in the project was implemented as a match by keywords and textual radicals <br> <br> not with embeddings, TF-IDF, or advanced NLP. Each incident receives the class of the [**first**]() compatible set found in the `text`, with fallback categories when there is not enough evidence.
 
@@ -600,13 +600,13 @@ The [**"semantic correlation"**]() in the project was implemented as a match by 
 
 <br>
 
-### [6.3 Methodological Limitations of Derived Variables]()
+### 6.3 [Methodological Limitations of Derived Variables]()
 
 This inference is an [**interpretable and reproducible heuristic**](), not deep semantic understanding. When `title` or `description` are poor or incomplete, the quality of derived variables weakens. Among the recommended next steps is to evolve to embeddings (FinBERT) and TF-IDF at the corpus scale.
 
 <br><br>
 
-## [7. Statistical Analysis and Inferential Results]()
+## 7. [Statistical Analysis and Inferential Results]()
 
 
 
