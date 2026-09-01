@@ -765,10 +765,12 @@ CREATE TABLE regulatory_responses (
 
 ### 9.2 [API Endpoints (9 in total)]()
 
+
+[**Base URL**](): `http://localhost:5000` (local) or Render URL (production)
+
 <br>
 
 
-[**Base URL**](): `http://localhost:5000` (local) or Render URL (production)
 
 | Group | Method | Route | Description |
 |---|---|---|---|
@@ -852,7 +854,7 @@ The dashboard (`dashboard/app.py`, built with Streamlit) is the visual consumpti
 # [3. "http://localhost:5000"    → Standard fallback]()
 ```
 
-When the API is offline, the dashboard loads the local CSV as an [**automatic fallback**]() <br> <br> it never breaks during the demonstration.
+When the API is offline, the dashboard loads the local CSV as an [**automatic fallback**]()  it never breaks during the demonstration.
 
 <br>
 
@@ -893,11 +895,9 @@ The chatbot was migrated from OpenAI to [**Groq (llama-3.1-8b-instant)**]():
 <br>
 
 
-[**Key resolution logic**]() (without changing code between environments):
+➠ [**Key resolution logic**]() (without changing code between environments):
 
 <br>
-
-
 
 ```python
 def _get_groq_key() -> str:
@@ -1023,6 +1023,39 @@ class L1,L2,L3,L4,L5,L6,L7,L8 layer;
 
 
 <br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
