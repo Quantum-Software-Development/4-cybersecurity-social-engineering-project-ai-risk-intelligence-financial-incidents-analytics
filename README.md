@@ -685,7 +685,7 @@ The most valuable contribution of Notebook 2 is not in "proving" hypotheses, but
 
 <br>
 
-### [8.3 [Implemented Algorithms]()
+### 8.3 [Implemented Algorithms]()
 
 | Algorithm | Role |
 |---|---|
@@ -696,7 +696,7 @@ The most valuable contribution of Notebook 2 is not in "proving" hypotheses, but
 <br>
 
 
-### [8.4 Reported Results]()
+### 8.4 [Reported Results]()
 
 | Model | Algorithm | F1-Score | ROC-AUC |
 |---|---|---|---|
@@ -705,7 +705,7 @@ The most valuable contribution of Notebook 2 is not in "proving" hypotheses, but
 
 <br>
 
-### [8.5 Correct Technical Interpretation]()
+### 8.5 [Correct Technical Interpretation]()
 
 These results show that the modeling, in its current form, [**has not achieved reliable predictive performance**](). The correct reading is:
 
@@ -716,61 +716,214 @@ These results show that the modeling, in its current form, [**has not achieved r
 
 <br>
 
-### [8.6 Value of the Notebook despite low performance]()
+### 8.6 [Value of the Notebook despite low performance]()
 
 Notebook 3 has academic value because it demonstrates: data preparation for ML, encoding, defining targets, comparing algorithms, evaluating with metrics, and serializing for integration with the API <br> <br> fulfilling the [**Modeling**]() phase of CRISP-DM in a didactic and traceable manner.
 
 <br><br>
 
-## [9. Relational Database and RESTful API]()
+## 9. [Relational Database and RESTful API]()
+
+[**Notebook 4**]() implements the [**Deployment**]() phase, creating a Flask API to expose data and models.
+
+<br>
 
 
+### 9.1 [Relational Schema (SQLite)]()
+
+<br>
 
 
+```sql
+-- 3 related tables (minimum briefing requirement)
+CREATE TABLE incidents (
+    incident_id INTEGER PRIMARY KEY,
+    title TEXT, summary TEXT,
+    occurred_date DATE, year INTEGER,
+    application_type TEXT, customer_segment TEXT,
+    incident_type TEXT, severity_level TEXT, text TEXT
+);
+CREATE TABLE financial_impacts (
+    impact_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    incident_id INTEGER NOT NULL,
+    severity_level TEXT, estimated_loss TEXT, impact_description TEXT,
+    FOREIGN KEY (incident_id) REFERENCES incidents(incident_id)
+);
+CREATE TABLE regulatory_responses (
+    response_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    incident_id INTEGER NOT NULL,
+    regulatory_investigation INTEGER DEFAULT 0,
+    fine_imposed INTEGER DEFAULT 0,
+    policy_change INTEGER DEFAULT 0,
+    third_party_audit INTEGER DEFAULT 0,
+    FOREIGN KEY (incident_id) REFERENCES incidents(incident_id)
+);
+```
+
+<br>
 
 
+### 9.2 [API Endpoints (9 in total)]()
+
+<br>
 
 
+[**Base URL**](): `http://localhost:5000` (local) or Render URL (production)
+
+| Group | Method | Route | Description |
+|---|---|---|---|
+| [**Documentation**]() | GET | `/` | Status and list of endpoints |
+| [**Data**]() | GET | `/api/incidents` | List with filters (application_type, severity_level, year, limit) |
+| [**Data**]() | GET | `/api/incidents/<id>` | Detail + financial impact + regulatory response |
+| [**Statistics**]() | GET | `/api/stats/by-application` | Concentration by application type |
+| [**Statistics**]() | GET | `/api/stats/by-segment` | Incidents and bias rate by segment |
+| [**Statistics**]() | GET | `/api/stats/temporal` | Time series by year |
+| [**Statistics**]() | GET | `/api/stats/governance` | Frequency of governance flags |
+| [**Predictions**]() | POST | `/api/predict/severity` | Classifies as high/low severity |
+| [**Predictions**]() | POST | `/api/predict/investigation` | Probability of regulatory investigation |
+
+<br>
 
 
+### 9.3 [Usage Example]()
+
+<br>
 
 
+```bash
+# [List filtered incidents]()
+curl "http://localhost:5000/api/incidents?application_type=credit_scoring&limit=10"
+
+# [Severity prediction]()
+curl -X POST http://localhost:5000/api/predict/severity \
+  -H "Content-Type: application/json" \
+  -d '{
+    "application_type": "credit_scoring",
+    "incident_type": "algorithmic_bias",
+    "customer_segment": "retail",
+    "year": 2024,
+    "fine_imposed": 0,
+    "policy_change": 0,
+    "third_party_audit": 0
+  }'
+
+# [Expected response:]()
+# [{"prediction": "high", "probability": 0.78, "confidence": "high",]()
+# ["interpretation": "Severity: HIGH | confidence: high"}]()
+```
+
+<br>
 
 
+### 9.4 [Train-Production Consistency (`prepare_model_input`)]()
+
+The `prepare_model_input` function ensures three critical points:
+
+1. [**Replicates the training transformation pipeline**](): applies `get_dummies` with the same categories
+2. [**Creates missing columns with a value of 0**](): avoids `shape mismatch` errors
+3. [**Orders columns in the same sequence as training**](): ensures correct alignment with the model's coefficients
+
+<br>
 
 
+### 9.5 [Critical Observation]()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+The predictive endpoints are technically functional, but they depend on models with F1 = 0. They should be interpreted as a [**demonstration of integration**](), not as a reliable decision mechanism.
 
 
 <br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
 
+## 10. [Interactive Dashboard]()
+
+<br>
+
+
+### 10.1 [Overview]()
+
+The dashboard (`dashboard/app.py`, built with Streamlit) is the visual consumption layer of the project. It consumes the Flask API via HTTP <br> <br> [**it does not read files directly**]() <br> <br> respecting the separation of concerns in the architecture.
+
+<br>
+
+
+```python
+# [Automatic API URL resolution:]()
+# [1. st.secrets["API_BASE_URL"] → Streamlit Cloud]()
+# [2. os.environ["API_BASE_URL"] → Local .env]()
+# [3. "http://localhost:5000"    → Standard fallback]()
+```
+
+When the API is offline, the dashboard loads the local CSV as an [**automatic fallback**]() <br> <br> it never breaks during the demonstration.
+
+<br>
+
+
+### 10.2 [Implemented Pages]()
+
+<br>
+
+
+| Page | Content |
+|---|---|
+| [**📊 Overview**]() | 5 dynamic KPI cards · distribution by application · severity donut · time series · governance bars |
+| [**🔍 Explorer**]() | Table filtered by application/severity/type/year · CSV download |
+| [**📈 Statistical Analysis**]() | Complete H1–H4 with scipy calculations · result badges · correlation heatmap |
+| [**🤖 ML Models**]() | Algorithm comparison · Feature Importance · ROC curves · confusion matrix |
+| [**🔌 API Explorer**]() | Live status · endpoint selector · parameters · JSON response |
+| [**🎯 Risk Predictor**]() | Form → prediction M1 (severity) + M2 (investigation) → probability gauges |
+| [**💬 AI Assistant**]() | Groq llama-3.1-8b-instant + contextualized offline responses · history · suggestions |
+
+<br>
+
+
+### 10.3 [Chatbot: OpenAI → Groq Replacement]()
+
+The chatbot was migrated from OpenAI to [**Groq (llama-3.1-8b-instant)**]():
+
+<br>
+
+
+| Criterion | OpenAI (before) | Groq (now) |
+|---|---|---|
+| [**Cost**]() | ~$0.15/1M tokens | [**Free**]() |
+| [**Speed**]() | ~40 tok/s | [**~270 tok/s**]() |
+| [**Required SDK**]() | `openai` | [**Only `requests`**]() |
+| [**Configuration**]() | Manual via UI | [**Automatic**]() (secrets → env → UI) |
+| [**Fallback**]() | Offline mode | Offline mode + automatic retry |
+
+<br>
+
+
+[**Key resolution logic**]() (without changing code between environments):
+
+<br>
+
+
+
+```python
+def _get_groq_key() -> str:
+    try: return st.secrets["GROQ_API_KEY"]      # 1. Streamlit Cloud
+    except: pass
+    env = os.environ.get("GROQ_API_KEY", "")
+    if env: return env                           # 2. Environment variable
+    return st.session_state.get("groq_key_manual", "")  # 3. Manual input
+```
+
+### 10.4 [UI/UX Features]()
+
+- [**Dark/Light mode**]() with toggle in the sidebar
+- [**KPI cards**]() with values, icons, and deltas
+- [**Plotly Charts**]() fully interactive
+- [**CSV Download**]() filtered
+- [**API Status**]() in real-time (badge in the sidebar)
+- [**Automatic Fallback**]() <br> <br> works without API and without Groq key
+
+
+<br><br>
 
 ## 11. [System Architecture (MLOps Design)]()
 
 
 <br>
-
-
 
 ```mermaid
 %%{init: {'theme':'dark'}}%%
@@ -863,7 +1016,10 @@ class D3,E1,E2 cloud;
 class L1,L2,L3,L4,L5,L6,L7,L8 layer;
 ```
 
->  [Click here to view the diagram in higher resolution.](https://github.com/Quantum-Software-Development/4-cybersecurity-social-engineering-project-ai-risk-intelligence-financial-incidents-analytics/blob/99fe399886300a088411de18650726f4441bb71c/MLOps-Architecture%20.md)
+<br>
+
+
+➠  [Click here to view the diagram in higher resolution.](https://github.com/Quantum-Software-Development/4-cybersecurity-social-engineering-project-ai-risk-intelligence-financial-incidents-analytics/blob/99fe399886300a088411de18650726f4441bb71c/MLOps-Architecture%20.md)
 
 
 <br><br>
