@@ -613,35 +613,35 @@ This inference is an [**interpretable and reproducible heuristic**](), not deep 
 
 <br>
 
-### [7.1 H1 <br> <br> Concentration by Application Type]()
+### 7.1 [H1 - Concentration by Application Type]()
 
 - [**Test**](): Chi-square goodness of fit (uniform distribution as H₀)
 - [**Managerial interpretation**](): Rejection of uniformity identifies where governance must be more intensive (credit, fraud, algorithmic trading)
 
 <br>
 
-### [7.2 H2 <br> <br> Algorithmic Bias by Customer Segment]()
+### [7.2 [H2 - Algorithmic Bias by Customer Segment]()
 
 - [**Test**](): Chi-square test of independence
 - [**Relevance**](): Connects AI ethics with operational and reputational risk; unequally affected segments can generate regulatory scrutiny and lawsuits
 
 <br>
 
-### [7.3 H3 <br> <br> Severity and Regulatory Response]()
+### 7.3 [H3 -  Severity and Regulatory Response]()
 
 - [**Tests**](): Chi-square test of association + Logistic Regression (Odds Ratio)
 - [**Complement**](): The logistic regression studies the relationship between incident attributes and the probability of regulatory investigation
 
 <br>
 
-### [7.4 H4 <br> <br> Temporal Trend]()
+### 7.4 [H4 -Temporal Trend]()
 
 - [**Tests**](): Spearman Correlation + Linear Regression (OLS)
 - [**Caution**](): With a small base and short series, robust temporal patterns require more data
 
 <br>
 
-### [7.5 Critical Reading of the Results]()
+###  7.5 [Critical Reading of the Results]()
 
 The most valuable contribution of Notebook 2 is not in "proving" hypotheses, but in organizing the analytical reasoning in a rigorous way. Even with limited statistical power, the notebook provides a coherent evaluation structure for the distribution of incidents, asymmetry between segments, the severity-governance relationship, and temporal evolution <br> <br> supporting the [**empirical evidence layer**]() of the project.
 
@@ -655,7 +655,7 @@ The most valuable contribution of Notebook 2 is not in "proving" hypotheses, but
 
 <br>
 
-### 8.1[ Modeling Dataset]()
+### 8.1 [ Modeling Dataset]()
 
 | Attribute | Value |
 |---|---|
