@@ -21,12 +21,47 @@ Modular AI Risk Intelligence Infrastructure for Financial Incident Analytics, Go
 AI-powered ecosystem for semantic analytics, operational risk intelligence, interactive dashboards, APIs, and LLM-driven insights.
 </p>
 
+
 <br><br>
+
+
+<!-- ========= START TEASER ========= -->
+###### <p align="center"> **Where intelligent systems monitor financial risk...** </p>
+
+###### <p align="center"> ***While humans monitor the intelligent systems***. <br>
+
+###### <p align="center"> ⚡
+
+<br>
 
 #
 
 <br><br>
-<!-- ========= END REPO TITLE ========= -->
+<!-- ========= END TEASER ========= -->
+
+
+
+ <!-- START ♡ Sponsor BADGE ····· 🇶 Quantum Software Development -->
+<p align="center">
+  <a href="https://github.com/sponsors/Quantum-Software-Development">
+    <img
+      src="https://img.shields.io/badge/♡%20SPONSOR-07111F?style=for-the-badge&labelColor=07111F&logoColor=white"
+      alt="Sponsor"
+      height="36"
+    >
+    <img
+      src="https://img.shields.io/badge/%F0%9F%87%B6%20Quantum%20Software%20Development-3A424C?style=for-the-badge&labelColor=3A424C&logoColor=white"
+      alt="🇶 Quantum Software Development"
+      height="36"
+    >
+  </a>
+</p>
+
+  
+<br><br>
+ <!--END♡ Sponsor BADGE ····· 🇶 Quantum Software Development -->
+
+
 
 <!-- ========= START Dashboard Streamlit ========= -->
 <p align="center">
