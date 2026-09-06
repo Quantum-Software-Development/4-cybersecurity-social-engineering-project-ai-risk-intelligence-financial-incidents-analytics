@@ -161,12 +161,20 @@ Institution:** Pontifical Catholic University of São Paulo (PUC-SP) — FACEI
 
 
 <!-- ========= START DEMO VIDEO ========= -->
+### <p align="center"> 🎥 **DEMO: RESTful API & Dashboard Deployment** ✧ `Render` ✧ `Streamlit`
+
+<br>
+
 https://github.com/user-attachments/assets/5d3c33b0-166e-414c-a561-8e8dd509be3d
 
-######  Creative Direction, Music Curation & Editing by Fab⚡️  
-###### 🎶 [Soundtrack:]() "Canon in D" — Johann Pachelbel
+###### <p align="center"> 🎬 **Creative Direction, Music Curation & Editing by Fab⚡️**
+###### <p align="center"> 🎶 **Soundtrack:** *"Canon in D"* — Johann Pachelbel
 
-<br><br><br>
+<br>
+
+#
+
+<br><br>
 <!-- ========= END DEMO VIDEO ========= -->
 
 
@@ -192,8 +200,13 @@ https://github.com/user-attachments/assets/5d3c33b0-166e-414c-a561-8e8dd509be3d
   <img src="https://img.shields.io/badge/Render-Cloud%20Deployment-134e4a?logo=render&logoColor=white" />
 </p>
 
-<br><br><br>
-<!-- ========= END BADGES GROUP 2 ========= -->
+
+<br><br>
+
+#
+
+<br><br>
+<!-- =========END TECH STACK / PIPELINE BADGES========= -->
 
 
 <!-- ========= START NOTE ========= -->
@@ -205,7 +218,39 @@ https://github.com/user-attachments/assets/5d3c33b0-166e-414c-a561-8e8dd509be3d
 >
 
 <br><br>
+
+#
+
+<br><br>
 <!-- ========= END NOTE ========= -->
+
+
+<!-- ========= START Main Repo REFERENCE  ========= -->
+> [!TIP]
+>
+> ## 🔐 Cybersecurity, Social Engineering & AI Security —  Hub
+>
+> This repository is part of a broader academic and technical ecosystem dedicated to Cybersecurity, Social Engineering, Artificial Intelligence Security, Financial Risk Intelligence, and Human-Centered Technology.
+>
+> The project explores AI incident analysis, operational risk monitoring, governance frameworks, compliance intelligence, semantic analytics, and regulatory-oriented AI infrastructures for banking, financial services, and fintech environments.
+>
+> Explore the central repository containing complementary materials, technical documentation, analyses, and related projects:
+>
+> 🔗 **[Cybersecurity, Social Engineering & AI Security —  Hub Repository](https://github.com/Quantum-Software-Development/1-Cybersecurity-SocialEngineering_Hub)**
+>
+> #
+>
+> ✨ Part of the **Human-Centered AI & Data Science Modeling Series**
+>
+> *Integrating cybersecurity, artificial intelligence, financial risk analytics, data science, and human perspective through applied research and intelligent systems.*
+
+
+<br><br><br><br>
+<!-- ========= END Main Repo REFERENCE  ========= -->
+
+
+
+
 
 <!-- ========= START OVERVIEW ========= -->
 ##  [Overview]()
@@ -252,31 +297,8 @@ From an executive perspective, the work demonstrates how dispersed incidents can
 <br><br>
 <!-- ========= END Overview ========= -->
 
-<!-- ========= START Main Repo REFERENCE  ========= -->
-> [!TIP]
->
-> ## 🔐 Cybersecurity, Social Engineering & AI Security —  Hub
->
-> This repository is part of a broader academic and technical ecosystem dedicated to Cybersecurity, Social Engineering, Artificial Intelligence Security, Financial Risk Intelligence, and Human-Centered Technology.
->
-> The project explores AI incident analysis, operational risk monitoring, governance frameworks, compliance intelligence, semantic analytics, and regulatory-oriented AI infrastructures for banking, financial services, and fintech environments.
->
-> Explore the central repository containing complementary materials, technical documentation, analyses, and related projects:
->
-> 🔗 **[Cybersecurity, Social Engineering & AI Security —  Hub Repository](https://github.com/Quantum-Software-Development/1-Cybersecurity-SocialEngineering_Hub)**
->
-> #
->
-> ✨ Part of the **Human-Centered AI & Data Science Modeling Series**
->
-> *Integrating cybersecurity, artificial intelligence, financial risk analytics, data science, and human perspective through applied research and intelligent systems.*
 
 
-
-
-<br><br><br><br>
-<!-- ========= END Main Repo REFERENCE  ========= -->
-<!-- ======================================= END DEFAULT HEADER ⚡️ ===========================================  -->
 
 ## Table of Contents
 
@@ -434,6 +456,8 @@ The project applies thematic filtering using more than 30 keywords across the `t
 <br>
 
 ### 3.3 [Source Limitations]()
+
+<br>
 
 | [Limitation]()                            | [Impact]()                        | [Adopted strategy]()          |
 | ----------------------------------------- | --------------------------------- | ----------------------------- |
