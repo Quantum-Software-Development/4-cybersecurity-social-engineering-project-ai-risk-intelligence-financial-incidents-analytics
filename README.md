@@ -1,13 +1,10 @@
-<!-- ======================================= ⚡️ Start DEFAULT HEADER ===========================================  -->
 
+<!--START  🇬🇧English LANGUAGE BUTTON  -->
+##### \[[🇧🇷 Português](README.pt_BR.md)\] \[**[🇬🇧 English](README.md)**\]   
+<!--END 🇬🇧English LANGUAGE BUTTON  --  -->
 
-<!-- ========= START LANGUAGE BUTTON ========= -->
-<br>
-
-**\[[🇧🇷 Português](README.pt_BR.md)\] \[**[🇬🇧 English](README.md)**\]**
 
 <br><br>
-<!-- ========= END LANGUAGE BUTTON ========= -->
 
 
 <!-- ========= START REPO TITLE ========= -->
@@ -61,6 +58,51 @@ AI-powered ecosystem for semantic analytics, operational risk intelligence, inte
 <br><br>
  <!--END♡ Sponsor BADGE ····· 🇶 Quantum Software Development -->
 
+ 
+ 
+ <!-- ========= START PUC GIF ========= -->
+<p align="center">
+   <img src="https://github.com/user-attachments/assets/791a69e2-d09a-429f-9257-f6667fff5c04 ">
+ </p>
+
+ <br>
+<!-- ========= END PUC GIF ========= -->
+
+
+<!-- ========= START 🇧🇷 Top CommtributorsE ========= -->
+<p align="center">
+  <a href="https://user-badge.committers.top/brazil/FabianaCampanari">
+    <img
+      src="https://img.shields.io/badge/%F0%9F%87%A7%F0%9F%87%B7%20TOP%20CONTRIBUTORS-07111F?style=for-the-badge&labelColor=07111F&logoColor=white"
+      alt="🇧🇷 TOP CONTRIBUTORS"
+      height="36"
+    >
+    <img
+      src="https://img.shields.io/badge/·····%20BRAZIL-3A424C?style=for-the-badge&labelColor=3A424C&logoColor=white"
+      alt="Brazil"
+      height="36"
+    >
+  </a>
+</p>
+
+</p>
+
+<br><br><br>
+<!-- ========= END 🇧🇷 Top CommtributorsE  ========= -->
+
+<!-- ========= START Institutional INFO ========= -->
+Institution:** Pontifical Catholic University of São Paulo (PUC-SP) — FACEI  
+[**Bachelor’s Program:**]() Humanistic AI & Data Science • 5th Semester • 2026  
+[**Course:**]() AI Security, Cybersecurity & Social Engineering  
+**Professors** [✨ Carlos Eduardo Paes](https://www.linkedin.com/in/carlos-eduardo-de-barros-paes-ph-d-7b137a4/)  and  [✨ Eduardo Savino Gomes]() 
+**Author:** [Fabiana ⚡️ Campanari](https://linktr.ee/fabianacampanari) 
+
+<br>
+
+#
+
+<br><br><br>
+<!-- ========= END Institutional INFO ========= -->
 
 
 <!-- ========= START Dashboard Streamlit ========= -->
@@ -109,43 +151,20 @@ AI-powered ecosystem for semantic analytics, operational risk intelligence, inte
   </a>
 </p>
 
-<br><br><br>
-<!-- ========= END DATA ANALYSING REPORT ========= -->
-<!-- ===================== END BADGE GROUP 1 ===================== -->
-
-
-
-<!-- ========= START Institutional INFO ========= -->
-## 🎓 Academic 
-
-<br>
-
-**Institution:** Pontifical Catholic University of São Paulo (PUC-SP) — FACEI  
-[**Bachelor’s Program:**]() Humanistic AI & Data Science • 5th Semester • 2026  
-[**Course:**]() AI Security, Cybersecurity & Social Engineering  
-**Professors** [✨ Carlos Eduardo Paes](https://www.linkedin.com/in/carlos-eduardo-de-barros-paes-ph-d-7b137a4/)  and  [✨ Eduardo Savino Gomes]() 
-**Author:** [Fabiana ⚡️ Campanari](https://linktr.ee/fabianacampanari) 
-
-<br>
+<br><br>
 
 #
 
-<br>
-<!-- ========= END Institutional INFO ========= --br>
-
-
-<!-- ========= START SPONSOR BADGES ========= -->
-### <p align="center"> [![Sponsor Quantum Software Development](https://img.shields.io/badge/Sponsor-Quantum%20Software%20Development-brightgreen?logo=GitHub)](https://github.com/sponsors/Quantum-Software-Development)
-
 <br><br>
-<!-- ========= END SPONSOR BADGES ========= -->
+<!-- ========= END Data Analysis Report BADGE ========= -->
+
 
 
 <!-- ========= START DEMO VIDEO ========= -->
 https://github.com/user-attachments/assets/5d3c33b0-166e-414c-a561-8e8dd509be3d
 
-#### 🖤 Creative Direction, Music Curation & Editing by Fab⚡️  
-##### 🎶 [Soundtrack:]() "Canon in D" — Johann Pachelbel
+######  Creative Direction, Music Curation & Editing by Fab⚡️  
+###### 🎶 [Soundtrack:]() "Canon in D" — Johann Pachelbel
 
 <br><br><br>
 <!-- ========= END DEMO VIDEO ========= -->
