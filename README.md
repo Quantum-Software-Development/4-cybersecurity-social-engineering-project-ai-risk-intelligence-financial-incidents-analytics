@@ -74,11 +74,7 @@ AI-powered ecosystem for semantic analytics, operational risk intelligence, inte
   </a>
 </p>
 
-<br><br>
-
-#
-
-<br><br>
+<br><br><br>
 <!-- ========= END DATA ANALYSING REPORT ========= -->
 <!-- ===================== END BADGE GROUP 1 ===================== -->
 
@@ -217,14 +213,12 @@ From an executive perspective, the work demonstrates how dispersed incidents can
 >
 > #
 >
-> ✨ Part of the **Humanistic AI & Data Modeling Series**
-> 
-> *Integrating cybersecurity, artificial intelligence, financial risk analytics, data science, and human insight through applied research and intelligent systems.* 
+> ✨ Part of the **Human-Centered AI & Data Science Modeling Series**
 >
-> ### [***Where intelligent systems monitor financial risk…***]() ***and humans monitor the intelligent systems***.<br>
->  ⚡
->
-> <br>
+> *Integrating cybersecurity, artificial intelligence, financial risk analytics, data science, and human perspective through applied research and intelligent systems.*
+
+
+
 
 <br><br><br><br>
 <!-- ========= END Main Repo REFERENCE  ========= -->
