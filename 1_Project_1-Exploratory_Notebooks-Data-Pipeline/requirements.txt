@@ -30,7 +30,7 @@ Flask-CORS==6.0.5
 
 # Utilidades
 python-dateutil==2.8.2
-pytz==2023.3
+pytz==2026.3.post1
 
 # Produção (opcional)
 
