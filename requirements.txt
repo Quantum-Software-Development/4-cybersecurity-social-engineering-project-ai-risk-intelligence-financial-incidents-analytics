@@ -73,7 +73,7 @@ groq>=0.9.0
 # ----------------------------------------------------------------
 # Environment setup and date handling
 python-dotenv>=1.2.2
-python-dateutil>=2.8.2
+python-dateutil>=2.9.0.post0
 
 # ----------------------------------------------------------------
 # 🚀 PRODUCTION (OPTIONAL)
