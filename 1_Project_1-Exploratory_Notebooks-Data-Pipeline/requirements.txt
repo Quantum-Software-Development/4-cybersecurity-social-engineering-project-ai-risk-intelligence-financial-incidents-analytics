@@ -34,7 +34,7 @@ pytz==2026.3.post1
 
 # Produção (opcional)
 
-gunicorn==26.0.0
+gunicorn==26.2.0
 
 
 # Testes (opcional)
