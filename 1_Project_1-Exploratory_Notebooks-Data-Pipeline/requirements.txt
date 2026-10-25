@@ -2,7 +2,7 @@
 # Python 3.8+
 
 # Core
-pandas==2.0.3
+pandas==3.0.6
 numpy==2.5.0
 
 # Visualização
