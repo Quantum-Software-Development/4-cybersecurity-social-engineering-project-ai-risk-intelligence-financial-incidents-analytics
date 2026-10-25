@@ -5,7 +5,7 @@ pytest>=9.1.1
 
 # Code quality
 black>=24.3.0
-flake8>=7.0.0
+flake8>=7.4.1
 
 # Dev environment
 ipython>=8.12.0
