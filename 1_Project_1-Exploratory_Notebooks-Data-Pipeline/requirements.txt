@@ -33,12 +33,12 @@ python-dateutil==2.9.0.post0
 pytz==2026.3.post1
 
 # Produção (opcional)
-
 gunicorn==26.2.0
 
 
 # Testes (opcional)
-
+pytest==9.0.3
+requests==2.34.2
 pytest==9.1.1
-requests==2.33.1
+
 
