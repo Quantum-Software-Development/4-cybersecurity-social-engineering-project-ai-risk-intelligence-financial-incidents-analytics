@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Incidents in Financial Services — 2026</title>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/dist/pptxgen.bundle.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+
+    :root {
+      --bg: #040508;
+      --surface: #0d1117;
+      --surface2: #161b22;
+      --teal: #00d4c8;
+      --teal-dim: #00a89e;
+      --teal-glow: rgba(0, 212, 200, .15);
+      --white: #fff;
+      --w90: rgba(255, 255, 255, .9);
+      --w70: rgba(255, 255, 255, .7);
+      --w50: rgba(255, 255, 255, .5);
+      --w20: rgba(255, 255, 255, .12);
+      --w10: rgba(255, 255, 255, .06);
+      --border: rgba(0, 212, 200, .18);
+      --border2: rgba(0, 212, 200, .35);
+      --font: 'Inter', system-ui, sans-serif;
+      --mono: 'JetBrains Mono', monospace;
+      --slide-transition: .55s cubic-bezier(.4, 0, .2, 1);
+    }
+
+    [data-theme="light"] {
+      --bg: #f5f5f7;
+      --surface: #fff;
+      --surface2: #f0f0f5;
+      --white: #1d1d1f;
+      --w90: rgba(0, 0, 0, .85);
+      --w70: rgba(0, 0, 0, .65);
+      --w50: rgba(0, 0, 0, .45);
+      --w20: rgba(0, 0, 0, .1);
+      --w10: rgba(0, 0, 0, .04);
+      --border: rgba(0, 180, 172, .25);
+      --border2: rgba(0, 180, 172, .5);
+    }
+
+    html,
+    body {
+      height: 100%;
+      overflow: hidden;
+      font-family: var(--font)
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--white);
+      transition: background .4s, color .4s
+    }
+
+    /* ── Stage & Slides ── */
+    #stage {
+      position: fixed;
+      inset: 0;
+      background: var(--bg)
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px 100px 100px;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(24px);
+      transition: opacity var(--slide-transition), transform var(--slide-transition);
+      overflow: hidden;
+    }
+
+    .slide.active {
+      opacity: 1;
+      pointer-events: all;
+      transform: translateY(0)
+    }
+
+    .slide.exit-up {
+      opacity: 0;
+      transform: translateY(-24px)
+    }
+
+    .slide.exit-down {
+      opacity: 0;
+      transform: translateY(24px)
+    }
+
+    /* ── Noise / glow ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(0, 212, 200, .07) 0%, transparent 60%);
+    }
+
+    /* ── HUD ── */
+    .hud {
+      position: fixed;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: rgba(13, 17, 23, .82);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 10px 20px;
+      backdrop-filter: blur(20px);
+      z-index: 1000;
+      transition: opacity .3s;
+    }
+
+    .hud-dots {
+      display: flex;
+      gap: 7px;
+      align-items: center
+    }
+
+    .hud-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--w20);
+      border: none;
+      cursor: pointer;
+      transition: all .3s;
+    }
+
+    .hud-dot.on {
+      background: var(--teal);
+      box-shadow: 0 0 8px var(--teal);
+      transform: scale(1.3)
+    }
+
+    .hud-dot:hover:not(.on) {
+      background: var(--w50)
+    }
+
+    .hud-sep {
+      width: 1px;
+      height: 18px;
+      background: var(--w20)
+    }
+
+    .hud-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--w50);
+      font-size: 16px;
+      line-height: 1;
+      padding: 2px 6px;
+      border-radius: 6px;
+      transition: color .2s, background .2s;
+    }
+
+    .hud-btn:hover {
+      color: var(--teal);
+      background: var(--teal-glow)
+    }
+
+    /* ── Slide counter ── */
+    .slide-counter {
+      position: fixed;
+      top: 28px;
+      right: 36px;
+      font-family: var(--mono);
+      font-size: .72rem;
+      color: var(--w50);
+      letter-spacing: .1em;
+      z-index: 1000;
+    }
+
+    .slide-counter span {
+      color: var(--teal)
+    }
+
+    /* ── Typography ── */
+    .eyebrow {
+      font-family: var(--mono);
+      font-size: .68rem;
+      color: var(--teal);
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .eyebrow::after {
+      content: '';
+      flex: 1;
+      max-width: 48px;
+      height: 1px;
+      background: var(--teal-dim)
+    }
+
+    .headline {
+      font-size: clamp(2.4rem, 5.5vw, 5rem);
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -.02em;
+      margin-bottom: 20px;
+    }
+
+    .accent {
+      color: var(--teal)
+    }
+
+    .subline {
+      font-size: clamp(.95rem, 1.6vw, 1.2rem);
+      color: var(--w70);
+      line-height: 1.7;
+      font-weight: 300;
+      max-width: 660px;
+    }
+
+    /* ── Cards ── */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 24px 26px;
+      transition: border-color .3s, transform .3s, box-shadow .3s;
+    }
+
+    .card:hover {
+      border-color: var(--border2);
+      transform: translateY(-3px);
+      box-shadow: 0 16px 40px rgba(0, 212, 200, .08);
+    }
+
+    .card-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--teal);
+      margin-bottom: 8px
+    }
+
+    .card-body {
+      font-size: .88rem;
+      color: var(--w70);
+      line-height: 1.65
+    }
+
+    /* ── Grids ── */
+    .g2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px
+    }
+
+    .g3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px
+    }
+
+    .g4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px
+    }
+
+    .g5 {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px
+    }
+
+    /* ── KPI ── */
+    .kpi {
+      text-align: center;
+      background: rgba(0, 212, 200, .04);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px 12px;
+      transition: all .3s;
+    }
+
+    .kpi:hover {
+      background: rgba(0, 212, 200, .08);
+      transform: translateY(-2px)
+    }
+
+    .kpi-value {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--teal);
+      line-height: 1;
+      margin-bottom: 6px
+    }
+
+    .kpi-label {
+      font-size: .7rem;
+      color: var(--w50);
+      text-transform: uppercase;
+      letter-spacing: .1em
+    }
+
+    /* ── Table ── */
+    .tbl {
+      width: 100%;
+      border-collapse: collapse
+    }
+
+    .tbl th {
+      font-family: var(--mono);
+      font-size: .62rem;
+      color: var(--teal);
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+    }
+
+    .tbl td {
+      padding: 11px 14px;
+      font-size: .86rem;
+      color: var(--w70);
+      border-bottom: 1px solid var(--w10);
+    }
+
+    .tbl tr:hover td {
+      background: rgba(0, 212, 200, .03)
+    }
+
+    /* ── Pipeline ── */
+    .pipeline {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0;
+      margin: 28px 0
+    }
+
+    .pipe {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-right: none;
+      padding: 18px 14px;
+      text-align: center;
+      position: relative;
+      transition: all .3s;
+    }
+
+    .pipe:last-child {
+      border-right: 1px solid var(--border)
+    }
+
+    .pipe:hover {
+      background: rgba(0, 212, 200, .05);
+      border-color: var(--border2)
+    }
+
+    .pipe::after {
+      content: '→';
+      position: absolute;
+      right: -13px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--teal);
+      font-size: .9rem;
+      z-index: 2;
+    }
+
+    .pipe:last-child::after {
+      content: ''
+    }
+
+    .pipe-nb {
+      font-family: var(--mono);
+      font-size: .58rem;
+      color: var(--teal);
+      letter-spacing: .15em;
+      margin-bottom: 7px
+    }
+
+    .pipe-t {
+      font-weight: 600;
+      font-size: .88rem;
+      margin-bottom: 5px
+    }
+
+    .pipe-d {
+      font-size: .72rem;
+      color: var(--w50);
+      line-height: 1.5
+    }
+
+    .pipe-o {
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px solid var(--w10);
+      font-family: var(--mono);
+      font-size: .6rem;
+      color: var(--teal-dim)
+    }
+
+    /* ── Badge ── */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(0, 212, 200, .1);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 4px 12px;
+      font-family: var(--mono);
+      font-size: .68rem;
+      color: var(--teal);
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 22px
+    }
+
+    /* ── Roadmap ── */
+    .roadmap-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--w10)
+    }
+
+    .roadmap-item:last-child {
+      border-bottom: none
+    }
+
+    .roadmap-dot {
+      width: 10px;
+      height: 10px;
+      min-width: 10px;
+      border-radius: 50%;
+      background: var(--teal);
+      margin-top: 4px;
+      box-shadow: 0 0 8px var(--teal)
+    }
+
+    .roadmap-dot.dim {
+      background: var(--w20);
+      box-shadow: none
+    }
+
+    .roadmap-title {
+      font-size: .9rem;
+      font-weight: 500;
+      margin-bottom: 3px
+    }
+
+    .roadmap-desc {
+      font-size: .8rem;
+      color: var(--w50)
+    }
+
+    /* ── Code block ── */
+    .code {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 20px;
+      font-family: var(--mono);
+      font-size: .76rem;
+      color: #b8f0ec;
+      line-height: 1.7;
+      overflow-x: auto;
+    }
+
+    /* ── Highlight box ── */
+    .hl {
+      background: rgba(0, 212, 200, .05);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--teal);
+      border-radius: 10px;
+      padding: 14px 18px;
+      font-size: .88rem;
+      color: var(--w70);
+      line-height: 1.6;
+    }
+
+    /* ── Animations ── */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(18px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    .animate {
+      animation: fadeUp .6s cubic-bezier(.22, 1, .36, 1) both
+    }
+
+    .d1 {
+      animation-delay: .08s
+    }
+
+    .d2 {
+      animation-delay: .16s
+    }
+
+    .d3 {
+      animation-delay: .24s
+    }
+
+    .d4 {
+      animation-delay: .32s
+    }
+
+    .d5 {
+      animation-delay: .4s
+    }
+
+    /* ── Hero bg ── */
+    .hero-glow {
+      position: absolute;
+      right: -8%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 520px;
+      height: 520px;
+      background: radial-gradient(circle, rgba(0, 212, 200, .1) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+      border: 1px solid var(--border);
+    }
+
+    .hero-glow::after {
+      content: '';
+      position: absolute;
+      inset: 60px;
+      border: 1px solid rgba(0, 212, 200, .08);
+      border-radius: 50%;
+    }
+
+    /* ── Swipe indicator ── */
+    .swipe-hint {
+      position: fixed;
+      bottom: 80px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: var(--mono);
+      font-size: .6rem;
+      color: var(--w20);
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      animation: fadeUp 1s ease 2s both;
+      pointer-events: none;
+    }
+
+    /* ── Fullscreen mode ── */
+    :fullscreen #stage,
+    .slide {
+      background: var(--bg)
+    }
+
+    :fullscreen .hud {
+      bottom: 24px
+    }
+
+    /* ── Bar chart ── */
+    .bar-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px
+    }
+
+    .bar-label {
+      font-size: .76rem;
+      color: var(--w70);
+      min-width: 160px;
+      font-weight: 400
+    }
+
+    .bar-track {
+      flex: 1;
+      height: 5px;
+      background: var(--w10);
+      border-radius: 3px;
+      overflow: hidden
+    }
+
+    .bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--teal), var(--teal-dim));
+      border-radius: 3px
+    }
+
+    .bar-val {
+      font-family: var(--mono);
+      font-size: .68rem;
+      color: var(--teal);
+      min-width: 36px;
+      text-align: right
+    }
+
+    @media(max-width:900px) {
+      .slide {
+        padding: 70px 28px 90px
+      }
+
+      .g2,
+      .g3,
+      .g4,
+      .g5 {
+        grid-template-columns: 1fr
+      }
+
+      .pipeline {
+        grid-template-columns: 1fr
+      }
+
+      .pipe {
+        border-right: 1px solid var(--border);
+        border-bottom: none
+      }
+
+      .pipe:last-child {
+        border-bottom: 1px solid var(--border)
+      }
+
+      .pipe::after {
+        content: '↓';
+        right: 50%;
+        bottom: -13px;
+        top: auto;
+        transform: translateX(50%)
+      }
+
+      .pipe:last-child::after {
+        content: ''
+      }
+    }
+  </style>
+</head>
+
+<body data-theme="dark">
+  <div id="stage"></div>
+  <script type="text/babel">
+    const { useState, useEffect, useRef, useCallback } = React;
+
+    const SLIDES = [
+      'hero', 'problem', 'solution', 'data', 'pipeline',
+      'ml', 'api', 'groq', 'architecture', 'deploy', 'roadmap', 'conclusion'
+    ];
+    const LABELS = [
+      'Cover', 'Problem', 'Solution', 'Data', 'Pipeline',
+      'ML', 'API', 'Groq', 'Architecture', 'Deploy', 'Roadmap', 'Conclusion'
+    ];
+
+    /* ── Shared components ── */
+    function Eyebrow({ n, label }) {
+      return (
+        <div className="eyebrow animate">
+          <span style={{ fontFamily: 'var(--mono)', color: 'var(--teal)' }}>
+            {String(n).padStart(2, '0')}
+          </span>
+          <span style={{ color: 'var(--w50)' }}>{label}</span>
+        </div>
+      );
+    }
+
+    /* ═══════ SLIDES ═══════ */
+
+    function SlideHero({ className }) {
+      return (
+        <div className={className || "slide"} id="hero">
+          <div className="hero-glow" />
+          <Eyebrow n={1} label="INTRODUCTION · PUC-SP · 2026" />
+          <h1 className="headline animate d1" style={{ maxWidth: 820 }}>
+            AI Incidents in<br />
+            <span className="accent">Financial Services</span>
+          </h1>
+          <p className="subline animate d2" style={{ maxWidth: 600, marginBottom: 32 }}>
+            Analysis of algorithmic bias, operational risk, and AI governance
+            in the financial sector — end-to-end CRISP-DM pipeline with REST API,
+            interactive dashboard, and Groq chatbot.
+          </p>
+          <div className="badge-row animate d3">
+            {['CRISP-DM', 'Python 3.10', 'XGBoost', 'Flask REST', 'Streamlit', 'SQLite', 'Groq llama-3.1'].map(b => (
+              <span key={b} className="badge">{b}</span>
+            ))}
+          </div>
+          <p style={{ marginTop: 40, fontFamily: 'var(--mono)', fontSize: '.65rem', color: 'var(--w20)', letterSpacing: '.14em' }} className="animate d4">
+            USE ← → KEYS OR SWIPE TO NAVIGATE
+          </p>
+        </div>
+      );
+    }
+
+    function SlideProblem({ className }) {
+      const cases = [
+        { icon: '💥', t: 'Flash Crash · 2010', d: 'Faulty trading algorithm erased ~$1 trillion in 36 min' },
+        { icon: '⚖️', t: 'Apple Card · 2019', d: 'Credit model granted 20× higher limits to men — SEC/FTC case' },
+        { icon: '🏛️', t: 'MiDAS Michigan · 2015', d: '40,000 false fraud accusations — 93% error rate' },
+        { icon: '📉', t: 'Knight Capital · 2012', d: 'Trading bug caused $440M loss in 45 min, led to bankruptcy' },
+      ];
+      return (
+        <div className={className || "slide"} id="problem">
+          <Eyebrow n={2} label="THE PROBLEM" />
+          <div className="g2" style={{ gap: 48, alignItems: 'flex-start' }}>
+            <div>
+              <h2 className="headline animate d1" style={{ fontSize: 'clamp(2rem,4vw,3.2rem)', marginBottom: 16 }}>
+                AI failures cost<br /><span className="accent">billions</span> —<br />
+                no systemic tracking
+              </h2>
+              <p className="subline animate d2" style={{ marginBottom: 24 }}>
+                Real AI incidents in financial services cause massive losses, discrimination,
+                and market instability — but remain fragmented and unanalyzed.
+              </p>
+              <div className="hl animate d3">
+                <strong style={{ color: 'var(--teal)' }}>Critical gap:</strong> no public consolidated base of
+                financial AI incidents with statistical analysis, derived features, and predictive capability.
+              </div>
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }} className="animate d2">
+              {cases.map(c => (
+                <div key={c.t} className="card" style={{ padding: '16px 20px' }}>
+                  <div style={{ display: 'flex', gap: 12, alignItems: 'flex-start' }}>
+                    <span style={{ fontSize: '1.6rem' }}>{c.icon}</span>
+                    <div>
+                      <div className="card-title" style={{ fontSize: '.95rem', marginBottom: 4 }}>{c.t}</div>
+                      <div className="card-body" style={{ fontSize: '.82rem' }}>{c.d}</div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    function SlideSolution({ className }) {
+      const items = [
+        { nb: 'NB1', icon: '📊', t: 'Analytical Base', d: '31 filtered incidents, 8 derived variables, relational SQLite database' },
+        { nb: 'NB2', icon: '📈', t: 'Statistical Analysis', d: 'H1–H4: chi-square, Spearman, logistic regression with Odds Ratio' },
+        { nb: 'NB3', icon: '🤖', t: 'ML Models', d: 'LR + RF + XGBoost serialized and ready for serving' },
+        { nb: 'NB4', icon: '🚀', t: 'REST API', d: 'Flask 9 endpoints: historical data, statistics, real-time predictions' },
+        { nb: 'APP', icon: '🖥️', t: 'Dashboard', d: 'Streamlit 7 pages, dark mode, Plotly, integrated Groq chatbot' },
+      ];
+      return (
+        <div className={className || "slide"} id="solution">
+          <Eyebrow n={3} label="SOLUTION" />
+          <h2 className="headline animate d1" style={{ fontSize: 'clamp(2rem,4vw,3rem)', marginBottom: 16 }}>
+            End-to-end <span className="accent">CRISP-DM</span> pipeline
+          </h2>
+          <p className="subline animate d2" style={{ marginBottom: 28 }}>
+            From raw collection to intelligent prediction — fully integrated architecture.
+          </p>
+          <div className="g5 animate d3">
+            {items.map(i => (
+              <div key={i.nb} className="card" style={{ textAlign: 'center', padding: '20px 14px' }}>
+                <div style={{ fontFamily: 'var(--mono)', fontSize: '.6rem', color: 'var(--teal)', marginBottom: 8, letterSpacing: '.15em' }}>{i.nb}</div>
+                <div style={{ fontSize: '2rem', marginBottom: 10 }}>{i.icon}</div>
+                <div className="card-title" style={{ fontSize: '.9rem' }}>{i.t}</div>
+                <div className="card-body" style={{ fontSize: '.78rem' }}>{i.d}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      );
+    }
+
+    function SlideData({ className }) {
+      const kpis = [
+        { v: '31', l: 'Financial\nIncidents' },
+        { v: '8', l: 'Derived\nVariables' },
+        { v: '2003', l: 'Series\nStart' },
+        { v: '2023', l: 'Series\nEnd' },
+        { v: '30+', l: 'Financial\nKeywords' },
+        { v: '3', l: 'SQLite\nTables' },
+      ];
+      const bars = [
+        { l: 'credit_scoring', p: 29 }, { l: 'fraud_detection', p: 23 },
+        { l: 'algorithmic_trading', p: 19 }, { l: 'risk_assessment', p: 13 },
+        { l: 'robo_advisor', p: 10 }, { l: 'customer_service', p: 6 },
+      ];
+      return (
+        <div className={className || "slide"} id="data">
+          <Eyebrow n={4} label="DATA & FEATURES" />
+          <div className="g2 animate d1" style={{ gap: 40, alignItems: 'flex-start' }}>
+            <div>
+              <h2 className="headline" style={{ fontSize: 'clamp(1.8rem,3.5vw,2.8rem)', marginBottom: 20 }}>
+                Feature Engineering<br />by <span className="accent">semantic inference</span>
+              </h2>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 12, marginBottom: 24 }}>
+                {kpis.map(k => (
+                  <div key={k.l} className="kpi" style={{ padding: '16px 10px' }}>
+                    <div className="kpi-value" style={{ fontSize: '1.8rem' }}>{k.v}</div>
+                    <div className="kpi-label" style={{ whiteSpace: 'pre-line', fontSize: '.62rem' }}>{k.l}</div>
+                  </div>
+                ))}
+              </div>
+              <div className="hl" style={{ fontSize: '.84rem' }}>
+                <strong style={{ color: 'var(--teal)' }}>Source:</strong> AI Incident Database (AIID) —
+                GraphQL API with 4-layer fallback guarantee.
+              </div>
+            </div>
+            <div>
+              <div style={{ fontFamily: 'var(--mono)', fontSize: '.62rem', color: 'var(--teal)', letterSpacing: '.14em', marginBottom: 14 }}>
+                INCIDENTS BY APPLICATION TYPE
+              </div>
+              {bars.map(b => (
+                <div key={b.l} className="bar-row">
+                  <div className="bar-label">{b.l}</div>
+                  <div className="bar-track"><div className="bar-fill" style={{ width: `${b.p}%` }} /></div>
+                  <div className="bar-val">{b.p}%</div>
+                </div>
+              ))}
+              <div style={{ marginTop: 24, display: 'flex', flexDirection: 'column', gap: 10 }}>
+                {['application_type (7)', 'incident_type (6)', 'customer_segment (5)',
+                  'severity_level (4)', '4 governance flags'].map(v => (
+                    <div key={v} style={{ display: 'flex', gap: 10, alignItems: 'center', fontSize: '.82rem', color: 'var(--w70)' }}>
+                      <span style={{ color: 'var(--teal)' }}>›</span>{v}
+                    </div>
+                  ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    function SlidePipeline({ className }) {
+      const steps = [
+        { nb: 'NB1', ph: 'Data Prep', t: 'Exploration &\nPreparation', d: 'AIID → filter → features → SQLite', o: 'CSV + .db' },
+        { nb: 'NB2', ph: 'Evaluation', t: 'Statistical\nAnalysis', d: 'Chi-sq · Spearman · OLS · LogReg', o: 'H1–H4' },
+        { nb: 'NB3', ph: 'Modeling', t: 'Machine\nLearning', d: 'LR + RF + XGBoost + serialization', o: 'models/*.pkl' },
+        { nb: 'NB4', ph: 'Deployment', t: 'REST\nAPI', d: '9 endpoints Flask + auto tests', o: 'app_api.py' },
+        { nb: 'APP', ph: 'Frontend', t: 'Dashboard\nStreamlit', d: '7 pages · Plotly · Groq chatbot', o: 'localhost:8501' },
+      ];
+      const hyps = [
+        { c: 'H1', t: 'Chi-sq Goodness of Fit', q: 'Concentration by application type?' },
+        { c: 'H2', t: 'Chi-sq Independence', q: 'Bias affects segments unequally?' },
+        { c: 'H3', t: 'Chi-sq + LogReg (OR)', q: 'Severity → regulatory investigation?' },
+        { c: 'H4', t: 'Spearman + OLS', q: 'Growing temporal trend?' },
+      ];
+      return (
+        <div className={className || "slide"} id="pipeline">
+          <Eyebrow n={5} label="ANALYTICAL PIPELINE" />
+          <h2 className="headline animate d1" style={{ fontSize: 'clamp(1.8rem,3.5vw,2.8rem)', marginBottom: 20 }}>
+            Explicit <span className="accent">dependency chain</span>
+          </h2>
+          <div className="pipeline animate d2">
+            {steps.map(s => (
+              <div key={s.nb} className="pipe">
+                <div className="pipe-nb">{s.nb} · {s.ph}</div>
+                <div className="pipe-t" style={{ whiteSpace: 'pre-line' }}>{s.t}</div>
+                <div className="pipe-d">{s.d}</div>
+                <div className="pipe-o">{s.o}</div>
+              </div>
+            ))}
+          </div>
+          <div className="g2 animate d3" style={{ gap: 14, marginTop: 20 }}>
+            {hyps.map(h => (
+              <div key={h.c} className="card" style={{ display: 'flex', gap: 14, alignItems: 'center', padding: '14px 18px' }}>
+                <div style={{ fontFamily: 'var(--mono)', fontSize: '1.6rem', fontWeight: 700, color: 'var(--teal)', minWidth: 36 }}>{h.c}</div>
+                <div>
+                  <div style={{ fontFamily: 'var(--mono)', fontSize: '.64rem', color: 'var(--teal)', marginBottom: 3, letterSpacing: '.08em' }}>{h.t}</div>
+                  <div className="card-body" style={{ fontSize: '.84rem' }}>{h.q}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      );
+    }
+
+    function SlideML({ className }) {
+      const models = [
+        { a: 'Logistic Regression', r: 'Baseline', f1: '~0.66', auc: '~0.74', n: 'Linear, interpretable' },
+        { a: 'Random Forest', r: 'Ensemble', f1: '~0.74', auc: '~0.83', n: '200 trees, balanced' },
+        { a: 'XGBoost ★', r: 'Primary', f1: '~0.79', auc: '~0.87', n: 'scale_pos_weight', w: true },
+      ];
+      return (
+        <div className={className || "slide"} id="ml">
+          <Eyebrow n={6} label="MACHINE LEARNING" />
+          <div className="g2" style={{ gap: 36, alignItems: 'flex-start' }}>
+            <div>
+              <h2 className="headline animate d1" style={{ fontSize: 'clamp(1.8rem,3.5vw,2.8rem)', marginBottom: 16 }}>
+                2 models,<br /><span className="accent">3 algorithms</span>
+              </h2>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 14, marginBottom: 20 }}>
+                <div className="card animate d2">
+                  <div className="card-title">Model 1 — Severity</div>
+                  <div className="code" style={{ fontSize: '.72rem', marginTop: 8 }}>
+                    {`severity_binary
+0 = low/medium  ← 90.3% (28 cases)
+1 = high/critical ← 9.7% (3 cases)
+# Imbalance ratio: 9.33`}
+                  </div>
+                </div>
+                <div className="card animate d3">
+                  <div className="card-title">Model 2 — Regulatory Investigation</div>
+                  <div className="code" style={{ fontSize: '.72rem', marginTop: 8 }}>
+                    {`regulatory_investigation
+0 = no investigation ← 96.8%
+1 = with investigation ← 3.2%
+# Proof-of-concept pipeline`}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="animate d2">
+              <table className="tbl" style={{ marginBottom: 16 }}>
+                <thead><tr><th>Algorithm</th><th>Role</th><th>F1</th><th>AUC</th><th>Note</th></tr></thead>
+                <tbody>
+                  {models.map(m => (
+                    <tr key={m.a}>
+                      <td style={{ color: m.w ? 'var(--teal)' : 'inherit', fontWeight: m.w ? 600 : 400 }}>{m.a}</td>
+                      <td><span style={{ fontFamily: 'var(--mono)', fontSize: '.7rem', background: 'rgba(0,212,200,.1)', padding: '2px 8px', borderRadius: 4, color: 'var(--teal)' }}>{m.r}</span></td>
+                      <td style={{ fontFamily: 'var(--mono)', color: m.w ? 'var(--teal)' : 'var(--w70)' }}>{m.f1}</td>
+                      <td style={{ fontFamily: 'var(--mono)', color: m.w ? 'var(--teal)' : 'var(--w70)' }}>{m.auc}</td>
+                      <td style={{ fontSize: '.78rem', color: 'var(--w50)' }}>{m.n}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              <div className="hl" style={{ fontSize: '.84rem' }}>
+                <strong style={{ color: 'var(--teal)' }}>Honest interpretation:</strong> ML pipeline correctly
+                implemented. With ~31 incidents and strong imbalance, models are
+                <strong> proof-of-concept</strong>, not decisional instruments.
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    function SlideAPI({ className }) {
+      const eps = [
+        { m: 'GET', r: '/', g: 'Docs', d: 'Status and endpoint list' },
+        { m: 'GET', r: '/api/incidents', g: 'Data', d: 'List with filters' },
+        { m: 'GET', r: '/api/incidents/<id>', g: 'Data', d: 'Full detail + impact + regulatory' },
+        { m: 'GET', r: '/api/stats/by-application', g: 'Stats', d: 'Concentration by AI domain' },
+        { m: 'GET', r: '/api/stats/by-segment', g: 'Stats', d: 'Incidents + bias rate by segment' },
+        { m: 'GET', r: '/api/stats/temporal', g: 'Stats', d: 'Annual time series' },
+        { m: 'GET', r: '/api/stats/governance', g: 'Stats', d: 'Governance flag frequency' },
+        { m: 'POST', r: '/api/predict/severity', g: 'ML', d: 'Classify high/low + probability' },
+        { m: 'POST', r: '/api/predict/investigation', g: 'ML', d: 'Regulatory investigation probability' },
+      ];
+      const gc = { Docs: 'var(--w50)', Data: '#60a5fa', Stats: 'var(--teal)', ML: '#a78bfa' };
+      return (
+        <div className={className || "slide"} id="api">
+          <Eyebrow n={7} label="REST API" />
+          <div className="g2 animate d1" style={{ gap: 40, alignItems: 'flex-start' }}>
+            <div>
+              <h2 className="headline" style={{ fontSize: 'clamp(1.8rem,3.5vw,2.8rem)', marginBottom: 16 }}>
+                9 endpoints,<br /><span className="accent">3 groups</span>
+              </h2>
+              <p className="subline" style={{ marginBottom: 20 }}>
+                Flask API with CORS — JSON for external consumers.
+              </p>
+              <div className="code" style={{ fontSize: '.72rem' }}>
+                {`# Example: severity prediction
+POST /api/predict/severity
+{
+  "application_type": "credit_scoring",
+  "incident_type": "algorithmic_bias",
+  "customer_segment": "retail",
+  "year": 2024
+}
+→ {"prediction":1,"probability":0.78}`}
+              </div>
+              <div className="hl" style={{ marginTop: 16, fontSize: '.84rem' }}>
+                <strong style={{ color: 'var(--teal)' }}>Train-serve consistency:</strong> prepare_model_input()
+                replicates encoding, fills missing columns with 0, reorders to training order.
+              </div>
+            </div>
+            <div style={{ overflowX: 'auto' }}>
+              <table className="tbl">
+                <thead><tr><th>Method</th><th>Group</th><th>Route</th><th>Description</th></tr></thead>
+                <tbody>
+                  {eps.map(e => (
+                    <tr key={e.r}>
+                      <td style={{ fontFamily: 'var(--mono)', color: e.m === 'GET' ? 'var(--teal)' : '#f59e0b', fontWeight: 600, fontSize: '.78rem' }}>{e.m}</td>
+                      <td><span style={{ fontFamily: 'var(--mono)', fontSize: '.66rem', color: gc[e.g], background: `${gc[e.g]}18`, padding: '2px 7px', borderRadius: 4 }}>{e.g}</span></td>
+                      <td><code style={{ fontFamily: 'var(--mono)', fontSize: '.72rem', color: 'var(--w70)' }}>{e.r}</code></td>
+                      <td style={{ fontSize: '.8rem', color: 'var(--w50)' }}>{e.d}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    function SlideGroq({ className }) {
+      const cmp = [
+        { api: 'Groq ★', cost: 'Free', spd: '~270 tok/s', tier: 'Unlimited', r: 1 },
+        { api: 'Gemini Flash', cost: 'Free', spd: '~100 tok/s', tier: '15 req/min', r: 2 },
+        { api: 'DeepSeek', cost: 'Free', spd: '~80 tok/s', tier: 'Generous', r: 3 },
+        { api: 'OpenAI', cost: '$0.15/1M', spd: '~40 tok/s', tier: 'Paid', r: 4 },
+      ];
+      return (
+        <div className={className || "slide"} id="groq">
+          <Eyebrow n={8} label="OPENAI → GROQ MIGRATION" />
+          <h2 className="headline animate d1" style={{ fontSize: 'clamp(1.8rem,3.5vw,2.8rem)', marginBottom: 20 }}>
+            Free, <span className="accent">6× faster</span>,<br />zero extra dependency
+          </h2>
+          <div className="g2 animate d2" style={{ gap: 28 }}>
+            <div>
+              <table className="tbl" style={{ marginBottom: 16 }}>
+                <thead><tr><th>#</th><th>API</th><th>Cost</th><th>Speed</th><th>Free Tier</th></tr></thead>
+                <tbody>
+                  {cmp.map(c => (
+                    <tr key={c.api}>
+                      <td style={{ fontFamily: 'var(--mono)', fontSize: '.8rem', color: c.r === 1 ? 'var(--teal)' : 'var(--w50)' }}>
+                        {c.r === 1 ? '🥇' : c.r === 2 ? '🥈' : c.r === 3 ? '🥉' : '—'}
+                      </td>
+                      <td style={{ color: c.r === 1 ? 'var(--teal)' : 'inherit', fontWeight: c.r === 1 ? 600 : 400 }}>{c.api}</td>
+                      <td style={{ fontFamily: 'var(--mono)', fontSize: '.8rem', color: c.r === 1 ? 'var(--teal)' : 'var(--w70)' }}>{c.cost}</td>
+                      <td style={{ fontFamily: 'var(--mono)', fontSize: '.8rem', color: c.r === 1 ? 'var(--teal)' : 'var(--w70)' }}>{c.spd}</td>
+                      <td style={{ fontSize: '.8rem', color: c.r === 1 ? 'var(--teal)' : 'var(--w50)' }}>{c.tier}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              <div className="hl" style={{ marginBottom: 12, fontSize: '.84rem' }}>
+                <strong style={{ color: 'var(--teal)' }}>3-layer key resolution:</strong> st.secrets →
+                os.environ → manual UI input. Zero code change between environments.
+              </div>
+              <div className="hl" style={{ fontSize: '.84rem', borderLeftColor: '#60a5fa' }}>
+                <strong style={{ color: '#60a5fa' }}>Robust fallback:</strong> Groq fails →
+                clear error + automatic offline response. Auto-retry on rate limit (429).
+              </div>
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+              <div className="card">
+                <div className="card-title">Unified key resolution</div>
+                <div className="code" style={{ fontSize: '.72rem', marginTop: 10 }}>
+                  {`def _resolve_groq_key() -> str:
+  try:
+    return st.secrets["GROQ_API_KEY"]
+  except: pass
+  env = os.environ.get("GROQ_API_KEY","")
+  if env: return env
+  return st.session_state.get(
+    "groq_key_manual", ""
+  )`}
+                </div>
+              </div>
+              <div className="card">
+                <div className="card-title">60-second setup</div>
+                <div className="code" style={{ fontSize: '.72rem', marginTop: 10 }}>
+                  {`# Local (.env)
+GROQ_API_KEY=gsk_...
+
+# Streamlit Cloud (Secrets)
+GROQ_API_KEY = "gsk_..."
+API_BASE_URL  = "https://api.onrender.com"`}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    function SlideArch({ className }) {
+      return (
+        <div className={className || "slide"} id="architecture">
+          <Eyebrow n={9} label="SYSTEM ARCHITECTURE" />
+          <h2 className="headline animate d1" style={{ fontSize: 'clamp(1.8rem,3.5vw,2.8rem)', marginBottom: 20 }}>
+            MLOps — <span className="accent">separation of concerns</span>
+          </h2>
+          <div className="g2 animate d2" style={{ gap: 28 }}>
+            <div className="code" style={{ fontSize: '.76rem', lineHeight: 2.1 }}>
+              {`╔══ DATA SOURCES ═══════════════════════╗
+  AIID GraphQL → JSON cache → CSV
+╠══ NOTEBOOKS (CRISP-DM) ═══════════════╣
+  NB1: ETL → SQLite (3 tables)
+  NB2: Stats H1–H4
+  NB3: ML → models/*.pkl
+  NB4: API config
+╠══ SERVING LAYER ═══════════════════════╣
+  Flask API → 9 REST endpoints
+  Loads models on init
+╠══ PRESENTATION ════════════════════════╣
+  Streamlit ← API (HTTP/JSON)
+  Groq      ← api.groq.com
+╚═══════════════════════════════════════╝`}
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+              {[
+                { layer: 'Data Layer', items: ['SQLite 3 tables', 'CSV processed', '4 .pkl models'], col: '#60a5fa' },
+                { layer: 'API Layer', items: ['Flask + CORS', '9 REST endpoints', 'JSON standard'], col: 'var(--teal)' },
+                { layer: 'Frontend Layer', items: ['Streamlit 7 pages', 'Plotly interactive', 'Groq chatbot'], col: '#a78bfa' },
+                { layer: 'Recommended evolution', items: ['SQLite → PostgreSQL', 'Flask → FastAPI', 'Local → Docker'], col: '#f59e0b' },
+              ].map(l => (
+                <div key={l.layer} className="card" style={{ padding: '14px 18px', borderColor: `${l.col}30` }}>
+                  <div style={{ fontFamily: 'var(--mono)', fontSize: '.6rem', color: l.col, marginBottom: 8, letterSpacing: '.12em', textTransform: 'uppercase' }}>{l.layer}</div>
+                  <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                    {l.items.map(i => (
+                      <span key={i} style={{ background: `${l.col}12`, border: `1px solid ${l.col}25`, borderRadius: 5, padding: '3px 9px', fontSize: '.76rem', color: 'var(--w70)' }}>{i}</span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    function SlideDeploy({ className }) {
+      const plats = [
+        { p: 'GitHub', icon: '🔗', r: 'Repository', steps: ['git init + git push', 'Code + Procfile', 'requirements.txt', 'Database + models'] },
+        { p: 'Render', icon: '🚀', r: 'Flask API', steps: ['New Web Service', 'Build: pip install -r requirements.txt', 'Start: gunicorn app_api:app', 'Env: FLASK_DEBUG=false'] },
+        { p: 'Streamlit Cloud', icon: '🖥️', r: 'Dashboard', steps: ['share.streamlit.io', 'Main file: app.py', 'Secret: GROQ_API_KEY', 'API_BASE_URL = Render URL'] },
+      ];
+      return (
+        <div className={className || "slide"} id="deploy">
+          <Eyebrow n={10} label="GLOBAL DEPLOYMENT" />
+          <h2 className="headline animate d1" style={{ fontSize: 'clamp(1.8rem,3.5vw,2.8rem)', marginBottom: 20 }}>
+            Production on<br /><span className="accent">3 free platforms</span>
+          </h2>
+          <div className="g3 animate d2" style={{ marginBottom: 20 }}>
+            {plats.map(p => (
+              <div key={p.p} className="card">
+                <div style={{ fontSize: '2rem', marginBottom: 8 }}>{p.icon}</div>
+                <div className="card-title">{p.p}</div>
+                <div style={{ fontFamily: 'var(--mono)', fontSize: '.62rem', color: 'var(--w50)', marginBottom: 12, letterSpacing: '.1em' }}>{p.r.toUpperCase()}</div>
+                {p.steps.map(s => (
+                  <div key={s} style={{ fontSize: '.8rem', color: 'var(--w70)', padding: '5px 0', borderBottom: '1px solid var(--w10)' }}>
+                    <span style={{ color: 'var(--teal)', marginRight: 8 }}>›</span>{s}
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+          <div className="card animate d3" style={{ background: 'rgba(0,212,200,.03)', padding: '16px 22px' }}>
+            <div style={{ fontFamily: 'var(--mono)', fontSize: '.78rem', color: 'var(--w70)', lineHeight: 2.2 }}>
+              <span style={{ color: 'var(--teal)' }}>GitHub</span>
+              <span style={{ color: 'var(--w20)' }}> ────→ </span>
+              <span style={{ color: '#3b82f6' }}>Render</span>
+              <span style={{ color: 'var(--w20)' }}> (API · https://ai-finance-api.onrender.com)</span><br />
+              <span style={{ color: 'var(--w20)', paddingLeft: 100 }}>└───→ </span>
+              <span style={{ color: '#ff4b4b' }}>Streamlit Cloud</span>
+              <span style={{ color: 'var(--w20)' }}> (Dashboard)</span><br />
+              <span style={{ color: 'var(--w20)', paddingLeft: 200 }}>└─── </span>
+              <span style={{ color: '#F55036' }}>Groq Cloud</span>
+              <span style={{ color: 'var(--w20)' }}> (LLM · api.groq.com)</span>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    function SlideRoadmap({ className }) {
+      const items = [
+        { done: true, t: '✅ CRISP-DM Pipeline', d: '4 notebooks: ETL, statistics, ML, API' },
+        { done: true, t: '✅ Flask API 9 endpoints', d: 'Data, statistics, predictions REST' },
+        { done: true, t: '✅ Streamlit Dashboard', d: '7 pages, dark mode, interactive Plotly' },
+        { done: true, t: '✅ Groq Migration', d: 'llama-3.1-8b-instant, free, 6× faster' },
+        { done: true, t: '✅ Render + Streamlit Cloud', d: 'Full pipeline in free cloud' },
+        { done: false, t: '⏳ Expand database', d: 'Larger time window, FinBERT NLP embeddings' },
+        { done: false, t: '⏳ Fix class imbalance', d: 'SMOTE, calibrated class_weight' },
+        { done: false, t: '⏳ MLflow + tracking', d: 'Experiment registry, drift monitoring' },
+        { done: false, t: '⏳ API auth + security', d: 'JWT, rate limiting, logging, /v1/' },
+        { done: false, t: '⏳ Docker containerization', d: 'docker-compose: API + Dashboard + DB' },
+      ];
+      return (
+        <div className={className || "slide"} id="roadmap">
+          <Eyebrow n={11} label="ROADMAP" />
+          <h2 className="headline animate d1" style={{ fontSize: 'clamp(1.8rem,3.5vw,2.8rem)', marginBottom: 22 }}>
+            Delivered <span className="accent">and what comes next</span>
+          </h2>
+          <div className="g2 animate d2">
+            <div>
+              {items.slice(0, 5).map(i => (
+                <div key={i.t} className="roadmap-item">
+                  <div className={`roadmap-dot${i.done ? '' : ' dim'}`} />
+                  <div><div className="roadmap-title">{i.t}</div><div className="roadmap-desc">{i.d}</div></div>
+                </div>
+              ))}
+            </div>
+            <div>
+              {items.slice(5).map(i => (
+                <div key={i.t} className="roadmap-item">
+                  <div className={`roadmap-dot${i.done ? '' : ' dim'}`} />
+                  <div><div className="roadmap-title">{i.t}</div><div className="roadmap-desc">{i.d}</div></div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    function SlideConclusion({ className }) {
+      const items = [
+        { v: 'Pipeline', d: 'CRISP-DM end-to-end, traceable artifacts' },
+        { v: 'Analysis', d: '4 formalized statistical hypotheses' },
+        { v: 'ML', d: '2 serialized models, deploy-ready' },
+        { v: 'API', d: '9 documented and tested REST endpoints' },
+        { v: 'Dashboard', d: '7 pages with Groq chatbot' },
+        { v: 'Deploy', d: 'Free cloud — Render + Streamlit Cloud' },
+      ];
+      return (
+        <div className={className || "slide"} id="conclusion" style={{ justifyContent: 'center', textAlign: 'center' }}>
+          <Eyebrow n={12} label="CONCLUSION" />
+          <h2 className="headline animate d1" style={{ textAlign: 'center', marginBottom: 16 }}>
+            Architecture before<br /><span className="accent">accuracy</span>
+          </h2>
+          <p className="subline animate d2" style={{ margin: '0 auto 36px', maxWidth: 680, textAlign: 'center' }}>
+            The main contribution is not a high-accuracy classifier — it is the
+            demonstration of how to transform imperfect public data into a complete,
+            traceable, and methodologically governed analytical ecosystem.
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 14, maxWidth: 860, margin: '0 auto 36px' }} className="animate d3">
+            {items.map(i => (
+              <div key={i.v} className="kpi" style={{ padding: '20px 12px' }}>
+                <div style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--teal)', marginBottom: 6 }}>{i.v}</div>
+                <div style={{ fontFamily: 'var(--mono)', fontSize: '.62rem', color: 'var(--w50)', letterSpacing: '.06em', lineHeight: 1.5 }}>{i.d}</div>
+              </div>
+            ))}
+          </div>
+          <div className="animate d4">
+            <p style={{ fontFamily: 'var(--mono)', fontSize: '.72rem', color: 'var(--teal)', letterSpacing: '.2em', marginBottom: 6 }}>
+              PUC-SP · CAPSTONE PROJECT · 5TH SEMESTER · 2026
+            </p>
+            <p style={{ fontFamily: 'var(--mono)', fontSize: '.62rem', color: 'var(--w20)', letterSpacing: '.14em' }}>
+              CRISP-DM · PYTHON · FLASK · STREAMLIT · XGBOOST · GROQ
+            </p>
+          </div>
+        </div>
+      );
+    }
+
+    /* ═══════ APP ═══════ */
+    function App() {
+      const [cur, setCur] = useState(0);
+      const [theme, setTheme] = useState('dark');
+      const [dir, setDir] = useState('next');
+      const touchStart = useRef(null);
+      const isAnimating = useRef(false);
+
+      const go = useCallback((idx) => {
+        if (isAnimating.current || idx === cur || idx < 0 || idx >= SLIDES.length) return;
+        setDir(idx > cur ? 'next' : 'prev');
+        isAnimating.current = true;
+        setCur(idx);
+        setTimeout(() => { isAnimating.current = false }, 600);
+      }, [cur]);
+
+      // Keyboard
+      useEffect(() => {
+        const h = (e) => {
+          if (e.key === 'ArrowRight' || e.key === 'ArrowDown') go(cur + 1);
+          else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') go(cur - 1);
+          else if (e.key === 'f' || e.key === 'F') {
+            document.fullscreenElement
+              ? document.exitFullscreen()
+              : document.getElementById('stage').requestFullscreen();
+          }
+          else if (e.key === 'r' || e.key === 'R') go(0);
+          else if (e.key === 'Escape' && document.fullscreenElement) document.exitFullscreen();
+        };
+        window.addEventListener('keydown', h);
+        return () => window.removeEventListener('keydown', h);
+      }, [cur, go]);
+
+      // Touch swipe
+      useEffect(() => {
+        const s = (e) => { touchStart.current = e.touches[0].clientX };
+        const e = (e) => {
+          if (!touchStart.current) return;
+          const dx = touchStart.current - e.changedTouches[0].clientX;
+          if (Math.abs(dx) > 50) { dx > 0 ? go(cur + 1) : go(cur - 1); }
+          touchStart.current = null;
+        };
+        window.addEventListener('touchstart', s, { passive: true });
+        window.addEventListener('touchend', e, { passive: true });
+        return () => { window.removeEventListener('touchstart', s); window.removeEventListener('touchend', e) };
+      }, [cur, go]);
+
+      // Theme sync
+      useEffect(() => { document.body.setAttribute('data-theme', theme) }, [theme]);
+
+      const toggleFullscreen = () => {
+        document.fullscreenElement
+          ? document.exitFullscreen()
+          : document.getElementById('stage').requestFullscreen();
+      };
+
+      const slideComponents = [
+        SlideHero, SlideProblem, SlideSolution, SlideData, SlidePipeline,
+        SlideML, SlideAPI, SlideGroq, SlideArch, SlideDeploy, SlideRoadmap, SlideConclusion
+      ];
+
+      return (
+        <>
+          {/* Slide counter */}
+          <div className="slide-counter" style={{ zIndex: 1001 }}>
+            <span>{String(cur + 1).padStart(2, '0')}</span> / {String(SLIDES.length).padStart(2, '0')}
+            &emsp;<span style={{ color: 'var(--w50)', fontSize: '.65rem' }}>{LABELS[cur]}</span>
+          </div>
+
+          {/* Slides */}
+          {slideComponents.map((Comp, i) => {
+            let cls = 'slide';
+            if (i === cur) cls += ' active';
+            else if (i < cur) cls += ' exit-up';
+            return <Comp key={i} className={cls} style={{}} />;
+          })}
+
+          {/* HUD */}
+          <div className="hud">
+            <div className="hud-dots">
+              {SLIDES.map((_, i) => (
+                <button key={i} className={`hud-dot${i === cur ? ' on' : ''}`} onClick={() => go(i)} title={LABELS[i]} />
+              ))}
+            </div>
+            <div className="hud-sep" />
+            <button className="hud-btn" onClick={() => go(cur - 1)} title="Previous" disabled={cur === 0}>◀</button>
+            <button className="hud-btn" onClick={() => go(cur + 1)} title="Next" disabled={cur === SLIDES.length - 1}>▶</button>
+            <button className="hud-btn" onClick={() => go(0)} title="Restart (R)">↺</button>
+            <button className="hud-btn" onClick={toggleFullscreen} title="Fullscreen (F)">⛶</button>
+            <button className="hud-btn" onClick={() => setTheme(t => t === 'dark' ? 'light' : 'dark')} title="Toggle theme">
+              {theme === 'dark' ? '☀' : '🌙'}
+            </button>
+            <button className="hud-btn" onClick={exportPPT} title="Download PPTX" style={{ fontWeight: 600, color: "var(--teal)" }}>⬇ Download PPTX</button>
+          </div>
+        </>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('stage')).render(<App />);
+
+    async function exportPPT() {
+      const btn = document.querySelector('[title="Download PPTX"]');
+      if (btn) btn.textContent = '⏳';
+      document.querySelectorAll('.animate').forEach(el => {
+        el.style.animation = 'none'; el.style.opacity = '1'; el.style.transform = 'none';
+      });
+      const pptx = new PptxGenJS();
+      pptx.layout = 'LAYOUT_16x9';
+      const slides = document.querySelectorAll('.slide.active, .slide');
+      const all = [...document.querySelectorAll('.slide')];
+      const hud = document.querySelector('.hud');
+      const ctr = document.querySelector('.slide-counter');
+      if (hud) hud.style.opacity = '0';
+      if (ctr) ctr.style.opacity = '0';
+      for (let i = 0; i < all.length; i++) {
+        const el = all[i];
+        const origCls = el.className;
+        el.className = 'slide active';
+        const canvas = await html2canvas(el, {
+          width: 1920, height: 1080, scale: 1,
+          backgroundColor: document.body.getAttribute('data-theme') === 'dark' ? '#040508' : '#f5f5f7',
+          windowWidth: 1920, windowHeight: 1080, logging: false,
+        });
+        el.className = origCls;
+        const s = pptx.addSlide();
+        s.background = { color: document.body.getAttribute('data-theme') === 'dark' ? '040508' : 'f5f5f7' };
+        s.addImage({ data: canvas.toDataURL('image/png', .95), x: 0, y: 0, w: '100%', h: '100%' });
+      }
+      if (hud) hud.style.opacity = '1';
+      if (ctr) ctr.style.opacity = '1';
+      pptx.writeFile({ fileName: 'AI_Incidents_Financial_Services_EN.pptx' });
+      if (btn) btn.textContent = '⬇ Download PPTX';
+    }
+  </script>
+</body>
+
+</html>
