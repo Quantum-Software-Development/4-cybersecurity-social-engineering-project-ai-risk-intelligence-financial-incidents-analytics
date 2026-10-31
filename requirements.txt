@@ -30,7 +30,7 @@ statsmodels>=0.14.6
 # ----------------------------------------------------------------
 # Modeling, training, and explainability
 scikit-learn>=1.9.1
-xgboost>=1.7.0
+xgboost>=3.4.1
 shap>=0.53.0
 joblib>=1.5.3
 
