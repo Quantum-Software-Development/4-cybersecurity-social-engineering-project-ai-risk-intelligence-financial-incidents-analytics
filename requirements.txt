@@ -16,7 +16,7 @@ numpy>=2.5.0
 # Exploratory visualization and analytical dashboards
 matplotlib>=3.7.0
 seaborn>=0.12.0
-plotly>=5.18.0
+plotly>=7.1.0
 
 # ----------------------------------------------------------------
 # 📈 STATISTICS & ANALYSIS

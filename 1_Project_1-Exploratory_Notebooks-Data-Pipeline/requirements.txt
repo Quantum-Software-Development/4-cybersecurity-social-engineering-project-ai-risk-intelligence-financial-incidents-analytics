@@ -8,7 +8,7 @@ numpy==2.5.0
 # Visualização
 matplotlib==3.7.2
 seaborn==0.12.2
-plotly==5.16.1
+plotly==7.1.0
 
 # Machine Learning
 scikit-learn==1.9.1
